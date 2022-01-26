@@ -1,3 +1,5 @@
+package ra.hp;
+
 // helper class similar to FP in FlashPunk and HXP in HaxePunk
 class HP {
 	// hopefully just a reference..?
