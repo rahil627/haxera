@@ -1,9 +1,11 @@
 package ra.hp;
 
-// helper class similar to FP in FlashPunk and HXP in HaxePunk
+// helper class similar to FP in FlashPunk (and HXP in HaxePunk)
 class HP {
 	// hopefully just a reference..?
 	public static var scene:h2d.Scene; // = App.s2d
+	public static var debugText:h2d.Text;
+
 
 	public static var dt(get, default):Float;
 
