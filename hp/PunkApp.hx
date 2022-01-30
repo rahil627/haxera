@@ -4,7 +4,7 @@ import hxd.App;
 import h2d.Console;
 
 // extend me!
-// similar to Engine in Flash/HaxePunk (but heaps uses h3d.Engine)
+// similar to Engine in Flash/HaxePunk (but heaps uses h3d.Engine, soooo:)
 // just a layer on top of the main App class
 class PunkApp extends App {
 
@@ -19,6 +19,7 @@ class PunkApp extends App {
 		// init global stuff
 		HP.console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene);
 		HP.console.shortKeyChar = "`".charCodeAt(0);
+		HP.console.show(); // TODO: temp, because inputs dont work
 
 		// TODO: testing trace	
 		trace("pressed something, logged by trace");
