@@ -7,21 +7,53 @@ import h2d.Console;
 // similar to Engine in Flash/HaxePunk (but heaps uses h3d.Engine)
 // just a layer on top of the main App class
 class PunkApp extends App {
-	public var console:Console; // or debugConsole?
+
+	var inputHandler:h2d.Interactive;
 
 	override function init() {
-		super.init(); // empty?
+		super.init(); // empty
 
-		// add console to the game
-		var console = new h2d.Console(hxd.res.DefaultFont.get(), s2d);
+		// set global vars
+		HP.scene = this.s2d;
 
-		// redefine key to show console on screen
-		console.shortKeyChar = "`".charCodeAt(0);
+		// init global stuff
+		HP.console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene);
+		HP.console.shortKeyChar = "`".charCodeAt(0);
+
+		// TODO: testing trace	
+		trace("pressed something, logged by trace");
+		
+		// setup input
+		// TODO: is this needed??
+		//Key.initialize();
+		
+		// TODO: move to HP
+		inputHandler = new h2d.Interactive(HP.scene.width, HP.scene.height, HP.scene); // ?collider = HP.scene.getBounds()
+		
+		// TODO: debugging input
+		hxd.Window.getInstance().addEventTarget(onEvent);
+
+		// TODO: what about this??
+		hxd.Window.getInstance().propagateKeyEvents = true;
 	}
 
 	override function update(dt:Float) {
-		super.update();
+		super.update(dt); // empty
+		
+		// update global vars
+		HP.dt = dt;
+
+		// TODO: testing timer vars
+		if (hxd.Timer.dt != dt)
+			HP.console.log("the time vars are actually different!");		
 	}
+
+	// TODO: testing input
+	function onEvent(event : hxd.Event) {
+		HP.console.log("global input event: " + event.toString());
+				
+	}
+
 }
 
 

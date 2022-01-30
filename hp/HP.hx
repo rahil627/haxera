@@ -1,10 +1,13 @@
 package ra.hp;
 
-// helper class similar to FP in FlashPunk (and HXP in HaxePunk)
+import h2d.Console;
+
+// helper class similar to FP in FlashPunk and HXP in HaxePunk
+// TODO: maybe rename to just P
 class HP {
 	// TODO: hopefully just a reference, like ActionScript..?
 	public static var scene:h2d.Scene; // = App.s2d
-	public static var debugText:h2d.Text;
+	public static var console:Console;
 
 	// TODO: dt passed into update vs Timer.dt?
 	public static var dt(get, default):Float;
