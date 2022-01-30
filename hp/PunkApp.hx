@@ -22,7 +22,9 @@ class PunkApp extends App {
 		HP.console.shortKeyChar = "`".charCodeAt(0);
 		HP.console.show(); // TODO: temp, because inputs dont work
 
-		// TODO: testing trace--not logged!
+		// TODO: testing trace--not logged in the console!
+		trace("pressed something, logged by trace");
+		trace("pressed something, logged by trace");
 		trace("pressed something, logged by trace");
 		
 		// setup input
