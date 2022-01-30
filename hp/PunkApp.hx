@@ -6,6 +6,7 @@ import h2d.Console;
 // extend me!
 // similar to Engine in Flash/HaxePunk (but heaps uses h3d.Engine, soooo:)
 // just a layer on top of the main App class
+// must extend App because init() and update() are called internally by App
 class PunkApp extends App {
 
 	var inputHandler:h2d.Interactive;
@@ -47,6 +48,10 @@ class PunkApp extends App {
 		// TODO: testing timer vars
 		if (hxd.Timer.dt != dt)
 			HP.console.log("the time vars are actually different!");		
+	}
+
+	override function onResize() {
+		// placeholder
 	}
 
 	// TODO: testing input
