@@ -9,7 +9,7 @@ import h2d.Console;
 // must extend App because init() and update() are called internally by App
 class PunkApp extends App {
 
-	var inputHandler:h2d.Interactive;
+	var screenInputHandler:h2d.Interactive;
 
 	override function init() {
 		super.init(); // empty
@@ -22,16 +22,19 @@ class PunkApp extends App {
 		HP.console.shortKeyChar = "`".charCodeAt(0);
 		HP.console.show(); // TODO: temp, because inputs dont work
 
-		// TODO: testing trace	
+		// TODO: testing trace--not logged!
 		trace("pressed something, logged by trace");
 		
 		// setup input
-		// TODO: is this needed??
+		// TODO: is this needed??--no, called in App.setup()
 		//Key.initialize();
 		
-		// TODO: move to HP
-		inputHandler = new h2d.Interactive(HP.scene.width, HP.scene.height, HP.scene); // ?collider = HP.scene.getBounds()
-		
+		// TODO: temporary global input handler until i fix keys
+		// TODO: should use HP.scene.AddEventListener()
+		HP.screenInputHandler = new h2d.Interactive(HP.scene.width, HP.scene.height, HP.scene); // ?collider = HP.scene.getBounds()
+		//touchHandler.onOver = function(_) b.alpha = 0.5;
+		//touchHandler.onOut = function(_) b.alpha = 1.0;
+
 		// TODO: debugging input
 		hxd.Window.getInstance().addEventTarget(onEvent);
 
