@@ -28,6 +28,7 @@ class HP {
 	// but can further abstract it here...
 
 	// abstract Scene
+	// the scene inherits a lot of shit that you probably don't want to touch..
 	public static var sceneWidth(get, default):Int;
 	public static var sceneHeight(get, default):Int;
 
