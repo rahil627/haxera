@@ -6,4 +6,11 @@ package ra; // is this not implied by the path name?
 // including the the use of the standard library that comes with it
 class Haxe {
 	// public static var
+
+	// TODO: what about inline function?
+	public static function getRandomColor():Int {
+		return Math.round(Math.random() * 0xFFFFFF);
+		// TODO: does haxe have (Int)float-number feature?
+		// TODO: haxe.std not showing up in autocompletion...
+	} 
 }
