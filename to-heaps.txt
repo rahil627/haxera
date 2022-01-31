@@ -1,0 +1,48 @@
+todo: copy to my dropbox
+
+can put notes i gather from the web on my iPad more easily here,
+just use the web interface from github
+
+
+heaps structure:
+
+file / package stucture:
+h2d
+h3d
+hxd
+top-level
+
+class / data stucture:
+Window[.js/hl/.etc]
+  - maybe a high-level abstraction of window in SDL
+  - a seperate Window for every platform
+  - generally don't need to touch this, as Scene handles 'n abstracts most of it
+Scene
+  - edits the window
+  - extends Layers, InteractableScene (TODO: still learning..)
+  - draws the entire scene tree front-to-back via drawContent
+App
+  - has a scene
+  - has the main game loop
+  - initalizes Key
+
+Key
+ - a static helper class for key inputs
+
+input events are setup in Window via addEventListener, depending on the platform
+then handled by scene
+in general, should use Interactable class to handle input events
+Scene has getInteractable which will get the top-most Interactable,
+like a scene tree, but for inputs
+
+
+Object
+  - base scene tree object
+  - can have a parent Object and can have children Objects
+  - has a transform (x, y, rotation), local and global coordinates can be fetched
+Drawable extends Object (TODO: still learning...)
+Graphics extends Drawable
+  - has Flash-like api for drawing things to the screen (lineStyle, moveTo/lineTo, fill/endFill, etc.)
+
+
+
