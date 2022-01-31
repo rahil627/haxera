@@ -16,12 +16,13 @@ class PunkApp extends App {
 		super.init(); // empty
 
 		// set global vars
+		HP.app = this;
 		HP.scene = this.s2d;
 		HP.window = hxd.Window.getInstance();
 
 		// init global stuff
-		HP.window.title = "p u n k <3";
-		//HP.window.displayMode = hxd.DisplayMode.Fullscreen;
+		HP.window.title = "heaps p u n k <3";
+		//HP.window.displayMode = hxd.DisplayMode.Fullscreen; // should use scene.ScaleMode
 		//HP.propogateKeyEvents = true;
 
 		HP.console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene);
