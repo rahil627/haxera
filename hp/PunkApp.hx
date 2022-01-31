@@ -7,6 +7,7 @@ import h2d.Console;
 // similar to Engine in Flash/HaxePunk (but heaps uses h3d.Engine, soooo:)
 // just a layer on top of the main App class
 // must extend App because init() and update() are called internally by App
+// it was purposefully set like that..
 class PunkApp extends App {
 
 	var screenInputHandler:h2d.Interactive;
@@ -16,8 +17,13 @@ class PunkApp extends App {
 
 		// set global vars
 		HP.scene = this.s2d;
+		HP.window = hxd.Window.getInstance();
 
 		// init global stuff
+		HP.window.title = "p u n k <3";
+		//HP.window.displayMode = hxd.DisplayMode.Fullscreen;
+		//HP.propogateKeyEvents = true;
+
 		HP.console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene);
 		HP.console.shortKeyChar = "`".charCodeAt(0);
 		HP.console.show(); // TODO: temp, because inputs dont work
@@ -38,10 +44,10 @@ class PunkApp extends App {
 		//touchHandler.onOut = function(_) b.alpha = 1.0;
 
 		// TODO: debugging input
-		hxd.Window.getInstance().addEventTarget(onEvent);
+		HP.window.addEventTarget(onEvent);
 
 		// TODO: what about this??
-		hxd.Window.getInstance().propagateKeyEvents = true;
+		HP.window.propagateKeyEvents = true;
 	}
 
 	override function update(dt:Float) {
