@@ -28,8 +28,11 @@ class HP {
 	// but can further abstract it here...
 
 	// abstract Scene
+	public static var sceneWidth(get, default):Int;
+	public static var sceneHeight(get, default):Int;
 
-
+	// Window properties
+	
 	// TODO: seperate getter/setter or not?
 	// TODO: hmmmm, having trouble with returning Void :(
 	static function set_windowTitle(s:String):String {
@@ -43,9 +46,19 @@ class HP {
 		return dm;
 	}
 
+	// Scene properties
+
 	// TODO: dt passed into update vs Timer.dt?
 	static function get_dt() {
 		return hxd.Timer.dt;
+	}
+
+	static function get_sceneWidth() {
+		return scene.width;
+	}
+
+	static function get_sceneHeight() {
+		return scene.height;
 	}
 
 	// static function helperFunction() {
