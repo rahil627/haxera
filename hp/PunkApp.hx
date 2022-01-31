@@ -21,7 +21,7 @@ class PunkApp extends App {
 		HP.window = hxd.Window.getInstance();
 
 		// init global stuff
-		HP.window.title = "heaps p u n k <3";
+		HP.window.title = "heaps <3 p u n k <3<3";
 		//HP.window.displayMode = hxd.DisplayMode.Fullscreen; // should use scene.ScaleMode
 		//HP.propogateKeyEvents = true;
 
