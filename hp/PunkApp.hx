@@ -10,7 +10,14 @@ import h2d.Console;
 // it was purposefully set like that..
 class PunkApp extends App {
 
+	// generally don't want any vars here
+	// just use HP to keep references to everything
 	var screenInputHandler:h2d.Interactive;
+
+	// TODO: optional entities 'n layers
+	//public static var layers:Layers;
+	public static var entities:Array<Entity>;
+	public static var console:Console;
 
 	override function init() {
 		super.init(); // empty
@@ -19,6 +26,11 @@ class PunkApp extends App {
 		HP.app = this;
 		HP.scene = this.s2d;
 		HP.window = hxd.Window.getInstance();
+	
+		// TODO: this bit is kinda optional, maybe modular
+		//HP.world:Layers // TODO: scene or this?
+		entities = [];
+		HP.entities = entities;
 
 		// init global stuff
 		HP.window.title = "heaps <3 p u n k"; // i've seen set in the hxml build file
