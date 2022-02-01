@@ -1,5 +1,12 @@
 todo: add to haxe.txt
 
 just a temp place to leave some notes i get from the web with my iPad
+or from vim/server
 
+
+trace is not logged in the console!
+
+naming:
+classes at least two characters so that refactoring isn't bad, and autocomplete works okay
+PunkApp extends App
 

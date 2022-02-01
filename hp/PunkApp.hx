@@ -21,22 +21,15 @@ class PunkApp extends App {
 		HP.window = hxd.Window.getInstance();
 
 		// init global stuff
-		HP.window.title = "heaps <3 p u n k";
-		//HP.window.displayMode = hxd.DisplayMode.Fullscreen; // should use scene.ScaleMode
-		//HP.propogateKeyEvents = true;
-
+		HP.window.title = "heaps <3 p u n k"; // i've seen set in the hxml build file
+		//HP.window.displayMode = hxd.DisplayMode.Fullscreen; // should use scene.ScaleMode?
 		HP.console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene);
 		HP.console.shortKeyChar = "`".charCodeAt(0);
 		HP.console.show(); // TODO: temp, because inputs dont work
 
-		// TODO: testing trace--not logged in the console!
-		trace("pressed something, logged by trace");
-		trace("pressed something, logged by trace");
-		trace("pressed something, logged by trace");
 		
 		// setup input
-		// TODO: is this needed??--no, called in App.setup()
-		//Key.initialize();
+		//Key.initialize(); // called in App.setup()
 		
 		// TODO: temporary global input handler until i fix keys
 		// TODO: should use HP.scene.AddEventListener()
@@ -47,8 +40,7 @@ class PunkApp extends App {
 		// TODO: debugging input
 		HP.window.addEventTarget(onEvent);
 
-		// TODO: what about this??
-		HP.window.propagateKeyEvents = true;
+		HP.window.propagateKeyEvents = true; // TODO:  used internally
 	}
 
 	override function update(dt:Float) {

@@ -1,4 +1,4 @@
-package ra.hp; // or hxd?
+package ra.hp;
 
 // maybe better not to explicitly state the package,
 // and instead let the file-path decide
@@ -26,7 +26,6 @@ class MathEx {
 
 	}
 
-	// can add degrees variants of math functions here
 
 	// maybe can just throw in all math functions here?
 	// including all of the functions in Point	

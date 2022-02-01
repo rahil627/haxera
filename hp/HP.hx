@@ -10,12 +10,13 @@ import h2d.Interactive;
 
 // helper class similar to FP in FlashPunk and HXP in HaxePunk
 // abstracts the useful functions from App, Scene, Window
-// TODO: maybe rename to just P
+// Layers?
 class HP {
 	// TODO: hopefully just a reference, like ActionScript..?
-	public static var app:App; // generally don't touch this / abstract this
-	public static var scene:Scene; // = App.s2d; TODO: try to abstract this here
 	public static var window:Window; // generally don't touch this; for advanced use only
+	public static var scene:Scene; // = App.s2d; TODO: try to abstract this here
+	public static var app:App; // generally don't touch this / abstract this
+	
 	public static var console:Console;
 	public static var screenInputHandler:Interactive;
 	public static var dt(get, default):Float;
@@ -32,9 +33,18 @@ class HP {
 	public static var sceneWidth(get, default):Int;
 	public static var sceneHeight(get, default):Int;
 
+
+
+
+
+
+
+
+	// App properties
+
+
 	// Window properties
 	
-	// TODO: seperate getter/setter or not?
 	// TODO: hmmmm, having trouble with returning Void :(
 	static function set_windowTitle(s:String):String {
 		HP.window.title = s;
