@@ -14,9 +14,6 @@ class PunkApp extends App {
 	// just use HP to keep references to everything
 	var screenInputHandler:h2d.Interactive;
 
-	// TODO: optional entities 'n layers
-	//public static var layers:Layers;
-	public static var entities:Array<Entity>;
 	public static var console:Console;
 
 	override function init() {
@@ -27,11 +24,6 @@ class PunkApp extends App {
 		HP.scene = this.s2d;
 		HP.window = hxd.Window.getInstance();
 	
-		// TODO: this bit is kinda optional, maybe modular
-		//HP.world:Layers // TODO: scene or this?
-		entities = [];
-		HP.entities = entities;
-
 		// init global stuff
 		HP.window.title = "heaps <3 p u n k"; // i've seen set in the hxml build file
 		//HP.window.displayMode = hxd.DisplayMode.Fullscreen; // should use scene.ScaleMode?

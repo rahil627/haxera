@@ -19,15 +19,7 @@ class HP {
 	
 	public static var console:Console; // TODO: if debug
 
-
-	// THIS SECTION IS OPTIONAL
 	public static var screenInputHandler:Interactive; // TODO temp
-
-	// TODO: these are rather optional, constraining the game/app
-	//public static var world:Layer; // TODO: scene or this?
-	public static var entities:Array<Entity>;
-	// END OF OPTIONAL SECTION
-
 
 	// abstract Window
 	public static var windowTitle(default, set):String; // try to keep class name in var name
