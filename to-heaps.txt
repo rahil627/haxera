@@ -7,13 +7,25 @@ just use the web interface from github
 heaps structure:
 
 file / package stucture:
+  - super terse to reduce typing package names?.. or maybe a linux user thing
 h2d
   - col, collider
   - filter, 2d shader effects
   - domkit, ?
   - impl, implementation, used internally
 h3d
+  - ...one day...
 hxd
+  - shared between both 2d and 3d parts
+  - x/clipper
+  - x/earcut
+  - fmt, ? contains specific features like fonts, hdr, etc. not sure what it stands for though...
+  - fs, file-system
+  - impl, implementation, used internally, mostly data structures
+  - net, network
+  - poly2tri, polygon2triangle? graphics vertex drawing, point, triangle, edge, etc.
+  - res, resource
+  - snd, sound
 top-level
 
 class / data stucture:
