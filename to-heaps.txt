@@ -16,24 +16,25 @@ class / data stucture:
 
 window, scene, app:
 Window[.js/hl/.etc]
-  - maybe a high-level abstraction of window in SDL
-  - a seperate Window for every target
+  - maybe a high-level abstraction of the OS window (SDL)
+  - there's a different Window for every target
   - contains a single static instance of itself: Window.getInstance()
-  - generally don't need to touch this, as Scene handles 'n abstracts most of it
+  - generally don't need to touch this, as Scene handles 'n abstracts most of it (??)
   - might be able to edit some vars through the hxml file: for example, Window.title
-  - from FP/HXP, this is HXP.Window, and maybe an even higher abstraction is HXP.Screen?
+  - from FP/HXP, this is HXP.Window, and maybe an even higher abstraction was HXP.Screen?
+  - from Godot/Unity, this is where you check-mark full-screen, borderless, etc. (DisplayMode)
 Scene
-  - extends Layers, InteractableScene (TODO: still learning..)  
-  - edits the Window
+  - extends Layers, InteractableScene (TODO: still learning..)
+  - edits the Window for different ScaleMode
   - draws the entire scene tree front-to-back via drawContent
-  - handles Layers
+  - handles Layers (TODO: but maybe just used internally(??), along with camera(?))
   - handles changing Scene
-  - from FP/HXP, maybe a combo of HXP.scene and FP/HXP.world?
+  - from FP/HXP, maybe a combo of HXP.scene and FP/HXP.world? (not sure...)
 App
-  - designed to be inherited, providing entry for the main init() and main update()
-  - contains the static main()
-  - has the first default instance of Scene
-  - has the main game loop
+  - designed to be inherited, providing entry to the main init() and main update()
+  - contains a single static instance of itself (can store a reference of it yourself)
+  - has the first default instance of Scene (s2d/s3d)
+  - has the main game loop (it's internal, no need to touch)
   - initalizes Key
   - from FP/HXP, this is HXP.Engine
 Key
@@ -43,8 +44,8 @@ Key
 input flow / propogation:
   - input events are setup in Window via addEventListener, accordingly to each target
     - then handled by Scene
-    - then further simplified by Key
-    - ...then accessed by Interactable?
+    - then further simplified and handled by Key
+    - ...then optionally accessed by Interactable?
   - although you can access all of the global input events, you will likely want to use Key for keys and Interactable for mouse/input
   - can use Interactable to handle mouse/touch input events and
   - can use Key to handle keyboard events from anywhere, even without Interactable!
@@ -53,24 +54,26 @@ input flow / propogation:
   - Scene has getInteractable (among other things...) which figures out and fetches the top-most Interactable
 
 object, and all of it's inherited classes:
-  - think of these as components of an entity
+  - think of these as components of an entity: transform, render, input, vector graphics, etc.
+    - as in, something that provides a suite of vars 'n functions to help do something in particular: a library?
+  - maybe can inherit Object to write your own component (?)
 Object
   - base scene tree object
   - can have a parent Object and can have children Objects, like Flash api
-  - has a transform component (x, y, rotation), providing local to global coordinate helper functions too
+  - provides a transform component (x, y, rotation), providing local to global coordinate helper functions too
 Drawable
   - extends Object
-  - ...has a draw/render component?
+  - ...provides a draw/render component (?? no clue)
 Graphics
   - extends Drawable
-  - has Flash-like vector drawing api component (lineStyle, moveTo/lineTo, fill/endFill, etc.)
+  - provides a Flash-like vector drawing api component (lineStyle, moveTo/lineTo, fill/endFill, etc.)
 Interactable
   - extends Object
-  - has an input capture handling component
+  - provides an input capture handling component
 Layers
   - extends Object
-  - ...?? it's like a special container data structure tailored to the scene tree: the 2d array of the scene tree
-  - it provides ways to put things where you want in the scene tree: under this object, above that layer, etc.
+  - ...?? provides a special container data structure tailored to the scene tree: the 2d array of the scene tree
+  - it provides ways to put/remove things where you want in the scene tree: under this object, above that layer, etc.,
 
   
   
