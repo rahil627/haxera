@@ -20,7 +20,7 @@ class BaseEntity {
 	public function new() {
 		//game = Game.inst; // just use global (TODO: multiple scenes problem?)
 		//inf = Data.object.get(kind); // castle db stuff
-		//this.x = x; // vs e.sprite.x, hmmm, very confusing...
+		//this.x = x; // just a wrapper for e.sprite.x?
 		//this.y = y;
 		//sprite = new h2d.Anim(getAnim(), 15);
 		//Glob.world.add(sprite, hasFlag(Under) ? LayerKind.under : LayerKind.players);
