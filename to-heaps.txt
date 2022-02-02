@@ -109,4 +109,27 @@ col
 -- (end of structure)
 
 
+
+selected game examples:
+https://github.com/ncannasse
+  - TODO: glance through all of his ld games
+  - https://github.com/ncannasse/ld40/blob/master/src/Game.hx
+    - **the best game example i've seen, including the simplest entity system (an array)**
+
+
+
+selected "game bases":
+https://github.com/jefvel/game-base/tree/master/src
+  - **this looks like what would happen if i tried to make a complete game base**
+
+https://github.com/deepnight/gameBase/tree/master/src
+  - a lot of unnecessary stuff specific to his games... but he made Dead Cells!
+
+https://github.com/TerryCavanagh/terryheaps/tree/master/terryheaps
+  - more game jam style of coding, lol, but has a raw primitive beauty :)
+
+
+
+
+
 trace is not logged in the console!
