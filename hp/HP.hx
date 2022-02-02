@@ -6,14 +6,7 @@ import hxd.Window;
 import hxd.Window.DisplayMode;
 import h2d.Console;
 import h2d.Interactive;
-/*
-enum MainLoopState {
-	preUpdate;
-	postUpdate;
-	preRender;
-	postRender;
-}
-*/
+
 // helper class similar to FP in FlashPunk and HXP in HaxePunk
 // abstracts the useful functions from App, Scene, Window
 // try to keep just references, no actual objects
