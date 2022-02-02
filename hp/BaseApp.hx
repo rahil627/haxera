@@ -17,6 +17,12 @@ class BaseApp extends PunkApp {
 
 	}
 	
+	// not really dispose, just reset...
+	//public function dispose() {
+		//entities = [];
+		//world = 
+	//}
+	
 	// note: must be placed at the end? threw an error:
 	// module main didn't define object type Main?
 	static function main() {
