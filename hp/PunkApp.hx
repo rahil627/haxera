@@ -2,7 +2,14 @@ package ra.hp;
 
 import hxd.App;
 import h2d.Console;
-
+/*
+enum MainLoopState {
+	preUpdate;
+	postUpdate;
+	preRender;
+	postRender;
+}
+*/
 // extend me!
 // similar to Engine in Flash/HaxePunk (but heaps uses h3d.Engine, soooo:)
 // just a layer on top of the main App class
