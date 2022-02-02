@@ -6,7 +6,15 @@ import hxd.Window;
 import hxd.Window.DisplayMode;
 import h2d.Console;
 import h2d.Interactive;
-
+/*
+// idea from HXP
+enum MainLoopState {
+	preUpdate;
+	postUpdate;
+	preRender;
+	postRender;
+}
+*/
 // helper class similar to FP in FlashPunk and HXP in HaxePunk
 // abstracts the useful functions from App, Scene, Window
 // try to keep just references, no actual objects
@@ -22,16 +30,20 @@ class HP {
 	// abstract Window
 	public static var windowTitle(default, set):String; // try to keep class name in var name
 	public static var windowDisplayMode(default, set):DisplayMode;
-	
+	//public static var windowWidth(get, default):Float; // TODO: unimpl
+	//public static var windowHeight(get, default):Float; // TODO: unimpl
+
 	// abstract Scene
 	// the scene inherits a lot of shit that you probably don't want to touch..
-	public static var sceneWidth(get, default):Int;
-	public static var sceneHeight(get, default):Int;
+	public static var sceneWidth(get, default):Float; // maybe also HP.width/height
+	public static var sceneHeight(get, default):Float;
+	//public static var scene(get, set):Float; // TODO: unimpl, use Scene.setScene
+
 
 	// abstract App 
 	public static var dt(get, default):Float; // TODO: probably a bad idea
-
-
+	//public static var state(get, null):MainLoopState; // TODO: unimpl
+	//public static var isPaused:Bool; //TODO: unimpl
 
 
 
