@@ -9,7 +9,8 @@ enum EntityKind {
 // just an optional bare-bones Entity to copy to begin a new project with
 // the entire class is optional
 // i'm not really sure what entity means,
-// but this one will likely contain an Object, or something that extends an Object
+// but this one will likely contain an Object, or something that extends an Object,
+// which itself will be added to the scene, or layers (which itself is added to the scene...) confused?
 class BaseEntity {	
 	//var id:Int; // useful for searching it
 	//var kind:EntityKind; // maybe useful narrowing down searches // TODO: vs Std.isOfType (infers class?)
