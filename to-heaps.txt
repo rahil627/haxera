@@ -20,14 +20,14 @@ hxd
   - shared between both 2d and 3d parts
   - x/clipper
   - x/earcut
-  - fmt, ? contains specific features like fonts, hdr, etc. not sure what it stands for though...
+  - fmt, ?
   - fs, file-system
   - impl, implementation, used internally, mostly data structures
   - **net, network**
   - poly2tri, polygon2triangle? graphics vertex drawing stuff, point, triangle, edge, etc.
   - **res, resource**
   - **snd, sound**
-  - **(root), most stuff goes here**
+  - **(root), most stuff goes here**, mostly OS stuff like input, low-level output, Window, etc.; not game-related
 (root), ?
 
 class / data stucture:
