@@ -34,7 +34,7 @@ class HP {
 
 	// abstract App
 	//public static var engine(get, never):Engine; // don't know what this is yet...
-	//public static var sevents(get, never):hxd.SceneEvents; // don't know whwt this is yet...
+	//public static var sevents(get, never):hxd.SceneEvents; // don't know what this is yet...
 	public static var dt(get, never):Float; // TODO: probably a bad idea...
 	//public static var state(get, null):MainLoopState; // TODO: unimpl
 	//public static var isPaused:Bool; //TODO: unimpl
@@ -52,7 +52,7 @@ class HP {
 	static inline function get_window() return hxd.Window.getInstance();
 	//static inline function get_engine() return app.engine;
 	static inline function get_scene() return app.s2d;
-	//static inline function set_scene() // TODO: unimpl, how to change scenes?
+	//static function set_scene(s:hxd.SceneEvents.InteractiveScene, disposePrevious:Bool = true) app.setScene(s, disposePrevious)
 	//static inline function get_scene() return app.s3d; // ?? has both at the same time?
 	//static inline function get_sevents() return app.sevents;
 
