@@ -43,5 +43,5 @@ class BaseEntity {
 
 	// from deepnight
 	//public function is<T:Entity>(c:Class<T>) return Std.isOfType(this, c);
-	//public function as<T:Entity>(c:Class<T>) : T return Std.downcast(this, c);
+	//public function as<T:Entity>(c:Class<T>) : T return Std.downcast(this, c); // huh, for using base functions of an inherited class?
 }
