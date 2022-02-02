@@ -27,6 +27,7 @@ class PunkApp extends App {
 		// init global stuff
 		HP.window.title = "heaps <3 p u n k"; // i've seen set in the hxml build file
 		//HP.window.displayMode = hxd.DisplayMode.Fullscreen; // should use scene.ScaleMode?
+		// TODO: if debug
 		HP.console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene);
 		HP.console.shortKeyChar = "`".charCodeAt(0);
 		HP.console.show(); // TODO: temp, because inputs dont work
@@ -46,6 +47,12 @@ class PunkApp extends App {
 
 		HP.window.propagateKeyEvents = true; // TODO:  used internally
 	}
+	
+	// TODO: testing input
+	function onEvent(event : hxd.Event) {
+		HP.console.log("global input event: " + event.toString());
+				
+	}
 
 	override function update(dt:Float) {
 		super.update(dt); // empty
@@ -62,11 +69,6 @@ class PunkApp extends App {
 		// placeholder
 	}
 
-	// TODO: testing input
-	function onEvent(event : hxd.Event) {
-		HP.console.log("global input event: " + event.toString());
-				
-	}
 
 }
 

@@ -7,7 +7,6 @@ import hxd.Window.DisplayMode;
 import h2d.Console;
 import h2d.Interactive;
 
-
 // helper class similar to FP in FlashPunk and HXP in HaxePunk
 // abstracts the useful functions from App, Scene, Window
 // try to keep just references, no actual objects
@@ -18,22 +17,19 @@ class HP {
 	public static var app:App; // generally don't touch this, abstract it here
 	
 	public static var console:Console; // TODO: if debug
-
 	public static var screenInputHandler:Interactive; // TODO temp
 
 	// abstract Window
 	public static var windowTitle(default, set):String; // try to keep class name in var name
 	public static var windowDisplayMode(default, set):DisplayMode;
 	
-	// App is abstracted by PunkApp
-	// but can further abstract it here...
-	public static var dt(get, default):Float; // TODO: probably a bad idea
-
 	// abstract Scene
 	// the scene inherits a lot of shit that you probably don't want to touch..
 	public static var sceneWidth(get, default):Int;
 	public static var sceneHeight(get, default):Int;
 
+	// abstract App 
+	public static var dt(get, default):Float; // TODO: probably a bad idea
 
 
 

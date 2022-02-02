@@ -5,10 +5,10 @@ enum EntityKind {
 	etc;
 }
 */
-// just a bare-bones Entity to copy to begin a new project with
-// all of the content is optional
+// just an optional bare-bones Entity to copy to begin a new project with
+// the entire class is optional
 // i'm not really sure what entity means,
-// but this one will likely contain an Object, or anything that extends an Object
+// but this one will likely contain an Object, or something that extends an Object
 class BaseEntity {	
 
 	//var kind:EntityKind; // maybe useful for searching
@@ -22,7 +22,7 @@ class BaseEntity {
 		//this.x = x;
 		//this.y = y;
 		//sprite = new h2d.Anim(getAnim(), 15);
-		//Glob.world.add(spr, hasFlag(Under) ? Game.LAYER_ENT_UNDER : Game.LAYER_ENT);
+		//Glob.world.add(sprite, hasFlag(Under) ? LayerKind.under : LayerKind.players);
 		//Glob.entities.push(this);
 	}
 

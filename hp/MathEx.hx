@@ -1,13 +1,13 @@
 package ra.hp;
 
-// maybe better not to explicitly state the package,
+// TODO: maybe better not to explicitly state the package,
 // and instead let the file-path decide
 
 import hxd.Math;
 
 // note: don't use 'import', use 'using': using ra.hp.MathEx
-// this makes it less convenient than i thought...
-// it might just be better to be a normal static class :/
+// this is less convenient than i thought...
+// it might just be better to have a normal static class :/
 // also, vim / vaxe / ctags can't generate autocomplete for it
 // maybe best to limit static extensions to only when i need to add a few things
 // for now, just put everything under my own helper classes
@@ -28,5 +28,6 @@ class MathEx {
 
 
 	// maybe can just throw in all math functions here?
-	// including all of the functions in Point	
+	// including functions found in Point?
+
 }
