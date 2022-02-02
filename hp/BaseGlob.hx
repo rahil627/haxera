@@ -14,7 +14,7 @@ class BaseGlob {
 	//public static var canvas:h2d.Graphics;  // a top-level thing to draw to
 
 	// constants
-	//public static final laserWidth = 50;
+	//public static inline final laserWidth = 50;
 
 }
 
