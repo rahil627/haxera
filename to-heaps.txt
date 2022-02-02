@@ -45,4 +45,8 @@ Graphics extends Drawable
   - has Flash-like api for drawing things to the screen (lineStyle, moveTo/lineTo, fill/endFill, etc.)
 
 
+-- (end of structure)
+
+
+trace is not logged in the console!
 
