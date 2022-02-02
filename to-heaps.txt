@@ -21,7 +21,7 @@ Window[.js/hl/.etc]
   - contains a single static instance of itself: Window.getInstance()
   - generally don't need to touch this, as Scene handles 'n abstracts most of it (??)
   - might be able to edit some vars through the hxml file: for example, Window.title
-  - from FP/HXP, this is HXP.Window, and maybe an even higher abstraction was HXP.Screen?
+  - from FP/HXP, this is HXP.Window
   - from Godot/Unity, this is where you check-mark full-screen, borderless, etc. (DisplayMode)
 Scene
   - extends Layers, InteractableScene (TODO: still learning..)
@@ -29,7 +29,7 @@ Scene
   - draws the entire scene tree front-to-back via drawContent
   - handles Layers (TODO: but maybe just used internally(??), along with camera(?))
   - handles changing Scene
-  - from FP/HXP, maybe a combo of HXP.scene and FP/HXP.world? (not sure...)
+  - from FP/HXP, maybe a combo of HXP.scene, HXP.screen (ScaleMode, mouse/touch input), and FP/HXP.world? (not sure...)
 App
   - designed to be inherited, providing entry to the main init() and main update()
   - contains a single static instance of itself (can store a reference of it yourself)
