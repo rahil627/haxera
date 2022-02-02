@@ -17,10 +17,10 @@ class BaseApp extends PunkApp {
 
 	}
 	
-	// not really dispose, just reset...
+	// not really dispose, just clear/reset the ds...
 	//public function dispose() {
 		//entities = [];
-		//world = 
+		//world = new Layer(); // lol, dunno how to dispose, it's just a tiny array of indicies anyway.., no content
 	//}
 	
 	// note: must be placed at the end? threw an error:
