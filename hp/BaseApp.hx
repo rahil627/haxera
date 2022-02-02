@@ -19,5 +19,6 @@ class BaseApp extends PunkApp {
 	static function main() {
 		new BaseApp();
 		// what else goes here?
+		// maybe can store an instance of it... but, for what?
 	}
 }
