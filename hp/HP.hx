@@ -11,10 +11,10 @@ import h2d.Interactive;
 // abstracts the useful functions from App, Scene, Window
 // try to keep just references, no actual objects
 class HP {
-	// TODO: learn how references work, and how to create a copy
-	public static var window:Window;  // generally don't touch this, abstract it here
-	public static var scene:Scene; // generally don't touch this, abstract it here
-	public static var app:App; // generally don't touch this, abstract it here
+	// TODO: learn how references work in Haxe, and how to create an actual copy
+	public static var window:Window(get, never);  // generally don't touch this, abstract it here
+	public static var scene:Scene(get, default); // generally don't touch this, abstract it here
+	public static var app:App(get, never); // generally don't touch this, abstract it here
 	
 	public static var console:Console; // TODO: if debug
 	public static var screenInputHandler:Interactive; // TODO temp
@@ -29,11 +29,11 @@ class HP {
 	// the scene inherits a lot of shit that you probably don't want to touch..
 	public static var sceneWidth(get, default):Float; // maybe also HP.width/height
 	public static var sceneHeight(get, default):Float;
-	//public static var scene(get, set):Float; // TODO: unimpl, use Scene.setScene
 
 
-	// abstract App 
-	public static var dt(get, default):Float; // TODO: probably a bad idea
+	// abstract App
+	//public static var engine(get, never):Engine;
+	public static var dt(get, never):Float; // TODO: probably a bad idea
 	//public static var state(get, null):MainLoopState; // TODO: unimpl
 	//public static var isPaused:Bool; //TODO: unimpl
 
@@ -46,15 +46,14 @@ class HP {
 
 	// Window properties
 	
-	// frooyanrishratum ld47
-	// TODO: what is inline? And what is difference between this and storing a reference?
-	// at the moment, i just created an extra reference var, but maybe better to not have any actual vars
-	// and just use getter/setter
-	//static inline function get_window() return hxd.Window.getInstance();
+	// from yanrishratum ld47
+	// TODO: what is inline?
+	static inline function get_window() return hxd.Window.getInstance();
 	//static inline function get_engine() return app.engine;
-	//static inline function get_s2d() return app.s2d;
-	//static inline function get_s3d() return app.s3d;
-	//static inline function get_sevents() return app.sevents;
+	static inline function get_scene() return app.s2d;
+	//static inline function set_scene() // TODO: unimpl, change scenes
+	//static inline function get_scene() return app.s3d; // ?? has both at the same time?
+	//static inline function get_sevents() return app.sevents; // ??
 
 	
 	// TODO: hmmmm, having trouble with returning Void :(
@@ -62,7 +61,7 @@ class HP {
 		HP.window.title = s;
 		return s;
 	}
-
+	// TODO: hmmmm, having trouble with returning Void :(
 	static function set_windowDisplayMode(dm:DisplayMode):DisplayMode {
 		//HP.window.setFullScreen is deprecated, but can make my own..
 		HP.window.displayMode = dm;
@@ -70,9 +69,7 @@ class HP {
 	}
 
 	// Scene properties
-
-	// TODO: dt passed into update vs Timer.dt?
-	static function get_dt() return hxd.Timer.dt;
+	static function get_dt() return hxd.Timer.dt;  // TODO: dt passed into update vs Timer.dt?
 	static function get_sceneWidth() return scene.width;
 	static function get_sceneHeight() return scene.height;
 	
