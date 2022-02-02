@@ -49,12 +49,12 @@ class HP {
 
 	// Window properties
 	// TODO: does inline even make a difference here?
-	static inline function get_window() return hxd.Window.getInstance();
-	//static inline function get_engine() return app.engine;
-	static inline function get_scene() return app.s2d;
+	static function get_window() return hxd.Window.getInstance();
+	//static function get_engine() return app.engine;
+	static function get_scene() return app.s2d;
 	static function set_scene(s:hxd.SceneEvents.InteractiveScene, disposePrevious:Bool = true) app.setScene(s, disposePrevious);
-	//static inline function get_scene() return app.s3d; // ?? has both at the same time?
-	//static inline function get_sevents() return app.sevents;
+	//static function get_scene() return app.s3d; // ?? has both at the same time?
+	//static function get_sevents() return app.sevents;
 
 	
 	// TODO: hmmmm, having trouble with returning Void :(
