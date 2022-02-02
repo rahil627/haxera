@@ -23,12 +23,12 @@ Window[.js/hl/.etc]
   - might be able to edit some vars through the hxml file: for example, Window.title
   - from FP/HXP, this is HXP.Window, and maybe an even higher abstraction is HXP.Screen?
 Scene
+  - extends Layers, InteractableScene (TODO: still learning..)  
   - edits the Window
-  - extends Layers, InteractableScene (TODO: still learning..)
   - draws the entire scene tree front-to-back via drawContent
   - handles Layers
   - handles changing Scene
-  - from FP/HXP, maybe a combo of HXP.scene and HXP.world?
+  - from FP/HXP, maybe a combo of HXP.scene and FP/HXP.world?
 App
   - designed to be inherited, providing entry for the main init() and main update()
   - contains the static main()
@@ -38,7 +38,7 @@ App
   - from FP/HXP, this is HXP.Engine
 Key
   - a static helper class for key inputs
-  - from FP/HXP, this is the same!
+  - from FP/HXP, this is also Key!
 
 input flow / propogation:
   - input events are setup in Window via addEventListener, accordingly to each target
@@ -58,15 +58,18 @@ Object
   - can have a parent Object and can have children Objects, like Flash api
   - has a transform component (x, y, rotation), providing local to global coordinate helper functions too
 Drawable
+  - extends Object
   - ...has a draw/render component?
 Graphics
   - extends Drawable
   - has Flash-like vector drawing api component (lineStyle, moveTo/lineTo, fill/endFill, etc.)
 Interactable
+  - extends Object
   - has an input capture handling component
 Layers
-  - ...?? it's like a container for the scene tree: the array of the scene tree
-
+  - extends Object
+  - ...?? it's like a special container data structure tailored to the scene tree: the 2d array of the scene tree
+  - it provides ways to put things where you want in the scene tree: under this object, above that layer, etc.
 
   
   
