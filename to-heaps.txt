@@ -13,40 +13,65 @@ hxd
 top-level
 
 class / data stucture:
+
+window, scene, app:
 Window[.js/hl/.etc]
   - maybe a high-level abstraction of window in SDL
-  - a seperate Window for every platform
+  - a seperate Window for every target
+  - contains a single static instance of itself: Window.getInstance()
   - generally don't need to touch this, as Scene handles 'n abstracts most of it
+  - might be able to edit some vars through the hxml file: for example, Window.title
+  - from FP/HXP, this is HXP.Window, and maybe an even higher abstraction is HXP.Screen?
 Scene
-  - edits the window
+  - edits the Window
   - extends Layers, InteractableScene (TODO: still learning..)
   - draws the entire scene tree front-to-back via drawContent
+  - handles Layers
+  - handles changing Scene
+  - from FP/HXP, maybe a combo of HXP.scene and HXP.world?
 App
-  - has a scene
+  - designed to be inherited, providing entry for the main init() and main update()
+  - contains the static main()
+  - has the first default instance of Scene
   - has the main game loop
   - initalizes Key
-
+  - from FP/HXP, this is HXP.Engine
 Key
- - a static helper class for key inputs
+  - a static helper class for key inputs
+  - from FP/HXP, this is the same!
 
-input events are setup in Window via addEventListener, depending on the platform
-then handled by scene
-in general, should use Interactable class to handle input events
-Scene has getInteractable which will get the top-most Interactable,
-like a scene tree, but for inputs
+input flow / propogation:
+  - input events are setup in Window via addEventListener, accordingly to each target
+    - then handled by Scene
+    - then further simplified by Key
+  - although you can access all of the global input events, you will likely want to use Key for keys and Interactable for mouse/input
+  - can use Interactable to handle mouse/touch input events and
+  - can use Key to handle keyboard events from anywhere, even without Interactable!
+  - Interactable provides a link between scene tree objects and input, figuring out which object should receive the input
+    - imagine you have a 3d world on a tablet device, you will likely want the top-most objects to capture input
+  - Scene has getInteractable (among other things...) which figures out and fetches the top-most Interactable
 
-
+object, and all of it's inherited classes:
+  - think of these as components of an entity
 Object
   - base scene tree object
-  - can have a parent Object and can have children Objects
-  - has a transform (x, y, rotation), local and global coordinates can be fetched
-Drawable extends Object (TODO: still learning...)
-Graphics extends Drawable
-  - has Flash-like api for drawing things to the screen (lineStyle, moveTo/lineTo, fill/endFill, etc.)
+  - can have a parent Object and can have children Objects, like Flash api
+  - has a transform component (x, y, rotation), providing local to global coordinate helper functions too
+Drawable
+  - ...has a draw/render component?
+Graphics
+  - extends Drawable
+  - has Flash-like vector drawing api component (lineStyle, moveTo/lineTo, fill/endFill, etc.)
+Interactable
+  - has an input capture handling component
+Layers
+  - ...?? it's like a container for the scene tree: the array of the scene tree
 
+
+  
+  
 
 -- (end of structure)
 
 
 trace is not logged in the console!
-
