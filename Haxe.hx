@@ -11,7 +11,5 @@ class Haxe {
 	// TODO: what about inline function?
 	public static function randomHex():Int {
 		return Math.round(Math.random() * 0xFFFFFF);
-		// TODO: does haxe have (Int)float-number feature?
-		// TODO: haxe.std not showing up in autocompletion...
 	} 
 }
