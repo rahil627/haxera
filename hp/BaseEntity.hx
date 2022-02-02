@@ -28,6 +28,7 @@ class BaseEntity {
 	}
 
 	// override me!
+	// can separate into preUpdate, update, postUpdate, but only if you need to
 	public function update(dt:Float) {
 		// do stuff! 
 	}
