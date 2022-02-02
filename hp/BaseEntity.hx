@@ -12,7 +12,7 @@ enum EntityKind {
 // but this one will likely contain an Object, or something that extends an Object
 class BaseEntity {	
 	//var id:Int; // useful for searching it
-	//var kind:EntityKind; // maybe useful narrowing down searches // TODO: vs Std.isOfType
+	//var kind:EntityKind; // maybe useful narrowing down searches // TODO: vs Std.isOfType (infers class?)
 	//var sprite:Object; // Object and it's extensions: Drawable, Graphics, Anim, etc.
 
 	// override me! and call super();
