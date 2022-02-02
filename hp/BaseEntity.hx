@@ -38,4 +38,7 @@ class BaseEntity {
 		//sprite.remove(); // all Objects provide this_
 		//Glob.entities.remove(this);
 	}
+
+	//public function is<T:Entity>(c:Class<T>) return Std.isOfType(this, c);
+	//public function as<T:Entity>(c:Class<T>) : T return Std.downcast(this, c);
 }
