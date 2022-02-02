@@ -42,33 +42,37 @@ Window[.js/hl/.etc]
   - from FP/HXP, this is HXP.Window
   - from Godot/Unity, this is where you check-mark full-screen, borderless, etc. (DisplayMode)
 Scene
-  - extends Layers, InteractableScene (TODO: still learning..)
+  - extends Layers, InteractableScene (??)
+  - this data structure is the largest and handles a lot of stuff
   - edits the Window for different ScaleMode
-  - draws the entire scene tree front-to-back via drawContent
-  - handles Layers (TODO: but maybe just used internally(??), along with camera(?))
-  - handles changing Scene
-  - from FP/HXP, maybe a combo of HXP.scene, HXP.screen (ScaleMode, mouse/touch input), and FP/HXP.world? (not sure...)
+  - draws the entire scene tree front-to-back via render() and drawContent()
+  - can add/remove cameras
+  - has interactiveCamera which is used to handl mouse/touch input through Interactive
+  - provides getInteractive, which might be used by Interactive (??)
+  - can also use add/removeEventListener to check for all input events
+  - handles changing Scene (?? or in App?)
+  - from FP/HXP, maybe a combo of HXP.scene, HXP.screen (ScaleMode, mouse/touch input), and FP/HXP.world? (?? not sure...)
 App
   - designed to be inherited, providing entry to the main init() and main update()
   - contains a single static instance of itself (can store a reference of it yourself)
   - has the first default instance of Scene (s2d/s3d)
   - has the main game loop (it's internal, no need to touch)
   - initalizes Key
-  - from FP/HXP, this is HXP.Engine
+  - from FP/HXP, this is HXP.Engine (and HXP.App deprecated?)
 Key
   - a static helper class for key inputs
   - from FP/HXP, this is also Key!
 
 input flow / propogation:
-  - input events are setup in Window via addEventListener, accordingly to each target
+  - input events are setup in Window via addEventListener (or Scene?), accordingly to each target
     - then handled by Scene
     - then further simplified and handled by Key
     - ...then optionally accessed by Interactable?
   - although you can access all of the global input events, you will likely want to use Key for keys and Interactable for mouse/input
-  - can use Interactable to handle mouse/touch input events and
+  - can use Interactive to handle mouse/touch input events and
   - can use Key to handle keyboard events from anywhere, even without Interactable!
-  - Interactable provides a link between scene tree objects and input, figuring out which object should receive the input
-    - imagine you have a 3d world on a tablet device, you will likely want the top-most objects to capture input
+  - Interactive provides a link between scene tree objects and input, figuring out which object should receive the input
+    - imagine you have a 3d world on a tablet device, you will likely want the top-most camera-facing objects to capture input
   - Scene has getInteractable (among other things...) which figures out and fetches the top-most Interactable
 
 
@@ -86,7 +90,7 @@ Drawable
 Graphics
   - extends Drawable
   - provides a Flash-like vector drawing api component (lineStyle, moveTo/lineTo, fill/endFill, etc.)
-Interactable
+Interactive
   - extends Object
   - provides an input capture handling component
 Layers
