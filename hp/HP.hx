@@ -33,10 +33,12 @@ class HP {
 
 
 	// abstract App
-	//public static var engine(get, never):Engine; // don't know what this is for yet 
+	//public static var engine(get, never):Engine; // don't know what this is for yet
+	//public static var sevents(get, never):hxd.SceneEvents; // ??
 	public static var dt(get, never):Float; // TODO: probably a bad idea...
 	//public static var state(get, null):MainLoopState; // TODO: unimpl
 	//public static var isPaused:Bool; //TODO: unimpl
+
 
 
 
@@ -47,14 +49,13 @@ class HP {
 
 	// Window properties
 	
-	// from yanrishratum ld47
 	// TODO: what is inline?
 	static inline function get_window() return hxd.Window.getInstance();
 	//static inline function get_engine() return app.engine;
 	static inline function get_scene() return app.s2d;
 	//static inline function set_scene() // TODO: unimpl, how to change scenes?
 	//static inline function get_scene() return app.s3d; // ?? has both at the same time?
-	//static inline function get_sevents() return app.sevents; // ??
+	//static inline function get_sevents() return app.sevents;
 
 	
 	// TODO: hmmmm, having trouble with returning Void :(
