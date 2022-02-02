@@ -23,8 +23,8 @@ class HP {
 	// abstract Window
 	public static var windowTitle(default, set):String; // try to keep class name in var name
 	public static var windowDisplayMode(default, set):DisplayMode;
-	//public static var windowWidth(get, default):Float; // TODO: unimpl; no need
-	//public static var windowHeight(get, default):Float; // TODO: unimpl
+	//public static var windowWidth(get, default):Float; // unimpl; no need, yet
+	//public static var windowHeight(get, default):Float; // unimpl
 
 	// abstract Scene
 	// the scene inherits a lot of shit that you probably don't want to touch..
@@ -35,9 +35,9 @@ class HP {
 	// abstract App
 	//public static var engine(get, never):Engine; // don't know what this is yet...
 	//public static var sevents(get, never):hxd.SceneEvents; // don't know what this is yet...
-	public static var dt:Float; // TODO: are basic types not stored by reference?
-	//public static var state(get, null):MainLoopState; // TODO: unimpl
-	//public static var isPaused:Bool; //TODO: unimpl
+	public static var dt:Float; // TODO: are basic types not stored by refererence?
+	//public static var state(get, null):MainLoopState; // unimpl
+	//public static var isPaused:Bool; // unimpl
 
 
 
