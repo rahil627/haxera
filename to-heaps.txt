@@ -24,7 +24,7 @@ hxd
   - fs, file-system
   - impl, implementation, used internally, mostly data structures
   - **net, network**
-  - poly2tri, polygon2triangle? graphics vertex drawing stuff, point, triangle, edge, etc.
+  - poly2tri, polygon2triangle? graphics vertex drawing stuff, **Point** (use this??), Triangle, Edge, etc.
   - **res, resource**
   - **snd, sound**
   - **(root), most stuff goes here**, mostly OS stuff like input, low-level output, Window, etc.; not game-related
