@@ -9,10 +9,11 @@ heaps structure:
 file / package stucture:
   - super terse to reduce typing package names?.. or maybe a linux user thing
 h2d
-  - col, collider
+  - **col, collider**
   - filter, 2d shader effects
   - domkit, ?
   - impl, implementation, used internally
+  - **(root), most stuff goes here**
 h3d
   - ...one day...
 hxd
@@ -22,11 +23,12 @@ hxd
   - fmt, ? contains specific features like fonts, hdr, etc. not sure what it stands for though...
   - fs, file-system
   - impl, implementation, used internally, mostly data structures
-  - net, network
-  - poly2tri, polygon2triangle? graphics vertex drawing, point, triangle, edge, etc.
-  - res, resource
-  - snd, sound
-top-level
+  - **net, network**
+  - poly2tri, polygon2triangle? graphics vertex drawing stuff, point, triangle, edge, etc.
+  - **res, resource**
+  - **snd, sound**
+  - **(root), most stuff goes here**
+(root), ?
 
 class / data stucture:
 
