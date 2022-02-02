@@ -10,3 +10,5 @@ naming:
 classes at least two characters so that refactoring isn't bad, and that ctags 'n autocomplete all work okay
 PunkApp extends App
 
+
+std.Int() // no (Int)floatyNumber
