@@ -4,7 +4,7 @@
 class BaseApp extends PunkApp {
 
 	//public static var entities:Array<Entity>;
-	//public static var world:Layer;
+	//public static var world:Layer; // TODO: not really world, is it? Just some helper class
 
 	// called during application setup after `loadAssets` completed
 	override function init() {
@@ -24,8 +24,8 @@ class BaseApp extends PunkApp {
 
 	}
 	
-	// not really dispose, just clear/reset the ds...
-	//public function dispose() {
+	// not really dispose (as in garbage collect), just clear/reset the ds...
+	//public function resetWorld() {
 		//entities = [];
 		//world = new Layer(); // lol, dunno how to dispose, it's just a tiny array of indicies anyway.., no content
 	//}
