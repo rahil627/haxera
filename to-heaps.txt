@@ -44,6 +44,7 @@ input flow / propogation:
   - input events are setup in Window via addEventListener, accordingly to each target
     - then handled by Scene
     - then further simplified by Key
+    - ...then accessed by Interactable?
   - although you can access all of the global input events, you will likely want to use Key for keys and Interactable for mouse/input
   - can use Interactable to handle mouse/touch input events and
   - can use Key to handle keyboard events from anywhere, even without Interactable!
