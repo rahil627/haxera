@@ -33,8 +33,8 @@ class HP {
 
 
 	// abstract App
-	//public static var engine(get, never):Engine; // don't know what this is for yet
-	//public static var sevents(get, never):hxd.SceneEvents; // ??
+	//public static var engine(get, never):Engine; // don't know what this is yet...
+	//public static var sevents(get, never):hxd.SceneEvents; // don't know whwt this is yet...
 	public static var dt(get, never):Float; // TODO: probably a bad idea...
 	//public static var state(get, null):MainLoopState; // TODO: unimpl
 	//public static var isPaused:Bool; //TODO: unimpl
