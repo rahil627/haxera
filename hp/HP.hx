@@ -7,7 +7,6 @@ import hxd.Window.DisplayMode;
 import h2d.Console;
 import h2d.Interactive;
 /*
-// idea from HXP
 enum MainLoopState {
 	preUpdate;
 	postUpdate;
@@ -54,6 +53,17 @@ class HP {
 
 	// Window properties
 	
+	// frooyanrishratum ld47
+	// TODO: what is inline? And what is difference between this and storing a reference?
+	// at the moment, i just created an extra reference var, but maybe better to not have any actual vars
+	// and just use getter/setter
+	//static inline function get_window() return hxd.Window.getInstance();
+	//static inline function get_engine() return app.engine;
+	//static inline function get_s2d() return app.s2d;
+	//static inline function get_s3d() return app.s3d;
+	//static inline function get_sevents() return app.sevents;
+
+	
 	// TODO: hmmmm, having trouble with returning Void :(
 	static function set_windowTitle(s:String):String {
 		HP.window.title = s;
@@ -69,19 +79,8 @@ class HP {
 	// Scene properties
 
 	// TODO: dt passed into update vs Timer.dt?
-	static function get_dt() {
-		return hxd.Timer.dt;
-	}
-
-	static function get_sceneWidth() {
-		return scene.width;
-	}
-
-	static function get_sceneHeight() {
-		return scene.height;
-	}
-
-	// static function helperFunction() {
-	// do something
-	// }
+	static function get_dt() return hxd.Timer.dt;
+	static function get_sceneWidth() return scene.width;
+	static function get_sceneHeight() return scene.height;
+	
 }
