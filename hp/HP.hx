@@ -35,16 +35,16 @@ class HP {
 	// abstract App
 	//public static var engine(get, never):Engine; // don't know what this is yet...
 	//public static var sevents(get, never):hxd.SceneEvents; // don't know what this is yet...
-	public static var dt(get, never):Float; // TODO: probably a bad idea...
+	public static var dt:Float; // TODO: are basic types not stored by reference?
 	//public static var state(get, null):MainLoopState; // TODO: unimpl
 	//public static var isPaused:Bool; //TODO: unimpl
 
 
 
 
+	// note: the default access modifier private, and the getters/setters should be private
 
-
-	// App properties
+	//App properties
 
 
 	// Window properties
@@ -70,7 +70,7 @@ class HP {
 	}
 
 	// Scene properties
-	static function get_dt() return hxd.Timer.dt;  // TODO: dt passed into update vs Timer.dt?
+	//static function get_dt() return hxd.Timer.dt;  // TODO: dt passed into update vs hxd.Timer.dt?
 	static function get_sceneWidth() return scene.width;
 	static function get_sceneHeight() return scene.height;
 	
