@@ -14,7 +14,7 @@ class HP {
 	// TODO: learn how references work in Haxe, and how to create an actual copy
 	public static var window:Window(get, never);  // generally don't touch this, abstract it here
 	public static var scene:Scene(get, default); // generally don't touch this, abstract it here
-	public static var app:App(get, never); // generally don't touch this, abstract it here
+	public static var app:App(get, never); // TODO: App or PunkApp?, generally don't touch this, abstract it here
 	
 	public static var console:Console; // TODO: if debug
 	public static var screenInputHandler:Interactive; // TODO temp
@@ -22,7 +22,7 @@ class HP {
 	// abstract Window
 	public static var windowTitle(default, set):String; // try to keep class name in var name
 	public static var windowDisplayMode(default, set):DisplayMode;
-	//public static var windowWidth(get, default):Float; // TODO: unimpl
+	//public static var windowWidth(get, default):Float; // TODO: unimpl; no need
 	//public static var windowHeight(get, default):Float; // TODO: unimpl
 
 	// abstract Scene
@@ -32,8 +32,8 @@ class HP {
 
 
 	// abstract App
-	//public static var engine(get, never):Engine;
-	public static var dt(get, never):Float; // TODO: probably a bad idea
+	//public static var engine(get, never):Engine; // don't know what this is for yet 
+	public static var dt(get, never):Float; // TODO: probably a bad idea...
 	//public static var state(get, null):MainLoopState; // TODO: unimpl
 	//public static var isPaused:Bool; //TODO: unimpl
 
@@ -51,7 +51,7 @@ class HP {
 	static inline function get_window() return hxd.Window.getInstance();
 	//static inline function get_engine() return app.engine;
 	static inline function get_scene() return app.s2d;
-	//static inline function set_scene() // TODO: unimpl, change scenes
+	//static inline function set_scene() // TODO: unimpl, how to change scenes?
 	//static inline function get_scene() return app.s3d; // ?? has both at the same time?
 	//static inline function get_sevents() return app.sevents; // ??
 
