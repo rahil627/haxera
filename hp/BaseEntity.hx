@@ -39,6 +39,7 @@ class BaseEntity {
 		//Glob.entities.remove(this);
 	}
 
+	// from deepnight
 	//public function is<T:Entity>(c:Class<T>) return Std.isOfType(this, c);
 	//public function as<T:Entity>(c:Class<T>) : T return Std.downcast(this, c);
 }
