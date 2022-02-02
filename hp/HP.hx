@@ -48,8 +48,7 @@ class HP {
 
 
 	// Window properties
-	
-	// TODO: what is inline?
+	// TODO: does inline even make a difference here?
 	static inline function get_window() return hxd.Window.getInstance();
 	//static inline function get_engine() return app.engine;
 	static inline function get_scene() return app.s2d;
