@@ -10,6 +10,7 @@ import h2d.Interactive;
 // helper class similar to FP in FlashPunk and HXP in HaxePunk
 // abstracts the useful functions from App, Scene, Window
 // try to keep just references, no actual objects
+// TODO: rename to Punk?
 class HP {
 	// TODO: learn how references work in Haxe, and how to create an actual copy
 	public static var window:Window(get, never);  // generally don't touch this, abstract it here
