@@ -18,7 +18,6 @@ class BaseApp extends PunkApp {
 	// module main didn't define object type Main?
 	static function main() {
 		new BaseApp();
-		// what else goes here?
 		// maybe can store an instance of it... but, for what?
 	}
 }
