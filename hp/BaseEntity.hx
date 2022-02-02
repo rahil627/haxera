@@ -1,4 +1,5 @@
 /*
+// TODO: vs Std.isOfType
 enum EntityKind {
 	player;
 	monster;
@@ -10,8 +11,8 @@ enum EntityKind {
 // i'm not really sure what entity means,
 // but this one will likely contain an Object, or something that extends an Object
 class BaseEntity {	
-
-	//var kind:EntityKind; // maybe useful for searching
+	//var id:Int; // useful for searching it
+	//var kind:EntityKind; // maybe useful narrowing down searches // TODO: vs Std.isOfType
 	//var sprite:Object; // Object and it's extensions: Drawable, Graphics, Anim, etc.
 
 	// override me! and call super();
@@ -19,7 +20,7 @@ class BaseEntity {
 	public function new() {
 		//game = Game.inst; // just use global (TODO: multiple scenes problem?)
 		//inf = Data.object.get(kind); // castle db stuff
-		//this.x = x;
+		//this.x = x; // vs e.sprite.x, hmmm, very confusing...
 		//this.y = y;
 		//sprite = new h2d.Anim(getAnim(), 15);
 		//Glob.world.add(sprite, hasFlag(Under) ? LayerKind.under : LayerKind.players);
@@ -27,7 +28,7 @@ class BaseEntity {
 	}
 
 	// override me!
-	public function update(dt:Float) { // TODO: pass in dt vs global dt
+	public function update(dt:Float) {
 		// do stuff! 
 	}
 
@@ -35,7 +36,7 @@ class BaseEntity {
 
 	// override me!
 	public function remove() {
-		//sprite.remove(); // all Objects provide this_
+		//sprite.remove(); // all Objects provide this
 		//Glob.entities.remove(this);
 	}
 
