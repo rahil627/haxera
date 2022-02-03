@@ -1,3 +1,4 @@
+// add these to your main import.hx file
 import ra.hp.HP
 
 // aliases
