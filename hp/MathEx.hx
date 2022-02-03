@@ -29,5 +29,6 @@ class MathEx {
 
 	// maybe can just throw in all math functions here?
 	// including functions found in Point?
+	// nah, Point isn't a standard class.. or is there one?..
 
 }
