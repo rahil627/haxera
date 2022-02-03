@@ -1,4 +1,4 @@
-// just something to ensure that all entities provide ways to do certain minimal things
+// just something to ensure(/insure?) that all entities provide ways to do certain minimal things
 // like dispose of itself!
 // the skeletal structure of entities
 // this is completely optional
