@@ -116,6 +116,10 @@ https://github.com/ncannasse
   - https://github.com/ncannasse/ld40/blob/master/src/Game.hx
     - **the best game example i've seen, including the simplest entity system (an array)**
 
+https://github.com/Yanrishatum/cherry-jam
+  - a collection of a Heaps god's ld games
+  - ld47 in particular has many good game framework ideas
+
 
 
 selected "game bases":
