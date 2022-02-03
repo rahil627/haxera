@@ -18,7 +18,6 @@ class BaseGlobal {
 }
 
 /*
-// enums are my fav!
 // can be confused with Layers (with an 's')
 enum Layer {
 	background;
