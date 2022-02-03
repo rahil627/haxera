@@ -1,5 +1,6 @@
 package tools;
 
+// from deepnight
 class LPoint {
 	/** Grid based X **/
 	public var cx : Int;
