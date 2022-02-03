@@ -40,6 +40,7 @@ class BaseEntity {
 	public function remove() {
 		//sprite.remove(); // all Objects provide this
 		//Glob.entities.remove(this);
+		//this = null; // TODO: lol, not sure about this...
 	}
 
 	// from deepnight
