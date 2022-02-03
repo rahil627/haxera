@@ -6,13 +6,12 @@ enum EntityKind {
 	etc;
 }
 */
-// just an optional bare-bones Entity to copy to begin a new project with
-// the entire class is optional
+// just an optional bare-bones entity class to copy to begin a new project with
 // i'm not really sure what entity means,
 // but this one will likely contain an Object, or something that extends an Object,
-// which itself will be added to the scene, or layers (which itself is added to the scene...) confused?
+// which itself will be added to the Scene (or to Layers, then Scene)
 class BaseEntity {	
-	//var id:Int; // useful for searching it
+	//var id:Int; // useful for finding it later
 	//var kind:EntityKind; // maybe useful narrowing down searches // TODO: vs Std.isOfType (infers class?)
 	//var sprite:Object; // Object and it's extensions: Drawable, Graphics, Anim, etc.
 
@@ -45,5 +44,5 @@ class BaseEntity {
 
 	// from deepnight
 	//public function is<T:Entity>(c:Class<T>) return Std.isOfType(this, c);
-	//public function as<T:Entity>(c:Class<T>) : T return Std.downcast(this, c); // huh, for using base functions of an inherited class?
+	//public function as<T:Entity>(c:Class<T>) : T return Std.downcast(this, c); // ?? huh, for using base functions of an inherited class?
 }
