@@ -4,6 +4,7 @@ import hxd.App;
 import h2d.Console;
 /*
 // the HaxePunk states, only needed for special cases
+// unimpl
 enum MainLoopState {
 	preUpdate;
 	postUpdate;
