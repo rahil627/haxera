@@ -1,36 +1,36 @@
+this folder is just a place to grab some functions from
+as i need them
+
 
 
 need:
 gamepad input manager
+  - **complex one from deepnight**
+  - simple one from tefvel
+
 
 want:
-drawing functions
-colors
+vector graphics drawing functions
+color
 geometry / 2d math
-input manager (mouse, touch, key) all together
+  - classes
+    - Point
+      - Vector2d
+        - HaxePunk
+    - Rectangle
+  - functions
+tweens
+  - does heaps have any?
+  - TODO: get haxepunk/tweens, especially motion tweens
+even simpler input manager (mouse, touch, key: all together)
 sound manager
-
-
-
-2d math, geometry
-Vector2d
-  - from HaxePunk
-
-TODO: get haxepunk/tweens, especially motion tweens
-  - does heaps provide this?
-
-
-
-input:
-mouse
-  - simple one from terryheaps
-**gamepad**
-  - complex one from deepnight
-
-output:
-sound
   - simple one from terryheaps
   - complex one from deepnight
+
+
+
+
+
 
 
 resources:
@@ -38,4 +38,5 @@ haxepunk
 deepnightlib
 deepnight gamebase
 terryheaps
+tefvel's gamebase
 https://github.com/openfl/openfl/tree/develop/src/openfl/geom
