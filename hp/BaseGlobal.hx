@@ -19,7 +19,8 @@ class BaseGlobal {
 
 /*
 // enums are my fav!
-enum LayerKind {
+// can be confused with Layers (with an 's')
+enum Layer {
 	background;
 	players;
 	projectiles;
