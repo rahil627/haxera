@@ -1,20 +1,36 @@
-TODO: get haxepunk/tweens, especially motion tweens
-  - does heaps provide this?
 
 
-...i just need basic 2d math, colors, and 2d drawing stuff
+need:
+gamepad input manager
+
+want:
+drawing functions
+colors
+geometry / 2d math
+input manager (mouse, touch, key) all together
+sound manager
+
 
 
 2d math, geometry
 Vector2d
   - from HaxePunk
 
+TODO: get haxepunk/tweens, especially motion tweens
+  - does heaps provide this?
+
+
 
 input:
 mouse
-  - from terryheaps
+  - simple one from terryheaps
 **gamepad**
-  - from deepnight
+  - complex one from deepnight
+
+output:
+sound
+  - simple one from terryheaps
+  - complex one from deepnight
 
 
 resources:
