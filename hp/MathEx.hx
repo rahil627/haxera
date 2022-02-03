@@ -11,19 +11,20 @@ import hxd.Math;
 // vim / vaxe / ctags can't generate autocomplete for it
 // maybe best to limit static extensions to only when i need to add a few things
 // for now, just put everything under my own helper classes
-class MathEx {
+class MathEx { // std.Math < hxd.Math < ra.hp.MathEx
+	
 	// this was taken from the Haxe docs / code book
-	// Returns a random number between a (inclusive) and b (exclusive).
-	public static function randomBetween(cl:Class<Math>, a:Int, b:Int) {
+	// returns a random number between a (inclusive) and b (exclusive)
+	public static function randomBetween(cl:Class<Math>, a:Int, b:Int) { // wtf? no return type?
 		return a + Math.floor(Math.random() * (b - a));
 	}
-	/*
-	public inline static function random( max = 1.0  ) {
-		return std.Math.random() * max; // std.Math < hxd.Math < ra.hp.MathEx
-					
-	}
-	*/
 
+	public static inline function randomInt(cl:Class<Math>, max = Int64.high):Int { // TODO: 32bit max?
+		return std.int(Math.random(max));
+	}
+	
+	public static inline function randomHex(cl:Class<Math>):Int {
+		return Haxe.randomInt(0xFFFFFF);
 	}
 
 
@@ -33,6 +34,8 @@ class MathEx {
 	// nah, is there even a standard Point ds? TODO: look for Point, or use poly2tri.Point?
 	// maybe better to not use extra ds'es, and keep it simple with Int/Float x/y/z/r
 	// ...but surely, eventually, people use vector math even for simple 2d movement?..
+	// can grab Vector2 from MikeTuttle / HaxePunk
+
 
 	// collision functions already exists in Object, i don't think there's a need for--
 	// the FP/HXP helper functions Entity.collidesWith(Entity).
