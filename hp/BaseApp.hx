@@ -9,7 +9,7 @@ class BaseApp extends PunkApp {
 	// called during application setup after `loadAssets` completed
 	override function init() {
 		super.init();
-		/* // TODO: not sure what defaultsmooth nor usescreenpixels do...
+		/* // not sure what defaultsmooth nor usescreenpixels do... just a sample
 		 HP.scene.defaultSmooth = true;
 		 HP.scene.scaleMode = LetterBox(1280, 720, false, Center, Center);
 		 #if js
@@ -24,10 +24,10 @@ class BaseApp extends PunkApp {
 
 	}
 	
-	// not really dispose (as in garbage collect), just clear/reset the ds...
+	// not really dispose, as in garbage collect, just clear/reset the ds...
 	//public function resetWorld() {
 		//entities = [];
-		//world = new Layer(); // lol, dunno how to dispose, it's just a tiny array of indicies anyway.., no content
+		//world = new Layer(); // TODO: lol, dunno how to dispose, *i think* it's just a tiny array of indicies anyway.., no content
 	//}
 	
 	// note: must be placed at the end? threw an error:
