@@ -1,5 +1,4 @@
-this folder is just a place to grab some functions from
-as i need them
+this folder is just a pile of goodies to quickly grab shit from as i need them
 
 
 
