@@ -4,4 +4,4 @@
 // holy shit(!!) this is awesome!!
 //import dn.Color as C; // one letter might be a problem refectoring..? regex 'C\.'?
 //import tools.LPoint as P;
-//import ra.hp.Global as HP // HeapsPunkGlobal, or P? or Punk? // TODO: refactor
+//import ra.hp.Global as HP // HeapsPunkGlobal, alts: HPG, HP, PG, P // TODO: refactor
