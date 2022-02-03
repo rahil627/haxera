@@ -27,6 +27,7 @@ class PunkApp extends App {
 		super.init(); // empty
 
 		// set global vars
+		// TODO: getters/setters vs pointers/references?
 		HP.app = this;
 		HP.scene = this.s2d;
 		HP.window = hxd.Window.getInstance();
