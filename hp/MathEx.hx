@@ -13,7 +13,7 @@ import hxd.Math;
 // for now, just put everything under my own helper classes
 class MathEx {
 	// this was taken from the Haxe docs / code book
-	/** Returns a random number between a (inclusive) and b (exclusive). */
+	// Returns a random number between a (inclusive) and b (exclusive).
 	public static function randomBetween(cl:Class<Math>, a:Int, b:Int) {
 		return a + Math.floor(Math.random() * (b - a));
 	}
