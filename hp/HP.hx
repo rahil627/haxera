@@ -13,9 +13,9 @@ import h2d.Interactive;
 // TODO: rename to Punk?
 class HP {
 	// TODO: learn how references work in Haxe, and how to create an actual copy
-	public static var window:Window(get, never);  // generally don't touch this, abstract it here
-	public static var scene:Scene(get, default); // generally don't touch this, abstract it here
-	public static var app:App(get, never); // TODO: App or PunkApp?, generally don't touch this, abstract it here
+	public static var window:Window(default, never);  // generally don't touch this, abstract it here
+	public static var scene:Scene(default, default); // generally don't touch this, abstract it here
+	public static var app:App(default, never); // TODO: App or PunkApp?, generally don't touch this, abstract it here
 	
 	public static var console:Console; // TODO: if debug
 	public static var screenInputHandler:Interactive; // TODO temp
