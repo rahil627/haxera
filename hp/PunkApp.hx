@@ -3,6 +3,7 @@ package ra.hp;
 import hxd.App;
 import h2d.Console;
 /*
+// the HaxePunk states, only needed for special cases
 enum MainLoopState {
 	preUpdate;
 	postUpdate;
@@ -11,16 +12,17 @@ enum MainLoopState {
 }
 */
 // extend me!
-// similar to Engine in Flash/HaxePunk (but heaps uses h3d.Engine, soooo:)
+// similar to Engine in Flash/HaxePunk (but heaps uses h3d.Engine, soooo)
 // just a layer on top of the main App class
 // must extend App because init() and update() are called internally by App
-// it was purposefully set like that..
+// it was designed to be extended
 class PunkApp extends App {
 
-	// generally don't want any vars here
+	// generally don't want any data in this class
 	// just use HP to keep references to everything
-	var screenInputHandler:h2d.Interactive;
-
+	var screenInputHandler:h2d.Interactive; // TODO: temp input solution
+	
+	// TODO: if debug
 	public static var console:Console;
 
 	override function init() {
