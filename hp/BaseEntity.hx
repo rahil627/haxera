@@ -9,7 +9,7 @@ enum EntityKind {
 // just an optional bare-bones entity class to copy to begin a new project with
 // i'm not really sure what entity means,
 // but this one will likely contain an Object, or something that extends an Object,
-// which itself will be added to the Scene (or to Layers, then Scene)
+// which itself will be added to the Scene (or first to Layers, then Scene)
 class BaseEntity {	
 	//var id:Int; // useful for finding it later
 	//var kind:EntityKind; // maybe useful narrowing down searches // TODO: vs Std.isOfType (infers class?)
