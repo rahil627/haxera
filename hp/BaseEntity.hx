@@ -27,7 +27,7 @@ class BaseEntity {
 		//BaseGlobal.entities.push(this);
 	}
 
-	// override me! and remember to call super()
+	// override me! and remember to call super.update(dt)
 	// can separate into preUpdate, update, postUpdate, but only if necessary
 	public function update(dt:Float) {
 		// do stuff! 
@@ -35,7 +35,7 @@ class BaseEntity {
 
 	// draw and render are handled automatically
 
-	// override me! and remember to call super()
+	// override me! and remember to call super.remove()
 	public function remove() {
 		//sprite.remove(); // all Objects provide this
 		//BaseGlobal.entities.remove(this);
