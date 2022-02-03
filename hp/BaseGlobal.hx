@@ -1,8 +1,7 @@
 // just an optional bare-bones global class to copy to begin a new project with
 // rename it to something short, or create a short alias in import.hx
-// store commonly-used global objects 'n vars
-// the scope is local to this game
-// more general useful stuff go to ra.Heaps 'n ra.Haxe 'n ra.hp.HP (HeapsPunk)
+// store references to commonly-used data structures
+// the scope of this is local to this specific game
 class BaseGlobal {
 	// might have a problem disposing these...
 	// nahhh, it's alright... just provide a function to clear them all
