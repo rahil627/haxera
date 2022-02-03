@@ -1,6 +1,6 @@
 package ra; // is this not implied by the path name?
 
-// HaxeHelper.hx?
+// HaxeHelper.hx? HH import alias
 // i mean... there's only a haxe package, not a class, soooo...
 // re-usable code for the haxe programming language
 // including the use of the standard library that comes with it
