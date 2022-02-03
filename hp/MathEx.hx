@@ -19,7 +19,7 @@ class MathEx {
 	}
 	/*
 	public inline static function random( max = 1.0  ) {
-		return std.Math.random() * max;
+		return std.Math.random() * max; // std.Math < hxd.Math < ra.hp.MathEx
 					
 	}
 	*/
