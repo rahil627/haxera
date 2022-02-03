@@ -1,5 +1,5 @@
 // just a bare-bones App/Main to copy to begin a new project with
-// the vars are all optional, feel free to delete!
+// the data is all optional, feel free to delete!
 // rename the class 'n filename and you're good to go!
 class BaseApp extends PunkApp {
 
