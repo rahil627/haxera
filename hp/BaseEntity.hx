@@ -23,8 +23,8 @@ class BaseEntity {
 		//this.x = x; // just a wrapper for e.sprite.x?
 		//this.y = y;
 		//sprite = new h2d.Anim(getAnim(), 15);
-		//Glob.world.add(sprite, hasFlag(Under) ? LayerKind.under : LayerKind.players);
-		//Glob.entities.push(this);
+		//BaseGlobal.world.add(sprite, hasFlag(Under) ? LayerKind.under : LayerKind.players);
+		//BaseGlobal.entities.push(this);
 	}
 
 	// override me!
@@ -38,7 +38,7 @@ class BaseEntity {
 	// override me!
 	public function remove() {
 		//sprite.remove(); // all Objects provide this
-		//Glob.entities.remove(this);
+		//BaseGlobal.entities.remove(this);
 		//this = null; // TODO: lol, not sure about this...
 	}
 
