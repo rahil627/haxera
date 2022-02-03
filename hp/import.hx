@@ -1,4 +1,4 @@
-// add these to your main import.hx file
+// add these to a "import.hx" file in the root directory of the heaps app
 import ra.hp.HP
 
 // aliases
