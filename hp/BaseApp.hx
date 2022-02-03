@@ -11,7 +11,7 @@ class BaseApp extends PunkApp {
 		super.init();
 		/* // not sure what defaultsmooth nor usescreenpixels do... just a sample
 		 HP.scene.defaultSmooth = true;
-		 HP.scene.scaleMode = LetterBox(1280, 720, false, Center, Center);
+		 HP.scaleMode = LetterBox(1280, 720, false, Center, Center);
 		 #if js
 		 Window.getInstance().useScreenPixels = true;
 		 #end
