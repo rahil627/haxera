@@ -21,7 +21,7 @@ class BaseApp extends PunkApp {
 	// from docs: called each frame right before rendering
 	// from docs: first call is done after the application is set up (so `loadAssets` and `init` are called)
 	override function update(dt:Float) {
-
+		super.update();
 	}
 	
 	// not really dispose, as in garbage collect, just clear/reset the ds...
