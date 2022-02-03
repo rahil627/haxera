@@ -27,8 +27,15 @@ class MathEx {
 	}
 
 
-	// maybe can just throw in all math functions here?
-	// including functions found in Point?
-	// nah, Point isn't a standard class.. or is there one?..
+	// can just throw all math functions here
 
+	// what about geometry ds, like Point, Rectangle (Bounds?), etc.?
+	// nah, is there even a standard Point ds? TODO: look for Point, or use poly2tri.Point?
+	// maybe better to not use extra ds'es, and keep it simple with Int/Float x/y/z/r
+	// ...but surely, eventually, people use vector math even for simple 2d movement?..
+
+	// collision functions already exists in Object, i don't think there's a need for--
+	// the FP/HXP helper functions Entity.collidesWith(Entity).
+	// it would just be an extra layer of abstraction of Object.intersectsWith (or whatever it is)
+	// e.s.collidesWith(e.s) vs e.collidesWith(e)
 }
