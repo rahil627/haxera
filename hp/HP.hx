@@ -10,7 +10,6 @@ import h2d.Interactive;
 // helper class similar to FP in FlashPunk and HXP in HaxePunk
 // abstracts the useful functions from App, Scene, Window
 // try to keep just references, no actual objects
-// TODO: rename to Punk?
 class HP {
 	// TODO: learn how references work in Haxe, and how to create an actual copy
 	public static var window:Window(default, never);  // generally don't touch this, abstract it here
@@ -49,7 +48,7 @@ class HP {
 
 	// Window properties
 	// TODO: does inline even make a difference here?
-	static function get_window() return hxd.Window.getInstance();
+	static function get_window() return hxd.Window.getInstance(); // magically generates a pointer var...?
 	//static function get_engine() return app.engine;
 	static function get_scene() return app.s2d;
 	static function set_scene(s:hxd.SceneEvents.InteractiveScene, disposePrevious:Bool = true) app.setScene(s, disposePrevious);
