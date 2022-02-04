@@ -9,8 +9,10 @@ class BaseApp extends PunkApp {
 	// called during application setup after `loadAssets` completed (from docs)
 	override function init() {
 		super.init();
-		HP.app = this;
-		/* // not sure what defaultsmooth nor usescreenpixels do... just a sample
+		/*
+		 BaseGlobal = this;
+
+		 // not sure what defaultsmooth nor usescreenpixels do... just a sample from deepnight
 		 HP.scene.defaultSmooth = true;
 		 HP.scaleMode = LetterBox(1280, 720, false, Center, Center);
 		 #if js
