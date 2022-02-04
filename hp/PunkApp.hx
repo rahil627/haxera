@@ -46,13 +46,13 @@ class PunkApp extends App {
 		
 		// setup input	
 		// TODO: temporary global input handler solution until i actually fix keys
-		// TODO: should use HP.scene.AddEventListener()?
 		HP.screenInputHandler = new h2d.Interactive(HP.scene.width, HP.scene.height, HP.scene); // ?collider = HP.scene.getBounds()
 		//touchHandler.onOver = function(_) b.alpha = 0.5;
 		//touchHandler.onOut = function(_) b.alpha = 1.0;
 
 		// TODO: debugging input
 		HP.window.addEventTarget(onEvent);
+		// TODO: try HP.scene.AddEventListener()
 
 		// just trying shit :/
 		//Key.initialize(); // called in App.setup()
