@@ -6,7 +6,7 @@ class BaseApp extends PunkApp {
 	//public static var entities:Array<Entity>;
 	//public static var world:Layer; // TODO: not really world, is it? Just some helper class
 
-	// from docs: called during application setup after `loadAssets` completed
+	// called during application setup after `loadAssets` completed (from docs)
 	override function init() {
 		super.init();
 		/* // not sure what defaultsmooth nor usescreenpixels do... just a sample
@@ -20,8 +20,8 @@ class BaseApp extends PunkApp {
 		 */
 	}
 
-	// from docs: called each frame right before rendering
-	// from docs: first call is done after the application is set up (so `loadAssets` and `init` are called)
+	// called each frame right before rendering (from docs)
+	// first call is done after the application is set up (so `loadAssets` and `init` are called (from docs)
 	override function update(dt:Float) {
 		super.update();
 	}
