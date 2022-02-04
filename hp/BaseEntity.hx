@@ -10,7 +10,7 @@ enum EntityKind {
 // i'm not really sure what entity means,
 // but this one will likely contain an Object, or something that extends an Object,
 // which itself will be added to the Scene (or first to Layers, then Scene)
-class BaseEntity {	
+class BaseEntity /*implements EntitySkeleton*/ {	
 	//var id:Int; // maybe useful for finding it later..? Or just store a reference... but then gotta be careful..
 	//var kind:EntityKind; // maybe useful narrowing down searches // TODO: vs Std.isOfType (infers class?)
 	//var sprite:Object; // Object and it's extensions: Drawable, Graphics, Anim, etc.
