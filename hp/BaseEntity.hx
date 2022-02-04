@@ -28,7 +28,7 @@ class BaseEntity /*implements EntitySkeleton*/ {
 	}
 
 	// override me! and remember to call super.update(dt)
-	// can separate into preUpdate, update, postUpdate, but only if necessary
+	// optional: can separate into preUpdate, update, postUpdate, but only if necessary
 	public function update(dt:Float) {
 		// do stuff! 
 	}
