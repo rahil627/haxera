@@ -35,11 +35,11 @@ class HP {
 
 	// abstract Scene
 	// the scene inherits a lot of shit that you probably don't want to touch..
-	public static var sceneScaleMode(get, set):ScaleMode;
-	public static var sceneWidth(get, default):Float; // maybe use this for HP.width/height
-	public static var sceneHeight(get, default):Float;
-	public static var width(get, default):Float; // shortcut
-	public static var height(get, default):Float;
+	public static var sceneScaleMode(get, set):ScaleMode; // use this to actually set the screen size
+	public static var sceneWidth(get, never):Float;
+	public static var sceneHeight(get, never):Float;
+	public static var width(get, never):Float; // shortcut
+	public static var height(get, never):Float;
 
 
 	// abstract App
