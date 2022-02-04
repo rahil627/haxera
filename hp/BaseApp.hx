@@ -13,7 +13,7 @@ class BaseApp extends PunkApp {
 		 HP.scene.defaultSmooth = true;
 		 HP.scaleMode = LetterBox(1280, 720, false, Center, Center);
 		 #if js
-		 Window.getInstance().useScreenPixels = true;
+		 HP.window.useScreenPixels = true;
 		 #end
 		 
 		 var player = new BaseEntity(); // just be sure to store the reference to entities somewhere safe!
