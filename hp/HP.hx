@@ -13,6 +13,8 @@ import hxd.Scene.ScaleMode;
 // try to keep just references of stuff, no actual objects
 class HP {
 	// TODO: learn how references work in Haxe, and how to create an actual copy
+	// TODO: inline everything?
+
 	public static var window:Window(default, never);  // generally don't touch this, abstract it here
 	// special set: use 'scene = new Scene()' to call app.setScene()
 	public static var scene:Scene(default, set); // generally don't touch this, abstract it here
@@ -46,32 +48,23 @@ class HP {
 
 
 	// note: the default access modifier is private, and the getters/setters should be private
+	// note: setters must return something, see trivia section in docs:
+	// ref: https://haxe.org/manual/class-field-property-rules.html
 
-	// HP.window, HP.scene, HP.app are all set in PunkApp
+	// HP.window, HP.scene, HP.app all have "real/physical" reference vars set in PunkApp
 	static function set_scene(s:hxd.SceneEvents.InteractiveScene, disposePrevious:Bool = true) app.setScene(s, disposePrevious);
+	//static function get_scene() return app.s3d; // TODO: ?? has both at the same time? 3d unimpl
 
 	// PunkApp properties
 	//static function get_dt() return hxd.Timer.dt;  // TODO: dt passed into update vs hxd.Timer.dt? (currently using passed in as reference)
 	
 	// Window properties
-	// TODO: does inline even make a difference here?
-	//static function get_window() return hxd.Window.getInstance(); // magically generates a pointer var...?
+	//static function get_window() return hxd.Window.getInstance(); // magically generates a pointer var...??
+	static function set_windowTitle(s:String):String return HP.window.title;
+	static function set_windowDisplayMode(dm:DisplayMode):DisplayMode return HP.window.displayMode;
+	//HP.window.setFullScreen is deprecated, but can make my own..
 	//static function get_engine() return app.engine;
-	//static function get_scene() return app.s3d; // ?? has both at the same time?
 	//static function get_sevents() return app.sevents;
-
-	
-	// TODO: hmmmm, having trouble with returning Void :(
-	static function set_windowTitle(s:String):String {
-		HP.window.title = s;
-		return s;
-	}
-	// TODO: hmmmm, having trouble with returning Void :(
-	static function set_windowDisplayMode(dm:DisplayMode):DisplayMode {
-		//HP.window.setFullScreen is deprecated, but can make my own..
-		HP.window.displayMode = dm;
-		return dm;
-	}
 
 	// Scene properties
 	static function get_sceneScaleMode() return sceneScaleMode;
