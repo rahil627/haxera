@@ -15,10 +15,11 @@ class HP {
 	// TODO: learn how references work in Haxe, and how to create an actual copy
 	// TODO: inline everything?
 
-	public static var window:Window(default, never);  // generally don't touch this, abstract it here
+	// generally don't touch these, abstract them here
+	public static var window:Window(default, never);
 	// special set: use 'scene = new Scene(...)' to call app.setScene()
-	public static var scene:Scene(default, set); // generally don't touch this, abstract it here
-	public static var app:App(default, never); // TODO: App or PunkApp?, generally don't touch this, abstract it here
+	public static var scene:Scene(default, set);
+	public static var app:App(default, never);
 	
 	// PunkApp
 	public static var dt:Float(get, never); // TODO: are basic types not stored by reference?
