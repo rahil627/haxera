@@ -1,5 +1,5 @@
 /*
-// TODO: vs Std.isOfType
+// still useful in case the same class is used to make several kinds of entities
 enum EntityKind {
 	player;
 	monster;
@@ -12,7 +12,7 @@ enum EntityKind {
 // which itself will be added to the Scene (or first to Layers, then Scene)
 class BaseEntity /*implements EntitySkeleton*/ {	
 	//var id:Int; // maybe useful for finding it later..? Or just store a reference... but then gotta be careful..
-	//var kind:EntityKind; // maybe useful narrowing down searches // TODO: vs Std.isOfType (infers class?)
+	//var kind:EntityKind; // maybe useful narrowing down searches
 	//var sprite:Object; // Object and it's extensions: Drawable, Graphics, Anim, etc.
 
 	// override me! and remember to call super()
@@ -43,6 +43,6 @@ class BaseEntity /*implements EntitySkeleton*/ {
 	}
 
 	// from deepnight
-	//public function is<T:Entity>(c:Class<T>) return Std.isOfType(this, c);
-	//public function as<T:Entity>(c:Class<T>) : T return Std.downcast(this, c); // ?? huh, for using base functions of an inherited class?
+	//public function is<T:Entity>(c:Class<T>) return Std.isOfType(this, c); // like entity kind, useful to narrow down searches
+	//public function as<T:Entity>(c:Class<T>) : T return Std.downcast(this, c); // ?? not sure when to use, but seems handy!
 }
