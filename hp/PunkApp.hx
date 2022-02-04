@@ -31,8 +31,8 @@ class PunkApp extends App {
 
 		// set global vars
 		HP.app = this;
-		//HP.scene = this.s2d; // now in getter
-		//HP.window = hxd.Window.getInstance(); // now in getter
+		HP.scene = this.s2d;
+		HP.window = hxd.Window.getInstance();
 	
 		// init global stuff
 		HP.window.title = "heaps <3 p u n k"; // i've seen set in the hxml build file
