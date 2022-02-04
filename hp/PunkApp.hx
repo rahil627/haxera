@@ -69,7 +69,7 @@ class PunkApp extends App {
 	}
 	#end
 		
-	// override me and remember to call super.update()
+	// override me and remember to call super.update(dt)
 	override function update(dt:Float) {
 		super.update(dt); // empty
 		
