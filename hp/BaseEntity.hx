@@ -13,7 +13,6 @@ enum EntityKind {
 class BaseEntity /*implements EntitySkeleton*/ {	
 	//var id:Int; // maybe useful for finding it later..? Or just store a reference... but then gotta be careful..
 	//var kind:EntityKind; // maybe useful narrowing down searches
-	//public function is<T:Entity>(c:Class<T>) return Std.isOfType(this, c); // like entity kind, useful to narrow down searches
 	//var sprite:Object; // Object and it's extensions: Drawable, Graphics, Anim, etc.
 
 	// override me! and remember to call super()
@@ -44,5 +43,6 @@ class BaseEntity /*implements EntitySkeleton*/ {
 	}
 
 	// from deepnight
+	//public function is<T:Entity>(c:Class<T>) return Std.isOfType(this, c); // like entity kind, useful to narrow down searches
 	//public function as<T:Entity>(c:Class<T>) : T return Std.downcast(this, c); // ?? not sure when to use, but seems handy!
 }
