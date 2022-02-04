@@ -17,7 +17,7 @@ class HP {
 
 	// generally don't touch these, abstract them here
 	public static var window:Window(default, never);
-	// special set: use 'scene = new Scene(...)' to call app.setScene()
+	// overrides setter 'scene = new Scene(...)' to call app.setScene()
 	public static var scene:Scene(default, set);
 	public static var app:App(default, never);
 	
