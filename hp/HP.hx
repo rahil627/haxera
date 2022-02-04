@@ -54,21 +54,21 @@ class HP {
 
 	// Window properties
 	// TODO: does inline even make a difference here?
-	static function get_window() return hxd.Window.getInstance(); // magically generates a pointer var...?
-	//static function get_engine() return app.engine;
-	static function get_scene() return app.s2d;
-	static function set_scene(s:hxd.SceneEvents.InteractiveScene, disposePrevious:Bool = true) app.setScene(s, disposePrevious);
-	//static function get_scene() return app.s3d; // ?? has both at the same time?
-	//static function get_sevents() return app.sevents;
+	public static function get_window() return hxd.Window.getInstance(); // magically generates a pointer var...?
+	//public static function get_engine() return app.engine;
+	public static function get_scene() return app.s2d;
+	public static function set_scene(s:hxd.SceneEvents.InteractiveScene, disposePrevious:Bool = true) app.setScene(s, disposePrevious);
+	//public static function get_scene() return app.s3d; // ?? has both at the same time?
+	//public static function get_sevents() return app.sevents;
 
 	
 	// TODO: hmmmm, having trouble with returning Void :(
-	static function set_windowTitle(s:String):String {
+	public static function set_windowTitle(s:String):String {
 		HP.window.title = s;
 		return s;
 	}
 	// TODO: hmmmm, having trouble with returning Void :(
-	static function set_windowDisplayMode(dm:DisplayMode):DisplayMode {
+	public static function set_windowDisplayMode(dm:DisplayMode):DisplayMode {
 		//HP.window.setFullScreen is deprecated, but can make my own..
 		HP.window.displayMode = dm;
 		return dm;
@@ -76,9 +76,9 @@ class HP {
 
 	// Scene properties
 	//static function get_dt() return hxd.Timer.dt;  // TODO: dt passed into update vs hxd.Timer.dt?
-	static function get_sceneScaleMode() return sceneScaleMode;
-	static function set_sceneScaleMode(sm:ScaleMode):ScaleMode return scene.scaleMode = sm;
-	static function get_sceneWidth() return scene.width;
-	static function get_sceneHeight() return scene.height;
+	public static function get_sceneScaleMode() return sceneScaleMode;
+	public static function set_sceneScaleMode(sm:ScaleMode):ScaleMode return scene.scaleMode = sm;
+	public static function get_sceneWidth() return scene.width;
+	public static function get_sceneHeight() return scene.height;
 	
 }
