@@ -38,6 +38,9 @@ class HP {
 	public static var sceneScaleMode(get, set):ScaleMode;
 	public static var sceneWidth(get, default):Float; // maybe use this for HP.width/height
 	public static var sceneHeight(get, default):Float;
+	public static var width(get, default):Float; // shortcut
+	public static var height(get, default):Float;
+
 
 	// abstract App
 	//public static var engine(get, never):Engine; // don't know what this is yet...
@@ -71,6 +74,8 @@ class HP {
 	static function set_sceneScaleMode(sm:ScaleMode):ScaleMode return scene.scaleMode = sm;
 	static function get_sceneWidth() return scene.width;
 	static function get_sceneHeight() return scene.height;
+	static function get_width() return scene.width;
+	static function get_height() return scene.height;
 	
 	// App properties
 	
