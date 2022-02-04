@@ -6,10 +6,11 @@ import hxd.Window;
 import hxd.Window.DisplayMode;
 import h2d.Console;
 import h2d.Interactive;
+import hxd.Scene.ScaleMode;
 
 // helper class similar to FP in FlashPunk and HXP in HaxePunk
-// abstracts the useful functions from App, Scene, Window
-// try to keep just references, no actual objects
+// abstracts the commonly used data 'n functions from App, Scene, Window
+// try to keep just references of stuff, no actual objects
 class HP {
 	// TODO: learn how references work in Haxe, and how to create an actual copy
 	public static var window:Window(default, never);  // generally don't touch this, abstract it here
@@ -23,15 +24,17 @@ class HP {
 	#end
 
 	// abstract Window
-	public static var windowTitle(default, set):String; // try to keep class name in var name
+	public static var windowTitle(default, set):String; // try to keep class name in var name for now, for learning purposes
 	public static var windowDisplayMode(default, set):DisplayMode;
 	//public static var windowWidth(get, default):Float; // unimpl; no need, yet
 	//public static var windowHeight(get, default):Float; // unimpl
 
 	// abstract Scene
 	// the scene inherits a lot of shit that you probably don't want to touch..
+	public static var sceneScaleMode(get, set):ScaleMode;
 	public static var sceneWidth(get, default):Float; // maybe use this for HP.width/height
 	public static var sceneHeight(get, default):Float;
+
 
 
 	// abstract App
@@ -73,6 +76,8 @@ class HP {
 
 	// Scene properties
 	//static function get_dt() return hxd.Timer.dt;  // TODO: dt passed into update vs hxd.Timer.dt?
+	static function get_sceneScaleMode() return sceneScaleMode;
+	static function set_sceneScaleMode(sm:ScaleMode):ScaleMode return scene.scaleMode = sm;
 	static function get_sceneWidth() return scene.width;
 	static function get_sceneHeight() return scene.height;
 	
