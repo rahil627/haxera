@@ -21,11 +21,12 @@ class PunkApp extends App {
 
 	// generally don't want any data in this class
 	// just use HP to keep references to everything
-	var screenInputHandler:h2d.Interactive; // TODO: temp input solution
-	
-	// TODO: if debug
-	public static var console:Console;
 
+	#if debug
+	public static var console:Console;
+	var screenInputHandler:h2d.Interactive; // TODO: temp input solution
+	#end
+	
 	override function init() {
 		super.init(); // empty
 
@@ -35,13 +36,13 @@ class PunkApp extends App {
 		//HP.window = hxd.Window.getInstance();
 	
 		// init global stuff
-		HP.window.title = "heaps <3 p u n k"; // i've seen set in the hxml build file
+		HP.window.title = "heaps <3 p u n k"; // i've seen this set in the hxml build file
 		//HP.window.displayMode = hxd.DisplayMode.Fullscreen; // should use scene.ScaleMode?
-		// TODO: if debug
+
+		#if debug
 		HP.console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene);
 		HP.console.shortKeyChar = "`".charCodeAt(0);
 		HP.console.show(); // TODO: temp, because inputs dont work
-
 		
 		// setup input	
 		// TODO: temporary global input handler solution until i actually fix keys
@@ -56,13 +57,16 @@ class PunkApp extends App {
 		// just trying shit :/
 		//Key.initialize(); // called in App.setup()
 		HP.window.propagateKeyEvents = true; // used internally
+		#end
 	}
 	
+	#if debug
 	// TODO: testing input
 	function onEvent(event : hxd.Event) {
 		HP.console.log("global input event: " + event.toString());
 				
 	}
+	#end
 
 	override function update(dt:Float) {
 		super.update(dt); // empty
