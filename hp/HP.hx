@@ -16,7 +16,7 @@ class HP {
 	// TODO: inline everything?
 
 	public static var window:Window(default, never);  // generally don't touch this, abstract it here
-	// special set: use 'scene = new Scene()' to call app.setScene()
+	// special set: use 'scene = new Scene(...)' to call app.setScene()
 	public static var scene:Scene(default, set); // generally don't touch this, abstract it here
 	public static var app:App(default, never); // TODO: App or PunkApp?, generally don't touch this, abstract it here
 	
