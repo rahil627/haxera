@@ -16,7 +16,7 @@ class BaseApp extends PunkApp {
 		 Window.getInstance().useScreenPixels = true;
 		 #end
 		 
-		 var player = new BaseEntity();
+		 var player = new BaseEntity(); // just be sure to store the reference to entities somewhere safe!
 		 */
 	}
 
