@@ -61,7 +61,7 @@ class HP {
 	// Window properties
 	//static function get_window() return hxd.Window.getInstance(); // magically generates a pointer var...??
 	static function set_windowTitle(s:String):String return HP.window.title;
-	static function set_windowDisplayMode(dm:DisplayMode):DisplayMode return HP.window.displayMode;
+	static function set_windowDisplayMode(dm:DisplayMode):DisplayMode return HP.window.displayMode = dm;
 	//HP.window.setFullScreen is deprecated, but can make my own..
 	//static function get_engine() return app.engine;
 	//static function get_sevents() return app.sevents;
