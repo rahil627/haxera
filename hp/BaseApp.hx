@@ -15,6 +15,9 @@ class BaseApp extends PunkApp {
 		 #if js
 		 Window.getInstance().useScreenPixels = true;
 		 #end
+		 
+		 var player = new BaseEntity();
+		 entities.push(player); // TODO: do here or in BaseEntity init?
 		 */
 	}
 
