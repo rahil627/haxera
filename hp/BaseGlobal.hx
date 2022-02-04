@@ -2,6 +2,7 @@
 // rename it to something short, or create a short alias in import.hx
 // store references to commonly-used data structures here
 // the scope of this is local to this specific game
+// TODO: singleton vs static
 class BaseGlobal {
 	// might have a problem disposing these...
 	// nahhh, it's alright... just provide a function to clear them all
