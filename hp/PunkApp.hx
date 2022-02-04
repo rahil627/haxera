@@ -40,7 +40,7 @@ class PunkApp extends App {
 		//HP.window.displayMode = hxd.DisplayMode.Fullscreen; // should use scene.ScaleMode?
 
 		#if debug
-		HP.console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene);
+		HP.console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene); // TODO: font is tiny :(
 		HP.console.shortKeyChar = "`".charCodeAt(0);
 		HP.console.show(); // TODO: temp, because inputs dont work
 		
