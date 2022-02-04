@@ -21,11 +21,11 @@ class HP {
 	public static var app:App(default, never); // TODO: App or PunkApp?, generally don't touch this, abstract it here
 	
 	// PunkApp
+	public static var dt:Float(get, never); // TODO: are basic types not stored by reference?
 	#if debug
 	public static var console:Console;
 	public static var screenInputHandler:Interactive; // TODO temp
 	#end
-	public static var dt:Float(get, never); // TODO: are basic types not stored by reference?
 		
 	// abstract Window
 	public static var windowTitle(default, set):String; // try to keep class name in var name for now, for learning purposes
