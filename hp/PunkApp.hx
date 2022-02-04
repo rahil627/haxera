@@ -27,6 +27,7 @@ class PunkApp extends App {
 	var screenInputHandler:h2d.Interactive; // TODO: temp input solution
 	#end
 	
+	// override me and remember to call super.init()
 	override function init() {
 		super.init(); // empty
 
@@ -67,7 +68,8 @@ class PunkApp extends App {
 				
 	}
 	#end
-
+		
+	// override me and remember to call super.update()
 	override function update(dt:Float) {
 		super.update(dt); // empty
 		
@@ -79,6 +81,7 @@ class PunkApp extends App {
 			HP.console.log("the time vars are actually different!");		
 	}
 
+	// optional override
 	override function onResize() {
 		// placeholder
 	}
