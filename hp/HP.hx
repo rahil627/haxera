@@ -16,6 +16,7 @@ class HP {
 	public static var scene:Scene(default, default); // generally don't touch this, abstract it here
 	public static var app:App(default, never); // TODO: App or PunkApp?, generally don't touch this, abstract it here
 	
+	// PunkApp
 	#if debug
 	public static var console:Console;
 	public static var screenInputHandler:Interactive; // TODO temp
