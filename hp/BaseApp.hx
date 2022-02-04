@@ -17,7 +17,6 @@ class BaseApp extends PunkApp {
 		 #end
 		 
 		 var player = new BaseEntity();
-		 entities.push(player); // TODO: do here or in BaseEntity init?
 		 */
 	}
 
