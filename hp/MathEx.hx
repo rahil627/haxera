@@ -6,11 +6,8 @@ package ra.hp;
 import hxd.Math;
 
 // note: don't use 'import', use 'using': using ra.hp.MathEx
-// this is less convenient than i thought...
-// it might just be better to have a normal static class :/
+// it might just be more convenient to throw it in a normal global static class :/
 // vim / vaxe / ctags can't generate autocomplete for it
-// maybe best to limit static extensions to only when i need to add a few things
-// for now, just put everything under my own helper classes
 class MathEx { // std.Math < hxd.Math < ra.hp.MathEx
 	
 	// this was taken from the Haxe docs / code book
