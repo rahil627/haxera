@@ -74,7 +74,7 @@ class HP {
 	static function set_sceneScaleMode(sm:ScaleMode):ScaleMode return scene.scaleMode = sm;
 	static function get_sceneWidth() return scene.width;
 	static function get_sceneHeight() return scene.height;
-	static function get_width() return scene.width;
+	static function get_width() return scene.width; // TODO: test window.width vs scene.width
 	static function get_height() return scene.height;
 	
 	// App properties
