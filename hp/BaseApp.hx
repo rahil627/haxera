@@ -3,12 +3,13 @@
 // rename the class 'n filename and you're good to go!
 class BaseApp extends PunkApp {
 
-	//public static var entities:Array<Entity>;
-	//public static var world:Layer; // TODO: not really world, is it? Just some helper class
+	//public var entities:Array<Entity>;
+	//public var world:Layer; // TODO: not really world, is it? Just some helper class
 
 	// called during application setup after `loadAssets` completed (from docs)
 	override function init() {
 		super.init();
+		HP.app = this;
 		/* // not sure what defaultsmooth nor usescreenpixels do... just a sample
 		 HP.scene.defaultSmooth = true;
 		 HP.scaleMode = LetterBox(1280, 720, false, Center, Center);
