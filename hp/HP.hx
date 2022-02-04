@@ -16,8 +16,10 @@ class HP {
 	public static var scene:Scene(default, default); // generally don't touch this, abstract it here
 	public static var app:App(default, never); // TODO: App or PunkApp?, generally don't touch this, abstract it here
 	
-	public static var console:Console; // TODO: if debug
+	#if debug
+	public static var console:Console;
 	public static var screenInputHandler:Interactive; // TODO temp
+	#end
 
 	// abstract Window
 	public static var windowTitle(default, set):String; // try to keep class name in var name
@@ -27,7 +29,7 @@ class HP {
 
 	// abstract Scene
 	// the scene inherits a lot of shit that you probably don't want to touch..
-	public static var sceneWidth(get, default):Float; // maybe also HP.width/height
+	public static var sceneWidth(get, default):Float; // maybe use this for HP.width/height
 	public static var sceneHeight(get, default):Float;
 
 
@@ -41,7 +43,7 @@ class HP {
 
 
 
-	// note: the default access modifier private, and the getters/setters should be private
+	// note: the default access modifier is private, and the getters/setters should be private
 
 	//App properties
 
