@@ -1,6 +1,6 @@
 this folder is just a treasure chest to quickly grab shit from as i need them
 
-
+TODO: learn how licenses work
 
 need:
 gamepad input manager
