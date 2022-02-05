@@ -9,12 +9,19 @@ class BaseGlobals {
 	// i mean, they're static, can't really delete them anyway... whether they're here or in Main/BaseApp..
 	// only keep references to these here
 	
-	// this is the only important data structure to choose
-	// vector seems like a pain to maintain (you must know the index to use v.set(), soooo... array vs list
-	// array prolly can be optimized, but i'd rather choose list and never worry about it until the time comes :)
+	// i think this is the only important data structure to choose
+	// vector seems like a pain to maintain--you must know the index to use v.set()--, soooo... array vs list vs map
+	// the simplest and laziest way is to just use list and forget about it :)
+	// given that you are constantly adding and removing stuff all the time, maybe it's the best too?
+	// then comes arrays vs map
+	// array is O(1) access complexity vs O(log(n)) access complexity
+	// ..but really tho, it'd be limited to things you're constantly accessing, and if you're constantly accessing them..,
+	// well, you'd probably be holding pointers/references to those things anyway (i.e. players)!, soooo...:
 	//public static var entities:List<Entity>;
+	
+	//public static var mcaEntities:Map<Int, Entity>; // an optional map to search stuff by id
+	
 	//public static var world:Layer;
-	//public static var map1:Map<Int, Entity>; // ?? a map for searching by ID? log(n) complexity for access?
 	//public static var canvas:h2d.Graphics;  // a top-level thing to draw to
 
 	// constants
