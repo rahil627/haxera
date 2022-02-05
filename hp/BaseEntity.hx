@@ -1,4 +1,4 @@
-package ra.hp.bases
+package ra.hp.base
 
 /*
 // still useful in case the same class is used to make several kinds of entities
