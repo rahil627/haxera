@@ -25,7 +25,7 @@ class MyApp extends PunkApp {
 
 		 // init app stuff
 		 //entities = new haxe.ds.List<Int>();
-	 	 //world = new Layers();
+	 	 //world = new Layers(HP.scene);
 		 var player = new Entity(); // just be sure to store the reference to entities somewhere safe!
 		 */
 	}
