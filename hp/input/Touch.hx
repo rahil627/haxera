@@ -3,8 +3,8 @@ package ra.hp.input;
 import package ra.hp.HP; // depends on HP!!
 import hxd.Key;
 
-// mouse/touch input is all over the place in heaps
-// this ds brings it all together
+// it feels like touch input was hacked in by heaps, inferior to mouse
+// this ds brings makes a home for it
 class Touch {
 	// currently just copy-pasta from Mouse, because mouseX, mouseY and Key.MOUSE_LEFT are also used for touch input, but
 	// beyond that, however, they are very different: multi-touch, no other mouse buttons nor wheel
