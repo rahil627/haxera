@@ -11,8 +11,8 @@ enum EntityKind {
 // but this one will likely contain an Object, or something that extends an Object,
 // which itself will be added to the Scene (or first to Layers, then Scene)
 class BaseEntity /*implements EntitySkeleton*/ {	
-	//var id:Int; // maybe useful for finding it later..? Or just store a reference... but then gotta be careful..
-	//var kind:EntityKind; // maybe useful narrowing down searches
+	//var id:Int; // maybe useful for finding it later..?, can be used as a map key, TODO: storing temp int vs reference?
+	//var kind:EntityKind; // maybe useful narrowing down searches; one big container vs keeping multiple containers
 	//var sprite:Object; // Object and it's extensions: Drawable, Graphics, Anim, etc.
 
 	// override me! and remember to call super()
