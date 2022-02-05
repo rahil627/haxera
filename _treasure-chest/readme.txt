@@ -14,10 +14,10 @@ vector graphics drawing functions
 color
 geometry / 2d math
   - classes
-    - Point
-      - Vector2d
-        - HaxePunk
-    - Rectangle
+    - h2d.col (collider) have most of the geometry classes, note: Bounds = rectangle
+    - Vector2d
+      - HaxePunk
+      - or use Heaps.Vector (4d) as a base
   - functions
 tweens
   - **does heaps even have any?? :o**
