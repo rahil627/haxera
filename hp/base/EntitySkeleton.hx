@@ -4,7 +4,7 @@ package ra.hp.base // DELETE ME!!
 // like dispose of itself!
 // the skeletal structure of entities
 // this is completely optional
-// example use: BaseEntity implements EntitySkeleton
+// example use: BaseEntity implements BaseEntitySkeleton
 interface BaseEntitySkeleton {
     public function init():Void; // at the moment, the init code is in the constructor! TODO: init in constructor vs in an init function
     public function update(dt:Float):Void; // what if it doesn't have an update?
