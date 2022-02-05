@@ -1,3 +1,5 @@
+package ra.hp.bases
+
 // just an optional bare-bones global class to copy to begin a new project with
 // rename it to something short, or create a short alias in import.hx
 // store references to commonly-used data structures here
