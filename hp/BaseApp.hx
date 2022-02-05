@@ -11,6 +11,7 @@ class BaseApp extends PunkApp {
 		super.init();
 		/*
 		 // not sure what defaultsmooth nor usescreenpixels do... just a sample from deepnight
+		 HP.windowDisplayMode = hxd.DisplayMode.Windowed; // should use scene.ScaleMode?
 		 HP.scene.defaultSmooth = true;
 		 HP.scaleMode = LetterBox(1280, 720, false, Center, Center);
 		 #if js
