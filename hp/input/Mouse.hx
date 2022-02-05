@@ -20,3 +20,27 @@ class Mouse { // or/and Touch? TODO: is this the same for touch input?
 	
 	
 }
+
+/* from hxd.Key
+public static inline var MOUSE_LEFT = 0;
+	public static inline var MOUSE_RIGHT = 1;
+	public static inline var MOUSE_MIDDLE = 2;
+	public static inline var MOUSE_BACK = 3;
+	public static inline var MOUSE_FORWARD = 4;
+	/**
+	 * Mouse wheel does not have an off signal, and should be checked only through `isPressed` method.
+	 * Note that there may be multiple wheel scrolls between 2 frames, and to receive more accurate
+	 * results, it is recommended to directly listen to wheel events which also provide OS-generated wheel delta value.
+	 * See `Interactive.onWheel` for per-interactive events. For scene-based see `Scene.addEventListener`
+	 * when event is `EWheel`. For global hook use `Window.addEventTarget` method.
+	 */
+	public static inline var MOUSE_WHEEL_UP = 5;
+	/**
+	 * Mouse wheel does not have an off signal, and should be checked only through `isPressed` method.
+	 * Note that there may be multiple wheel scrolls between 2 frames, and to receive more accurate
+	 * results, it is recommended to directly listen to wheel events which also provide OS-generated wheel delta value.
+	 * See `Interactive.onWheel` for per-interactive events. For scene-based see `Scene.addEventListener`
+	 * when event is `EWheel`. For global hook use `Window.addEventTarget` method.
+	 */
+	public static inline var MOUSE_WHEEL_DOWN = 6;
+*/
