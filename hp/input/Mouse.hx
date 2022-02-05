@@ -10,6 +10,7 @@ class Mouse { // or/and Touch? TODO: is this the same for touch input?
 	public static var leftIsDown(get, null):Bool;
 	public static var leftJustClicked(get, null):Bool; // "just" might be too verbose :/
 	public static var leftJustReleased(get, null):Bool;
+	// note: stuff like onOver/onOut aren't handled here
 	
 	// properties
 	public static function get_x() return HP.scene.mouseX; // strange location!
