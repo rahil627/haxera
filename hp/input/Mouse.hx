@@ -8,7 +8,7 @@ class Mouse { // or/and Touch? TODO: is this the same for touch input?
 	public static var x(get, null):Float; 
 	public static var y(get, null):Float;
 	public static var leftIsDown(get, null):Bool;
-	public static var leftJustClicked(get, null):Bool; // "just" might be too verbose :/
+	public static var leftJustPressed(get, null):Bool; // "just" might be too verbose :/
 	public static var leftJustReleased(get, null):Bool;
 	// note: stuff like onOver/onOut aren't handled here
 	
@@ -16,7 +16,7 @@ class Mouse { // or/and Touch? TODO: is this the same for touch input?
 	public static function get_x() return HP.scene.mouseX; // strange location!
 	public static function get_y() return HP.scene.mouseY;
 	public static function get_leftIsDown():Bool return Key.isDown(Key.MOUSE_LEFT);
-	public static function get_leftJustClicked():Bool return Key.isPressed(Key.MOUSE_LEFT); // isPressed is confusing :(
+	public static function get_leftJustPressed():Bool return Key.isPressed(Key.MOUSE_LEFT); // isPressed is confusing :(
 	public static function get_leftJustReleased():Bool return Key.isReleased(Key.MOUSE_LEFT);
 	
 	
