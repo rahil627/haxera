@@ -1,4 +1,4 @@
-package ra.hp.base // delete this line!
+package ra.hp.base // DELETE ME!!
 
 /*
 // still useful in case you need to search for something but
