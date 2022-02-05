@@ -1,4 +1,4 @@
-package ra.hp.bases
+package ra.hp.base
 
 // just a bare-bones App/Main to copy to begin a new project with
 // the data is all optional, feel free to delete!
