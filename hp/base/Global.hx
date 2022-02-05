@@ -5,7 +5,7 @@ package ra.hp.base
 // store references to commonly-used data structures here
 // the scope of this is local to this specific game
 // TODO: singleton vs static
-class Global {
+class BaseGlobal {
 	// only keep references to these here
 	
 	// i think this is the only important data structure to choose
@@ -18,7 +18,7 @@ class Global {
 	// you'd probably already have stored pointers/references to those things anyway (i.e. players)!, soooo...:
 	//public static var entities:List<BaseEntity>;
 	
-	// in special cases can use stuff like this:
+	// for example, in special cases can use stuff like this:
 	//public static var players:Vector<Player>; // if the max amount of players never change, otherwise:
 	//public static var players:Array<Player>
 	//public static var entitiesBackpack:Map<Int, TargetEntities>; // to search for commonly-searched stuff by id (key)	
