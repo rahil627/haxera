@@ -21,8 +21,9 @@ class Mouse { // or/and Touch? TODO: is this the same for touch input?
 	
 }
 
+// can easily finish this class by copy-pasta'ing the rest:
 /* from hxd.Key
-public static inline var MOUSE_LEFT = 0;
+	public static inline var MOUSE_LEFT = 0;
 	public static inline var MOUSE_RIGHT = 1;
 	public static inline var MOUSE_MIDDLE = 2;
 	public static inline var MOUSE_BACK = 3;
