@@ -36,7 +36,7 @@ class MyApp extends PunkApp {
 	public function resetWorld() {
 		//entities.clear(); // lol, would this work?
 		for (e in entities)
-			e.remove(dt);
+			e.remove();
 		world = new Layers(); // TODO: lol, dunno how to dispose, *i think* it's just a tiny array of indicies anyway.., no content
 	}
 	
