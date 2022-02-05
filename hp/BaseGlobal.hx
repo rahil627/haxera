@@ -3,7 +3,7 @@
 // store references to commonly-used data structures here
 // the scope of this is local to this specific game
 // TODO: singleton vs static
-class BaseGlobal {
+class BaseGlobals {
 	// might have a problem disposing these...
 	// nahhh, it's alright... just provide a function to clear them all
 	// i mean, they're static, can't really delete them anyway... whether they're here or in Main/BaseApp..
