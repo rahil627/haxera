@@ -10,7 +10,7 @@ class BaseGlobal {
 	// only keep references to these here
 	//public static var entities:Array<Entity>; // TODO: vs Vector? / just pre-allocate the max expected memory? lol, idk!!
 	//public static var world:Layer;
-	//public static var map1:Map<Int, Entity>; // ?? a map for searching by ID?
+	//public static var map1:Map<Int, Entity>; // ?? a map for searching by ID? log(n) complexity for access?
 	//public static var canvas:h2d.Graphics;  // a top-level thing to draw to
 
 	// constants
