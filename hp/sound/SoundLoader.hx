@@ -33,12 +33,25 @@ class SoundLoader {
 		   break;
 	}
 
+	// requires init to use
+	public static function loadFolder() {
+		for(s in hxd.Res.load(folderPath))
+			s.toSound().getData();
+	}
 	
+	public static function loadFolder(folderPath:String) {
+		for(s in hxd.Res.load(folderPath))
+			s.toSound().getData();
+	}
 }
 
 
 
 /* from ld40
+// TODO: what's the difference between these two methods?
+// without storing it in a ds, can you still select which sounds to play?
+// can you see all of the resources loaded?
+
 		while( true )
 			try winds.push(hxd.Res.load("sfx/wind" + (i++) + ".wav").toSound()) catch( e : hxd.res.NotFound ) break;
 
