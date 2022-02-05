@@ -47,6 +47,6 @@ class BaseEntity /*implements EntitySkeleton*/ {
 	}
 
 	// from deepnight
-	//public function is<T:Entity>(c:Class<T>) return Std.isOfType(this, c); // like entity kind, useful to narrow down searches
-	//public function as<T:Entity>(c:Class<T>) : T return Std.downcast(this, c); // ?? not sure when to use, but seems handy!
+	public function is<T:Entity>(c:Class<T>) return Std.isOfType(this, c); // like entity kind, useful to narrow down searches
+	public function as<T:Entity>(c:Class<T>) : T return Std.downcast(this, c); // ?? not sure when to use, but seems handy!
 }
