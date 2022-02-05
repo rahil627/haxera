@@ -1,3 +1,6 @@
+package ra.hp // TODO: i'm not sure if this needs to be in HeapsPunk or not...
+//package hxd.GraphicsEx // ? lol
+
 // note: don't use 'import', use 'using': using ra.hp.GraphicsEx
 // if static extensions are no fun, just pass in Graphics into a normal static function
 class GraphicsEx {
