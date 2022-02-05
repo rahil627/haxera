@@ -1,6 +1,7 @@
 package ra.hp.sounds;
 
-// just loads sounds (hxd.res.Sound) and stores it in a map: SoundLoader.sounds
+// just helps load sounds (hxd.res.Sound) and stores it in a map: SoundLoader.sounds
+// then you can access that map to find the sound you want to play!
 // use hxd.snd.Manager.get() for all of your audio needs
 class SoundLoader {
 	public static var sounds:Map<String, hxd.res.Sound>; // todo: is string inefficient? generate an enum instead??
