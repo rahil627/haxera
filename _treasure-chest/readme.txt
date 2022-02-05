@@ -40,4 +40,12 @@ deepnightlib
 deepnight gamebase
 terryheaps
 tefvel's gamebase
-https://github.com/openfl/openfl/tree/develop/src/openfl/geom
+
+openfl
+  - https://github.com/openfl/openfl/tree/develop/src/openfl/geom
+armory3D
+  - https://github.com/armory3d/iron/blob/master/Sources/iron/object/Object.hx
+haxeflixel
+
+
+
