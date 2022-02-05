@@ -3,7 +3,7 @@
 // rename the class 'n filename and you're good to go!
 class BaseApp extends PunkApp {
 
-	//public var entities:Array<Entity>; // TODO: static vs global reference
+	//public var entities:List<BaseEntity>; // TODO: static vs global reference
 	//public var world:Layer; // TODO: not really world, is it? Just some helper class
 
 	// called during application setup after `loadAssets` completed (from docs)
