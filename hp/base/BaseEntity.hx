@@ -46,8 +46,7 @@ class BaseEntity /*implements EntitySkeleton*/ {
 		//this = null; // TODO: lol, not sure about doing this from within the class...
 	}
 
-	// from deepnight
-
+	// i found these two from deepnight's libs
 	//Tells if a value v is of the type t. Returns false if v or t are null.
 	//If t is a class or interface with @:generic meta, the result is false.
 	public function is<T:Entity>(c:Class<T>) return Std.isOfType(this, c); // like entity kind, useful to narrow down searches
