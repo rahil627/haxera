@@ -32,7 +32,7 @@ class BaseApp extends PunkApp {
 	
 	// not really dispose, as in garbage collect, just clear/reset the ds...
 	//public function resetWorld() {
-		//entities = [];
+		//entities.clear();
 		//world = new Layer(); // TODO: lol, dunno how to dispose, *i think* it's just a tiny array of indicies anyway.., no content
 	//}
 	
