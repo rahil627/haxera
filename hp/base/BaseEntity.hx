@@ -1,4 +1,4 @@
-package ra.hp.base
+package ra.hp.base // delete this line!
 
 /*
 // still useful in case the same class is used to make several kinds of entities
