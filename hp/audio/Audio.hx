@@ -3,30 +3,43 @@ package ra.hp.audio;
 
 //Very lightweight for Ludum Dare
 class SimpleAudio {
-	public static function init(){
-		loadedsounds = new Map<String, hxd.res.Sound>();
+	public static var sounds:Map<String, hxd.res.Sound>;
+	public static var folderPath;
+	public static var defaultFileExtension;
+	
+	public static function init(folderPath:String = "sounds/", defaultFileExtension:String = ".mp3"){
+		sounds = new Map<String, hxd.res.Sound>();
+		this.folderPath = folderPath;
+		this.defaultFileExtension = defaultFileExtension;
 	}
 
-	public static function load(soundFileName:String){
-		if(!loadedsounds.exists(soundFileName)){
-			loadedsounds.set(soundFileName, hxd.Res.load("filepath/" + soundFileName + "extension").toSound());
-		}
+	public static function load(soundFileName:String) {
+		if(sounds.exists(soundFileName)
+		   return;
+		sounds.set(soundFileName, hxd.Res.load("filepath/" + soundFileName).toSound());
 	}
+	
+	public static function load(soundFileName:String, fileExtension:String) {
+		if(sounds.exists(soundFileName)
+		   return;
+		sounds.set(soundFileName, hxd.Res.load("filepath/" + soundFileName + defaultFileExtension).toSound());
+	}
+
 
 	public static function play(soundfile:String){
 		var soundresource:hxd.res.Sound;
 
-		if(loadedsounds.exists(soundfile)){
-			soundresource = loadedsounds.get(soundfile);
+		if(sounds.exists(soundfile)){
+			soundresource = sounds.get(soundfile);
 		}else{
 			soundresource = hxd.Res.load("sounds/" + soundfile + ".mp3").toSound();
-			loadedsounds.set(soundfile, soundresource);
+			sounds.set(soundfile, soundresource);
 		}
 
 		soundresource.play();
 	}
 
-	public static var loadedsounds:Map<String, hxd.res.Sound>;
+	
 }
 
 
