@@ -14,7 +14,7 @@ vector graphics drawing functions
 color
 geometry / 2d math
   - classes
-    - h2d.col (collider) have most of the geometry classes, note: Bounds = rectangle
+    - h2d.col (collider) provide most of the geometry classes; note: Bounds = rectangle
     - Vector2d
       - HaxePunk
       - or use Heaps.Vector (4d) as a base
