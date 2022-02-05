@@ -38,7 +38,6 @@ class PunkApp extends App {
 	
 		// init global stuff
 		HP.window.title = "heaps <3 p u n k"; // i've seen this set in the hxml build file
-		//HP.window.displayMode = hxd.DisplayMode.Fullscreen; // should use scene.ScaleMode?
 
 		#if debug
 		HP.console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene); // TODO: font is tiny :(
