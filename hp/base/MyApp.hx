@@ -3,7 +3,7 @@ package ra.hp.base // DELETE ME!!
 // just a bare-bones App/Main to copy to begin a new project with
 // the data is all optional, feel free to delete!
 // rename the class 'n filename and you're good to go!
-class BaseApp extends PunkApp {
+class MyApp extends PunkApp {
 
 	//public var entities:List<Entity>; // TODO: static vs global reference
 	//public var world:Layer; // TODO: not really world, is it? Just some helper class
@@ -22,7 +22,7 @@ class BaseApp extends PunkApp {
 		 HP.engine.backgroundColor = 0xFF31A2F2;
 
 		 
-		 var player = new BaseEntity(); // just be sure to store the reference to entities somewhere safe!
+		 var player = new Entity(); // just be sure to store the reference to entities somewhere safe!
 		 */
 	}
 	
@@ -42,7 +42,7 @@ class BaseApp extends PunkApp {
 	// note: must be placed at the end? threw an error:
 	// module main didn't define object type Main?
 	static function main() {
-		new BaseApp();
+		new MyApp();
 		// maybe can store an instance of it... but, for what?
 	}
 }
