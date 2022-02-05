@@ -36,10 +36,10 @@ sound manager
 
 resources:
 haxepunk
-deepnightlib
-deepnight gamebase
-terryheaps
 tefvel's gamebase
+deepnight's gamebase
+deepnightlib
+terryheaps
 
 openfl
   - https://github.com/openfl/openfl/tree/develop/src/openfl/geom
