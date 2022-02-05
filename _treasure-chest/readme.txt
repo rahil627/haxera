@@ -23,10 +23,10 @@ tweens
   - **does heaps even have any?? :o**
   - TODO: get haxepunk/tweens, especially motion tweens
 even simpler input manager (mouse, touch, key: all together)
-  - Mouse from terrheaps
+  - Mouse from terryheaps
 sound manager
   - simple one from terryheaps
-  - complex one from deepnight
+  - complex one already exists in Heaps (snd.Manager)
 
 
 
