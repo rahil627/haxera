@@ -1,3 +1,5 @@
+package ra.hp.bases
+
 /*
 // still useful in case the same class is used to make several kinds of entities
 enum EntityKind {
