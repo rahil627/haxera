@@ -24,7 +24,7 @@ class BaseEntity /*implements EntitySkeleton*/ {
 		//this.y = y;
 		//sprite = new h2d.Anim(getAnim(), 15);
 		//BaseGlobal.world.add(sprite, hasFlag(Under) ? LayerKind.under : LayerKind.players);
-		//BaseGlobal.entities.push(this);
+		//BaseGlobal.entities.push(this); // 1 complexity
 	}
 
 	// override me! and remember to call super.update(dt)
@@ -38,7 +38,7 @@ class BaseEntity /*implements EntitySkeleton*/ {
 	// override me! and remember to call super.remove()
 	public function remove() {
 		//sprite.remove(); // all Objects provide this
-		//BaseGlobal.entities.remove(this);
+		//BaseGlobal.entities.remove(this); // n complexity
 		//this = null; // TODO: lol, not sure about this...
 	}
 
