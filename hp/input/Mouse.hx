@@ -3,14 +3,15 @@ package ra.hp; // note: not ra.hp.input
 import package ra.hp.HP; // depends on HP!!
 import hxd.Key;
 
-// a stupid class for stupid people like me :(
+// mouse input is all over the place in heaps
+// this ds brings it all together
 class Mouse { // or/and Touch? TODO: is this the same for touch input?
 	public static var x(get, null):Float; 
 	public static var y(get, null):Float;
 	public static var leftIsDown(get, null):Bool;
 	public static var leftJustPressed(get, null):Bool; // "just" might be too verbose :/
 	public static var leftJustReleased(get, null):Bool;
-	// note: stuff like onOver/onOut aren't handled here
+	// note: stuff like onOver/onOut are handled by Interactive, not here
 	
 	// properties
 	public static function get_x() return HP.scene.mouseX; // strange location!
@@ -38,11 +39,5 @@ class Mouse { // or/and Touch? TODO: is this the same for touch input?
 	// See `Interactive.onWheel` for per-interactive events. For scene-based see `Scene.addEventListener`
 	// when event is `EWheel`. For global hook use `Window.addEventTarget` method.
 	public static inline var MOUSE_WHEEL_UP = 5;
-
-	// Mouse wheel does not have an off signal, and should be checked only through `isPressed` method.
-	// Note that there may be multiple wheel scrolls between 2 frames, and to receive more accurate
-	// results, it is recommended to directly listen to wheel events which also provide OS-generated wheel delta value.
-	// See `Interactive.onWheel` for per-interactive events. For scene-based see `Scene.addEventListener`
-	// when event is `EWheel`. For global hook use `Window.addEventTarget` method.
 	public static inline var MOUSE_WHEEL_DOWN = 6;
 */
