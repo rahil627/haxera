@@ -6,8 +6,8 @@ package ra.hp.base // DELETE ME!!
 // rename the class 'n filename and you're good to go!
 class MyApp extends PunkApp {
 
-	//public var entities:List<Entity>; // TODO: static vs global reference
-	//public var world:Layer; // TODO: not really world, is it? Just some helper class
+	//var entities:List<Entity>; // TODO: static vs global reference
+	//var world:Layer; // TODO: not really world, is it? Just some helper class
 
 	// called during application setup after `loadAssets` completed (from docs)
 	override function init() {
