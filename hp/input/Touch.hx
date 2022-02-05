@@ -1,6 +1,6 @@
 package ra.hp.input;
 
-import package ra.hp.HP; // depends on HP!!
+import ra.hp.HP; // depends on HP!!
 import hxd.Key;
 
 // it feels like touch input was hacked in by heaps, inferior to mouse
