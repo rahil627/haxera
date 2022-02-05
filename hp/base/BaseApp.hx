@@ -25,18 +25,19 @@ class BaseApp extends PunkApp {
 		 var player = new BaseEntity(); // just be sure to store the reference to entities somewhere safe!
 		 */
 	}
-
-	// called each frame right before rendering (from docs)
-	// first call is done after the application is set up (so `loadAssets` and `init` are called (from docs)
-	override function update(dt:Float) {
-		super.update();
-	}
 	
 	// not really dispose, as in garbage collect, just clear/reset the ds...
 	//public function resetWorld() {
 		//entities.clear();
 		//world = new Layer(); // TODO: lol, dunno how to dispose, *i think* it's just a tiny array of indicies anyway.., no content
 	//}
+	
+	// called each frame right before rendering (from docs)
+	// first call is done after the application is set up (so `loadAssets` and `init` are called (from docs)
+	override function update(dt:Float) {
+		super.update();
+	}
+	
 	
 	// note: must be placed at the end? threw an error:
 	// module main didn't define object type Main?
