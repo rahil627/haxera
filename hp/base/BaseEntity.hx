@@ -14,7 +14,7 @@ enum EntityKind {
 // i'm not really sure what entity means,
 // but this one will likely contain an Object, or something that extends an Object,
 // which itself will be added to the Scene (or first to Layers, then Scene)
-class Entity /*implements EntitySkeleton*/ {	
+class BaseEntity /*implements BaseEntitySkeleton*/ {	
 	//var id:Int; // maybe useful for finding it later..?, can be used as a map key, TODO: storing temp int vs reference?
 	//var name:String; // although strange, i've seen HaxePunk and Armory use this for searching, secret optimization magic??
 	//var kind:EntityKind; // maybe useful narrowing down searches; one big container vs keeping multiple containers
@@ -28,8 +28,8 @@ class Entity /*implements EntitySkeleton*/ {
 		//this.x = x; // just a wrapper for e.sprite.x?
 		//this.y = y;
 		//sprite = new h2d.Anim(getAnim(), 15);
-		//Global.world.add(sprite, hasFlag(Under) ? LayerKind.under : LayerKind.players);
-		//Global.entities.push(this); // 1 complexity
+		//BaseGlobal.world.add(sprite, hasFlag(Under) ? LayerKind.under : LayerKind.players);
+		//BaseGlobal.entities.push(this); // 1 complexity
 	}
 
 	// override me! and remember to call super.update(dt)
@@ -43,7 +43,7 @@ class Entity /*implements EntitySkeleton*/ {
 	// override me! and remember to call super.remove()
 	public function remove() {
 		//sprite.remove(); // all Objects provide this
-		//Global.entities.remove(this); // n complexity
+		//BaseGlobal.entities.remove(this); // n complexity
 		//this = null; // TODO: lol, not sure about doing this from within the class...
 	}
 
