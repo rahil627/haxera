@@ -5,7 +5,11 @@ import hxd.Key;
 
 // mouse input is all over the place in heaps
 // this ds brings it all together
+// note: this is a scene-level handler, not for Interactive
 class Mouse {
+	
+	// TODO: global vs scene handler?
+	
 	public static var x(get, null):Float; 
 	public static var y(get, null):Float;
 	public static var leftIsDown(get, null):Bool;
