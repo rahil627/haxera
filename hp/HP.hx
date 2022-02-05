@@ -44,7 +44,7 @@ class HP {
 
 
 	// abstract App
-	//public static var engine(get, never):Engine; // don't know what this is yet...
+	public static var engine(get, never):Engine; // don't know what this is yet... has backgroundColor tho
 	//public static var sevents(get, never):hxd.SceneEvents; // don't know what this is yet...
 	//public static var state(get, null):MainLoopState; // unimpl
 	//public static var isPaused:Bool; // unimpl
