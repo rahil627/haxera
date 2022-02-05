@@ -5,7 +5,7 @@ import hxd.Key;
 
 // mouse input is all over the place in heaps
 // this ds brings it all together
-class Mouse { // or/and Touch? TODO: is this the same for touch input?
+class Mouse {
 	public static var x(get, null):Float; 
 	public static var y(get, null):Float;
 	public static var leftIsDown(get, null):Bool;
