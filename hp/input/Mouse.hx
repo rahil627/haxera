@@ -14,7 +14,7 @@ class Mouse {
 	// note: stuff like onOver/onOut are handled by Interactive, not here
 	
 	// properties
-	public static function get_x() return HP.scene.mouseX; // strange location!
+	public static function get_x() return HP.scene.mouseX; // note: scene-based event, not global
 	public static function get_y() return HP.scene.mouseY;
 	public static function get_leftIsDown():Bool return Key.isDown(Key.MOUSE_LEFT);
 	public static function get_leftJustPressed():Bool return Key.isPressed(Key.MOUSE_LEFT); // isPressed is confusing :(
