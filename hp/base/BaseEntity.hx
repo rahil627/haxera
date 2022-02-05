@@ -52,12 +52,12 @@ class BaseEntity /*implements BaseEntitySkeleton*/ {
 
 	//Tells if a value v is of the type t. Returns false if v or t are null.
 	//If t is a class or interface with @:generic meta, the result is false.
-	public function is<T:Entity>(c:Class<T>) return Std.isOfType(this, c); // like entity kind, useful to narrow down searches
+	public function is<T:BaseEntity>(c:Class<T>) return Std.isOfType(this, c); // like entity kind, useful to narrow down searches
 	
 	//Checks if object value is an instance of class or interface c.
 	//Compiles only if the type specified by c can be assigned to the type of value.
 	//This method checks if a downcast is possible. That is, if the runtime type of value is assignable to the type specified by c, value is returned. Otherwise null is returned.
 	//This method is not guaranteed to work with core types such as String, Array and Date.
 	//If value is null, the result is null. If c is null, the result is unspecified.
-	public function as<T:Entity>(c:Class<T>) : T return Std.downcast(this, c); // ?? not sure when to use, but seems handy!
+	public function as<T:BaseEntity>(c:Class<T>) : T return Std.downcast(this, c); // ?? not sure when to use, but seems handy!
 }
