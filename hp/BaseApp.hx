@@ -1,3 +1,5 @@
+package ra.hp.bases
+
 // just a bare-bones App/Main to copy to begin a new project with
 // the data is all optional, feel free to delete!
 // rename the class 'n filename and you're good to go!
