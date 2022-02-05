@@ -32,7 +32,7 @@ class BaseGlobal {
 }
 
 /*
-// can be confused with Layers (with an 's')
+// careful: not to be confused with Layers with an 's'
 enum Layer {
 	background;
 	players;
