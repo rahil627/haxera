@@ -8,6 +8,8 @@ import hxd.Key;
 class Touch {
 	// currently just copy-pasta from Mouse, because mouseX, mouseY and Key.MOUSE_LEFT are also used for touch input, but
 	// beyond that, however, they are very different: multi-touch, no other mouse buttons nor wheel
+	
+	// TODO: inline?	
 	public static var x(get, null):Float; 
 	public static var y(get, null):Float;
 	public static var isTouching(get, null):Bool;
