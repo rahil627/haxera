@@ -2,7 +2,7 @@
 
 // aliases
 // holy shit(!!) this is awesome!!
-//import ra.hp.Global as HP // HeapsPunkGlobal, alts: HPG, HP, PG, P // TODO: refactor
+//import ra.hp.Global as HP // HeapsPunkGlobal, alts: HPG, HP, PG, P
 
 // examples
 //import dn.Color as C; // one letter might be a problem refectoring..? regex 'C\.'?
