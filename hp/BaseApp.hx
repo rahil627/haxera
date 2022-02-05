@@ -17,6 +17,8 @@ class BaseApp extends PunkApp {
 		 #if js
 		 HP.window.useScreenPixels = true;
 		 #end
+		 HP.engine.backgroundColor = 0xFF31A2F2;
+
 		 
 		 var player = new BaseEntity(); // just be sure to store the reference to entities somewhere safe!
 		 */
