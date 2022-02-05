@@ -1,10 +1,12 @@
 package ra.hp.base // delete this line!
 
 /*
-// still useful in case the same class is used to make several kinds of entities
+// still useful in case you need to search for something but
+// the same class is used to make several different kinds of entities
 enum EntityKind {
 	player;
 	monster;
+	cuteMonster;
 	etc;
 }
 */
