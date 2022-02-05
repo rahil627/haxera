@@ -39,7 +39,7 @@ class BaseEntity /*implements EntitySkeleton*/ {
 	public function remove() {
 		//sprite.remove(); // all Objects provide this
 		//BaseGlobal.entities.remove(this); // n complexity
-		//this = null; // TODO: lol, not sure about this...
+		//this = null; // TODO: lol, not sure about doing this from within the class...
 	}
 
 	// from deepnight
