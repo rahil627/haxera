@@ -1,4 +1,4 @@
-package ra.hp.base // delete this line!
+package ra.hp.base // DELETE ME!!
 
 // just something to ensure(/insure?) that all entities provide ways to do certain minimal things
 // like dispose of itself!
