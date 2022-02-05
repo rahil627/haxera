@@ -8,7 +8,7 @@ class Mouse { // or/and Touch? TODO: is this the same for touch input?
 	public static var x(get, null):Float; 
 	public static var y(get, null):Float;
 	public static var leftIsDown(get, null):Bool;
-	public static var leftJustClicked(get, null):Bool; // just might be too verbose :/
+	public static var leftJustClicked(get, null):Bool; // "just" might be too verbose :/
 	public static var leftJustReleased(get, null):Bool;
 	
 	// properties
