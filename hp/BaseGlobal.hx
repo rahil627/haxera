@@ -1,4 +1,4 @@
-package ra.hp.bases
+package ra.hp.base
 
 // just an optional bare-bones global class to copy to begin a new project with
 // rename it to something short, or create a short alias in import.hx
