@@ -5,12 +5,13 @@ import hxd.Key;
 
 // touch input in heaps feel as if it was done secondary to mouse
 // this ds brings makes a home for it :)
+// note: this is a scene-level handler, not for Interactive
 class Touch {
 	// currently just copy-pasta from Mouse, because mouseX, mouseY and Key.MOUSE_LEFT are also used for touch input, but
 	// beyond that, however, they are very different: multi-touch, no other mouse buttons nor wheel
 	
 	// TODO: multi-touch
-	// TODO: 3 levels: global, scene, interactive
+	// TODO: 3 levels: global vs scene, interactive?
 	
 	// TODO: inline?	
 	public static var x(get, null):Float; 
