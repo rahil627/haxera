@@ -1,18 +1,24 @@
-package ra.hp;
-//package terryheaps;
+package ra.hp; // note: not ra.hp.input
 
+import package ra.hp.HP; // depends on HP!!
 import hxd.Key;
 
-class Mouse{
-	public static var x(get, null):Float;
-	public static function get_x(){
-		return Gfx.core.s2d.mouseX;
-	}
+// a stupid class for stupid people like me
+class Mouse {
+	public static var x(get, null):Float; 
+	public static var y(get, null):Float;	
 	
-	public static var y(get, null):Float;
-	public static function get_y(){
-		return Gfx.core.s2d.mouseY;
-	}
+	
+	
+	
+	
+	
+	
+	
+	
+	// properties
+	public static function get_x() return HP.scene.mouseX;
+	public static function get_y() return HP.scene.mouseY;
 
 	public static function leftheld():Bool {
 		if (Key.isDown(Key.MOUSE_LEFT)) {
