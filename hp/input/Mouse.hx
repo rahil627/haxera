@@ -21,7 +21,9 @@ class Mouse { // or/and Touch? TODO: is this the same for touch input?
 	
 }
 
+
 // can easily finish this class by copy-pasta'ing the rest:
+// otherwise, see HaxePunk for more: https://github.com/HaxePunk/HaxePunk/blob/dev/haxepunk/input/Mouse.hx
 /* from hxd.Key
 	public static inline var MOUSE_LEFT = 0;
 	public static inline var MOUSE_RIGHT = 1;
