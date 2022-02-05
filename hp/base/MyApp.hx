@@ -34,7 +34,9 @@ class MyApp extends PunkApp {
 	
 	// not really dispose, as in garbage collect, just clear/reset the ds...
 	public function resetWorld() {
-		entities.clear();
+		//entities.clear(); // lol, would this work?
+		for (e in entities)
+			e.remove(dt);
 		world = new Layers(); // TODO: lol, dunno how to dispose, *i think* it's just a tiny array of indicies anyway.., no content
 	}
 	
