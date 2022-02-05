@@ -19,6 +19,8 @@ class BaseGlobals {
 	// well, you'd probably be holding pointers/references to those things anyway (i.e. players)!, soooo...:
 	//public static var entities:List<Entity>;
 	
+	// maybe later on, can use stuff like this:
+	//public static var players:Vector(PlayerEntity) // just an example
 	//public static var mcaEntities:Map<Int, Entity>; // an optional map to search stuff by id
 	
 	//public static var world:Layer;
