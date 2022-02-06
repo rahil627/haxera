@@ -1,5 +1,8 @@
 package hp.base // DELETE ME!!
 
+import haxe.ds.List;
+import h2d.Layers;
+	
 // just an optional bare-bones global class to copy to begin a new project with
 // rename it to something short, or create a short alias in import.hx
 // store references to commonly-used data structures here
@@ -8,15 +11,7 @@ package hp.base // DELETE ME!!
 class Global {
 	// only keep references to these here
 	
-	// i think this is the only important data structure to choose
-	// given that you're constantly adding 'n removing stuff, such as projectiles, then
-	// List is not only the best option, but the simplest too!
-	// array / vector and map are generally for optimization purposes only
-	// array is O(1) access complexity vs O(log(n)) access complexity
-	// ..but really tho, it'd be limited to things you're constantly accessing,
-	// and if you're already constantly accessing them.., well,
-	// you'd probably already have stored pointers/references to those things anyway (i.e. players)!, soooo...:
-	public static var entities:List<Entity>;
+	public static var entities:List<Entities>;
 	
 	// for example, in special cases can use stuff like this:
 	//public static var players:Array<Player>
