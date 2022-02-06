@@ -35,25 +35,25 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	}
 
 	// adds an entity to the beginning of the list
-	function add(entity:T) { // i personally prefer "add" to keep it simple
+	public function add(entity:T) { // i personally prefer "add" to keep it simple
 		entities.push(entity);
 	}
 	
-	function push(entity:T) {
+	public function push(entity:T) {
 		entities.push(entity);	
 	}
 	
 	// removes one entity from the beginning of the list
-	function remove():Null<T> {
+	public function remove():Null<T> {
 		return entities.pop();
 	}
 
 	// note: use this to try to keep more permanent stuff at the end
-	function addToEnd(entity:T) {
+	public function addToEnd(entity:T) {
 		entities.add(entity);
 	}
 	
-	//function removeFromEnd(entity:T) {
+	//public function removeFromEnd(entity:T) {
 		// not sure how to remove the last element...
 		// maybe it's a single-linked-list impl?, not double?
 		// strangely last() is provided, which returns the last element,
@@ -61,16 +61,20 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	//}
 
 	// n complexity, but surely has optimization magic in it
-	function remove(entity:T)Bool {
+	public function remove(entity:T)Bool {
 		return entities.remove(entity);
 	}
 	
-	function toString():String {
+	public function toString():String {
 		return entities.toString();
 	}
 	
 	
 	// other native array/list ds functions
+	
+	// list functions (not comprehensive)
+	public var first(get, never); public function getFirst():Null<T> return entities.first();
+	public var last(get, never); public function getLast():Null<T> return entities.last();	
 	
 	// todo: List.filter?
 	
