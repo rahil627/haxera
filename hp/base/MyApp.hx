@@ -34,10 +34,11 @@ class MyApp extends PunkApp {
 
 	}
 	
-	// not really dispose, as in garbage collect, just clear/reset the ds...
 	public function resetWorld() {
 		entities.remove();
 		world = new Layers(); // TODO: lol, dunno how to dispose, the array is private, *i think* it's just a tiny array of indicies anyway.., no content
+		
+		entities
 	}
 	
 	// called each frame right before rendering (from docs)
