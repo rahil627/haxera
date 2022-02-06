@@ -1,4 +1,4 @@
-package ra.hp.sounds;
+package ra.hp;
 
 // just helps load sounds (hxd.res.Sound) and stores it in a map: SoundLoader.sounds
 // then you can access that map to find the sound you want to play!
