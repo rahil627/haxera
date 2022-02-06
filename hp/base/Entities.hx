@@ -65,6 +65,10 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 		return entities.remove(entity);
 	}
 	
+	function toString():String {
+		return entities.toString();
+	}
+	
 	
 	// other native array/list ds functions
 	
