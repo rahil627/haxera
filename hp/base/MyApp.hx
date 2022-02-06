@@ -35,10 +35,8 @@ class MyApp extends PunkApp {
 	}
 	
 	public function resetWorld() {
-		entities.remove();
+		entities.clear();
 		world = new Layers(); // TODO: lol, dunno how to dispose, the array is private, *i think* it's just a tiny array of indicies anyway.., no content
-		
-		entities
 	}
 	
 	// called each frame right before rendering (from docs)
