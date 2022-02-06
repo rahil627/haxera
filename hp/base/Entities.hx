@@ -102,8 +102,12 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	
 	
 	// extensions begin here
-	
 	public function dispose() {
+		this.clear();
+		this = null;
+	}
+	
+	public function clear() {
 		//entities.clear(); // TODO: woudn't this work?... nah, contained Object(s) would become janky references
 		for (e in entities) {
 			entity.remove(); // remove Object, etc.
@@ -111,8 +115,8 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 		
 		entities.clear();
 	}
-	public function clear() { // alt
-		entities.dispose();
+	public function removeAll() { // alt
+		this.clear();
 	}
 
 	public function update(dt:Float) {
