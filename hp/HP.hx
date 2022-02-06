@@ -23,7 +23,7 @@ class HP {
 	public static var app:App(default, never);
 	
 	// from other places
-	public static var soundManager:Manager(get, never);
+	public static var soundManager:Manager(default, never);
 	
 	// PunkApp
 	public static var dt:Float(get, never); // TODO: are basic types not stored by reference?
@@ -64,7 +64,7 @@ class HP {
 	//static function get_scene() return app.s3d; // TODO: ?? has both at the same time? 3d unimpl
 
 	// other properties
-	static function get_soundManager() return hxd.snd.Manager.get();
+	//static function get_soundManager() return hxd.snd.Manager.get();
 
 	// PunkApp properties
 	//static function get_dt() return hxd.Timer.dt;  // TODO: dt passed into update vs hxd.Timer.dt? (currently using passed in as reference)
