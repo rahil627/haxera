@@ -68,13 +68,12 @@ Key
   - from FP/HXP, this is also Key!
 
 input flow / propogation:
-  - input events are setup in Window via addEventListener (or Scene?), accordingly to each target
-    - then handled by Scene
-    - then further simplified and handled by Key
-    - ...then optionally accessed by Interactable?
-  - although you can access all of the global input events, you will likely want to use Key for keys and Interactable for mouse/input
-  - can use Interactive to handle mouse/touch input events and
-  - can use Key to handle keyboard events from anywhere, even without Interactable!
+  - input events are setup in Window via addEventListener, accordingly to each target
+    - then handled by Scene via addSceneEventListener
+    - then handled and simplified by Key
+    - ...then optionally accessed by Interactive?
+  - although you can directly access and hook into the global input events, you will likely want to use Key for keys and Interactive for handling mouse/touch positions
+  - note: can use Key to handle keyboard events from anywhere, even without Interactive!
   - Interactive provides a link between scene tree objects and input, figuring out which object should receive the input
     - imagine you have a 3d world on a tablet device, you will likely want the top-most camera-facing objects to capture input
   - Scene has getInteractable (among other things...) which figures out and fetches the top-most Interactable
