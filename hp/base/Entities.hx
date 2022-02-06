@@ -23,10 +23,10 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	//@:allow(elke.entity.Entity3D, elke.entity.Entity2D)
 	//static var _NEXT_ID = 0;
 	
-	var entities:List<Entity:T>;
-	//var entities:Array<Entity:T>; // choose your ds impl
+	public var entities:List<Entity:T>; // todo: temporarily public until this class is complete
+	//var entities:Array<Entity:T>; // choose your ds impl;
 	
-	// the core of haxe.ds.List and Array
+	// the core shared functions of haxe.ds.List and Array
 	
 	public var count(get, never):Int; function get_count() return entities.length;
 	
@@ -44,8 +44,8 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	}
 	
 	// removes one entity from the beginning of the list
-	function remove() {
-		entities.pop();
+	function remove():Null<T> {
+		return entities.pop();
 	}
 
 	// note: use this to try to keep more permanent stuff at the end
@@ -61,14 +61,15 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	//}
 
 	// n complexity, but surely has optimization magic in it
-	function remove(entity:T) {
-		entities.remove(entity);
+	function remove(entity:T)Null<T> {
+		return entities.remove(entity);
 	}
 	
 	
 	// other native array/list ds functions
 	
 	// todo: List.filter?
+	
 	
 	
 	
