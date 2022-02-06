@@ -2,7 +2,7 @@ this package is for "base"/"bare-bones" code, not actual library ds'es
 
 everything here is optional
 
-maybe you need to use EntityList, or maybe a normal List or Array is enough, whatever!!
+maybe you need to use EntityList, or maybe a normal List or Array is enough, or maybe no container at all, whatever!!
 do what you want!
 
 there's one interconnectedness / dependency:
