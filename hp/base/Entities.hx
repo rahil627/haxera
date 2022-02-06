@@ -26,6 +26,7 @@ class Entities {
 	public function dispose() {
 		for (e in entities)
 			e.remove();
+		entities.clear();
 	}
 
 	public function update(dt:Float) {
