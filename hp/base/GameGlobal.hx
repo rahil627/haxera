@@ -8,7 +8,7 @@ import h2d.Layers;
 // store references to commonly-used data structures here
 // the scope of this is local to this specific app
 // TODO: singleton vs static
-class GameGlobal {
+class AppGlobal {
 	
 	// only keep references to stuff here // TODO: huh? my brain hurts
  	public static var world:Layers;
