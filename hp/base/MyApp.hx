@@ -53,6 +53,6 @@ class MyApp extends PunkApp {
 	// module main didn't define object type Main?
 	static function main() {
 		new MyApp();
-		// maybe can store an instance of it... but, for what?
+		// can store an instance of it... but, for what? for now HP.app is the parent PunkApp class
 	}
 }
