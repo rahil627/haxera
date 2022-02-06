@@ -2,7 +2,7 @@
 
 // aliases
 // holy shit(!!) this is awesome!!
-//import ra.hp.Global as HP // HeapsPunkGlobal, alts: HPG, HP, PG, P
+//import Global as GG // game globals
 
 // examples
 //import dn.Color as C; // one letter might be a problem refectoring..? regex 'C\.'?
