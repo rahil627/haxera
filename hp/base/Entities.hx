@@ -12,6 +12,9 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	
 	// use HaxePunk's EntityList as a base?
 	// https://github.com/HaxePunk/HaxePunk/blob/987b915486b9ea9ce23180cc17345ad805d87021/haxepunk/EntityList.hx
+	// it's interesting... entity has type, layer, camera, and can be added to the scene, much like Object
+	// in my case, however, all of that stuff is in handled by Object, except the type (i use "kind")
+	// so this ds will be much simpler
 	
 	// todo: slowly implement List as you need it
 	// https://api.haxe.org/haxe/ds/List.html
@@ -78,7 +81,7 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 
 	// Call a function on all Entities in an EntityList, and return it's value
 	// from HaxePunk.EntityList	
-	public function map<R>(f:(T->R)):Array<R> {
+	public function map<R>(f:(T->R)):List<R> { // todo array vs list
 		return [for (entity in entities) f(entity)];
 	}
 	
