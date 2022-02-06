@@ -17,7 +17,7 @@ class MathEx { // std.Math < hxd.Math < ra.hp.MathEx
 	}
 
 	public static inline function randomInt(cl:Class<Math>, max = Int64.high):Int { // TODO: 32bit max?
-		return std.int(Math.random(max));
+		return std.int(Math.random(max)); // or std.random(max)
 	}
 	
 	public static inline function randomHex(cl:Class<Math>):Int {
