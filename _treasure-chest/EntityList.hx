@@ -1,9 +1,8 @@
-https://github.com/HaxePunk/HaxePunk/blob/987b915486b9ea9ce23180cc17345ad805d87021/haxepunk/EntityList.hxpackage haxepunk;
-
 /**
  * A group of entities which can be added to or removed from the Scene and
  * moved together. Also supports object pooling.
  * @since	2.6.0
+ * @author MattTuttle & the HaxePunks
  */
 class EntityList<T:Entity> extends Entity
 {
