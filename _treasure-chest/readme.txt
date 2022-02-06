@@ -8,8 +8,9 @@ NOTE: Heaps has nearly everything, just have to search for it, just use github t
 
 need:
 gamepad input
-  - **complex one from deepnight**
+  - hxd.Pad
   - simple one from tefvel
+  - complex one from deepnight
   
 touch input
   - including multi-touch
