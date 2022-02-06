@@ -8,7 +8,7 @@ import h2d.Console;
 import h2d.Interactive;
 import hxd.Scene.ScaleMode;
 
-// helper class similar to FP in FlashPunk and HXP in HaxePunk
+// static global helper class similar to FP in FlashPunk and HXP in HaxePunk
 // abstracts the commonly used data 'n functions from App, Scene, Window
 // try to keep just references of stuff, no actual objects
 class HP {
