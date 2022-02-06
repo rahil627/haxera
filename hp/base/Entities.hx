@@ -12,12 +12,6 @@ class Entities {
 		entities = [];
 	}
 
-	public function dispose() {
-		for (e in entities) {
-			e.remove();
-		}
-	}
-
 	function add(e:Entity) {
 		entities.push(e);
 	}
@@ -25,12 +19,31 @@ class Entities {
 	function remove(e:Entity) {
 		entities.remove(e);
 	}
+	
+	
+	// extensions begin here
+	
+	public function dispose() {
+		for (e in entities)
+			e.remove();
+	}
 
 	public function update(dt:Float) {
-		for (e in entities) {
+		for (e in entities)
 			e.update(dt);
-		}
 	}
+	
+	public function find(e:Entity)Entity {
+		for (i in entities) {
+			//if (i.kind != e.kind)
+				//return null; // todo: or false?
+			
+			//if (i.type != e.type) //!std.isOfType(i, e)
+				//return null;			
+		}
+			
+	}
+	
 	
 	
 	
