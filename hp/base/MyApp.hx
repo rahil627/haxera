@@ -1,15 +1,16 @@
 package hp.base // DELETE ME!!
 
 import haxe.ds.List;
-//import ?.Layers;
+import h2d.Layers;
 
 // just a bare-bones App/Main to copy to begin a new project with
 // the data is all optional, feel free to delete!
 // rename the class 'n filename and you're good to go!
 class MyApp extends PunkApp {
 
-	var entities:List<Entity>; // TODO: static vs global reference
-	var world:Layer; // TODO: not really world, is it? Just some helper class
+	//var entities:List<Entity>; // TODO: static vs global reference
+	var entities:Entities;
+	var world:Layers; // TODO: not really world, is it? Just some helper class
 
 	// called during application setup after `loadAssets` completed (from docs)
 	override function init() {
@@ -26,7 +27,8 @@ class MyApp extends PunkApp {
 		 HP.engine.backgroundColor = 0xFF31A2F2;
 		*/
 		 // init app stuff
-		 entities = new List<Entity>();
+		 //entities = new List<Entity>();
+		 entities = new Entities();
 	 	 world = new Layers(HP.scene);
 		 //var monster = new Entity(); // just be sure to store the reference to entities somewhere safe!
 
@@ -34,10 +36,7 @@ class MyApp extends PunkApp {
 	
 	// not really dispose, as in garbage collect, just clear/reset the ds...
 	public function resetWorld() {
-		//entities.clear(); // lol, would this work?
-		for (e in entities)
-			e.remove();
-		entities.clear();
+		entities.remove();
 		world = new Layers(); // TODO: lol, dunno how to dispose, *i think* it's just a tiny array of indicies anyway.., no content
 	}
 	
@@ -45,9 +44,7 @@ class MyApp extends PunkApp {
 	// first call is done after the application is set up (so `loadAssets` and `init` are called (from docs)
 	override function update(dt:Float) {
 		super.update();
-		
-		for (e in entities)
-			e.update(dt);
+		entities.update(dt);
 		
 		
 	}
