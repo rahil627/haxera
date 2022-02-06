@@ -15,8 +15,8 @@ class Entities {
 		entities = [];
 	}
 
-	// adds to the beginning of the list
-	function add(e:Entity) { // "add" is a personal preference
+	// adds an entity to the beginning of the list
+	function add(e:Entity) { // i personally prefer "add" to keep it simple
 		entities.push(e);
 	}
 	
@@ -24,7 +24,7 @@ class Entities {
 		entities.push(e);	
 	}
 	
-	// removes one element from the beginning of the list
+	// removes one entity from the beginning of the list
 	function remove() {
 		entities.pop();
 	}
@@ -41,6 +41,7 @@ class Entities {
 		// but then you'd have to still use remove() and go through the entire list to remove it
 	//}
 
+	// n complexity, not sure how it works though
 	function remove(e:Entity) {
 		entities.remove(e);
 	}
@@ -59,7 +60,8 @@ class Entities {
 			e.update(dt);
 	}
 	
-	public function find(e:Entity)Entity {
+
+	public function search(e:Entity)Entity {
 		for (i in entities) {
 			//if (i.kind != e.kind)
 				//return null; // todo: or false?
@@ -70,7 +72,11 @@ class Entities {
 			
 	}
 	
-	
+	public function reverseSearch(e:Entity)Entity {
+		for (var i = i.entities.length(), i >=0, i--) {
+			// do stuff
+		}
+	}
 	
 	
 	
