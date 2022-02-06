@@ -38,8 +38,7 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	public function add(entity:T) { // i personally prefer "add"/"remove" to keep it simple, and match the rest of the framework
 		entities.push(entity);
 	}
-	
-	public function push(entity:T) {
+	public function push(entity:T) { // alt
 		entities.push(entity);	
 	}
 	
@@ -47,8 +46,7 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	public function remove():Null<T> {
 		return entities.pop();
 	}
-	
-	public function pop():Null<T> {
+	public function pop():Null<T> { // alt
 		return entities.pop();
 	}
 	
@@ -106,11 +104,15 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	// extensions begin here
 	
 	public function dispose() {
+		//entities.clear(); // TODO: woudn't this work?... nah, contained Object(s) would become janky references
 		for (e in entities) {
 			entity.remove(); // remove Object, etc.
 		}
 		
 		entities.clear();
+	}
+	public function clear() { // alt
+		entities.dispose();
 	}
 
 	public function update(dt:Float) {
