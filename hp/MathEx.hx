@@ -28,10 +28,8 @@ class MathEx { // std.Math < hxd.Math < ra.hp.MathEx
 	// can just throw all math functions here
 
 	// what about geometry ds, like Point, Rectangle (Bounds?), etc.?
-	// nah, is there even a standard Point ds? TODO: look for Point, or use poly2tri.Point?
-	// maybe better to not use extra ds'es, and keep it simple with Int/Float x/y/z/r
+	// maybe better to not use extra ds'es, and keep it simple with just Int/Float
 	// ...but surely, eventually, people use vector math even for simple 2d movement?..
-	// can grab Vector2 from MikeTuttle / HaxePunk
 
 
 	// collision functions already exists in Object, i don't think there's a need for--
