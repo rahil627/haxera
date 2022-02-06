@@ -19,6 +19,7 @@ touch input
 want:
 entity container ds
   - **EntityList from HaxePunk**
+    - uses array and features "object pooling"!!
 
 simpler input management (mouse, touch, key: all together?)
   - Mouse from terryheaps
