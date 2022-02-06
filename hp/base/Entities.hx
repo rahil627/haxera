@@ -13,7 +13,11 @@ class Entities {
 	}
 
 	function add(e:Entity) {
-		entities.push(e);
+		entities.add(e); // adds to the end of the list; use push to add to to the beginning
+	}
+	
+	function pop(e:Entity) {
+		entities.pop(); // removes first element
 	}
 
 	function remove(e:Entity) {
@@ -48,11 +52,6 @@ class Entities {
 	
 	
 	
-	
-	// helpers to avoid refactoring code
-	public function push(e:Entity) {
-		entities.add(e);
-	}
 	
 	
 }
