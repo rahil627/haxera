@@ -55,7 +55,7 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	}
 	
 	// removes one entity from the beginning of the list
-	public function remove():Null<T> { // TODO: confused with dispose
+	public function removeFirst():Null<T> { // "remove" can be ambiguous
 		return entities.pop();
 	}
 	public function pop():Null<T> { // alt
@@ -115,11 +115,11 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	
 	// extensions begin here
 	public function dispose() {
-		this.clear();
+		this.removeAll();
 		this = null;
 	}
 	
-	public function clear() {
+	public function removeAll() {  // or reset
 		//entities.clear(); // TODO: woudn't this work?... nah, contained Object(s) would become janky references
 		for (e in entities) {
 			entity.remove(); // remove Object, etc.
@@ -127,10 +127,15 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 		
 		entities.clear();
 	}
-	public function removeAll() { // alt
-		this.clear();
+	
+	public function clear() { // alt
+		this.removeAll()
 	}
-
+		
+	//public function remove() { // alt, TODO: this is just too ambiguous
+	//	this.removeAll();
+	//}
+	
 	public function update(dt:Float) {
 		for (e in entities)
 			entity.update(dt);
