@@ -10,6 +10,9 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	// maybe can use inheritance (extends List) or create a new generic (entities:ListEx<Entity>) somehow..?
 	// see https://haxe.org/manual/type-system-generic.html
 	
+	// use HaxePunk's EntityList as a base?
+	// https://github.com/HaxePunk/HaxePunk/blob/987b915486b9ea9ce23180cc17345ad805d87021/haxepunk/EntityList.hx
+	
 	// todo: slowly implement List as you need it
 	// https://api.haxe.org/haxe/ds/List.html
 
