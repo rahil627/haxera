@@ -19,11 +19,12 @@ class Global {
 	public static var entities:List<Entity>;
 	
 	// for example, in special cases can use stuff like this:
-	//public static var players:Vector<Player>; // if the max amount of players never change, otherwise:
 	//public static var players:Array<Player>
+	//public static var players:Vector<Player>; // if the max amount of players never change, otherwise:
 	//public static var entitiesBackpack:Map<Int, TargetEntities>; // to search for commonly-searched stuff by id (key)	
 
-	//public static var world:Layer;
+	// this is the second-most import ds, and thankfully it's already implemented
+	public static var world:Layer;
 	
 	//public static var canvas:h2d.Graphics;  // a top-level thing to draw to
 
