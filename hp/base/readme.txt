@@ -6,5 +6,5 @@ maybe you need to use EntityList, or maybe a normal List or Array is enough, wha
 do what you want!
 
 there's one interconnectedness / dependency:
-EntityList requires that Entity provide an remove(), and maybe an update(), hence the EntitySkeleton interface
+EntityList requires that Entity provide an remove(), and maybe an update() (even if it's empty), hence the EntitySkeleton interface
 ...even without EntityList, i still want the remove() provided
