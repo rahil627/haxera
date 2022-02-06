@@ -5,6 +5,7 @@ import haxe.ds.list;
 
 // a specialized generic container for Entity
 // designed to be an extendable replacement for haxe.ds.List or Array
+//@:generic TODO: don't i need this?
 class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	
 	// maybe can use inheritance (extends List) or create a new generic (entities:ListEx<Entity>) somehow..?
