@@ -24,6 +24,7 @@ class Global {
 	//public static var entitiesBackpack:Map<Int, TargetEntities>; // to search for commonly-searched stuff by id (key)	
 
 	//public static var world:Layer;
+	
 	//public static var canvas:h2d.Graphics;  // a top-level thing to draw to
 
 	// constants
