@@ -8,9 +8,9 @@ import h2d.Layers;
 // rename the class 'n filename and you're good to go!
 class MyApp extends PunkApp {
 
-	//var entities:List<Entity>; // TODO: static vs global reference
-	var entities:Entities;
 	var world:Layers; // TODO: not really world, is it? Just some helper class
+	var entities:Entities;
+	//var players:Array<PlayerEntity>; // TODO: static vs global reference
 
 	// called during application setup after `loadAssets` completed (from docs)
 	override function init() {
@@ -27,9 +27,9 @@ class MyApp extends PunkApp {
 		 HP.engine.backgroundColor = 0xFF31A2F2;
 		*/
 		 // init app stuff
-		 //entities = new List<Entity>();
+		 world = new Layers(HP.scene);
 		 entities = new Entities();
-	 	 world = new Layers(HP.scene);
+		 //players = new Array<PlayerEntity>();
 		 //var monster = new Entity(); // just be sure to store the reference to entities somewhere safe!
 
 	}
@@ -37,7 +37,7 @@ class MyApp extends PunkApp {
 	// not really dispose, as in garbage collect, just clear/reset the ds...
 	public function resetWorld() {
 		entities.remove();
-		world = new Layers(); // TODO: lol, dunno how to dispose, *i think* it's just a tiny array of indicies anyway.., no content
+		world = new Layers(); // TODO: lol, dunno how to dispose, the array is private, *i think* it's just a tiny array of indicies anyway.., no content
 	}
 	
 	// called each frame right before rendering (from docs)
