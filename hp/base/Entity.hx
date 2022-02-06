@@ -17,6 +17,7 @@ class Entity implements EntitySkeleton {
 	//var id:Int; // maybe useful for finding it later..?, can be used as a map key, TODO: storing temp int vs reference?
 	//var name:String; // although strange, i've seen HaxePunk and Armory use this for searching, secret optimization magic??
 	//var kind:EntityKind; // maybe useful narrowing down searches; one big container vs keeping multiple containers
+	
 	//var sprite:Object; // Object and it's extensions: Drawable, Graphics, Anim, etc.
 
 	// override me! and remember to call super()
