@@ -29,7 +29,7 @@ class Entity /*implements EntitySkeleton*/ {
 		//this.y = y;
 		//sprite = new h2d.Anim(getAnim(), 15);
 		//Global.world.add(sprite, hasFlag(Under) ? LayerKind.under : LayerKind.players);
-		//Global.entities.push(this); // 1 complexity
+		Global.entities.push(this); // 1 complexity
 	}
 
 	// override me! and remember to call super.update(dt)
@@ -43,8 +43,8 @@ class Entity /*implements EntitySkeleton*/ {
 	// override me! and remember to call super.remove()
 	public function remove() {
 		//sprite.remove(); // all Objects provide this
-		//Global.entities.remove(this); // n complexity
-		//this = null; // TODO: lol, not sure about doing this from within the class...
+		Global.entities.remove(this); // n complexity
+		this = null; // TODO: lol, not sure about doing this from within the class...
 	}
 
 	// i found these two from deepnight's libs
