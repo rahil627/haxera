@@ -29,7 +29,7 @@ class Entity implements EntitySkeleton {
 		//this.y = y;
 		//sprite = new h2d.Anim(getAnim(), 15);
 		//AppGlobal.world.add(sprite, hasFlag(Under) ? LayerKind.under : LayerKind.players);  // add Object to Layers
-		AppGlobal.entities.push(this); // 1 complexity
+		AppGlobal.entities.push(this);
 	}
 
 	// override me! and remember to call super.update(dt)
@@ -43,7 +43,7 @@ class Entity implements EntitySkeleton {
 	// override me! and remember to call super.remove()
 	public function remove() {
 		//sprite.remove(); // all Objects provide this
-		AppGlobal.entities.remove(this); // n complexity
+		AppGlobal.entities.remove(this);
 		this = null; // TODO: lol, not sure about doing this from within the class...
 	}
 
