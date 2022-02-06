@@ -1,19 +1,24 @@
 package ra.hp.base.entities; // DELETE ME
+import ra.hp.base.Entity; // DELETE ME
 
-import ra.hp.base.Entity // DELETE ME
+import haxe.ds.list;
 
 // a specialized container for Entity
 // designed to be an extendable replacement for haxe.ds.List or Array
 class Entities {
-	//TODO: maybe can create a template/ds class?: ListEx,
-	// which implements the first half of this ds
-	//see 	https://haxe.org/manual/type-system-generic.html
-	// or vs inheritance?: Entities extends List
+	
+	//TODO: inheritance (extends List) or create a new generic (entities:ListEx<Entity>)?
+	// see https://haxe.org/manual/type-system-generic.html
+	
+	// todo: slowly implement List as you need it
+	// https://api.haxe.org/haxe/ds/List.html
 
 	//@:allow(elke.entity.Entity3D, elke.entity.Entity2D)
 	//static var _NEXT_ID = 0;
 	
-	var entities:List<Entity>; // or Array
+	public var entities:List<Entity>; // or Array
+	
+	// the core of haxe.dsList
 	
 	public function new() {
 		entities = [];
@@ -49,6 +54,10 @@ class Entities {
 	function remove(e:Entity) {
 		entities.remove(e);
 	}
+	
+	
+	
+	
 	
 	
 	// extensions begin here
