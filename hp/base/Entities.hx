@@ -8,6 +8,7 @@ class Entities {
 	//TODO: maybe can create a template/ds class?: ListEx,
 	// which implements the first half of this ds
 	//see 	https://haxe.org/manual/type-system-generic.html
+	// or vs inheritance?: Entities extends List
 
 	//@:allow(elke.entity.Entity3D, elke.entity.Entity2D)
 	//static var _NEXT_ID = 0;
