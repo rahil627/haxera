@@ -87,7 +87,7 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	// extensions begin here
 	
 	public function dispose() {
-		for (e in container) {
+		for (e in entities) {
 			entity.remove();
 		}
 		
@@ -95,7 +95,7 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	}
 
 	public function update(dt:Float) {
-		for (e in container)
+		for (e in entities)
 			entity.update(dt);
 	}
 	
