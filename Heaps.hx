@@ -1,10 +1,9 @@
 package ra;
 
-// HeapsHelper.hx?
-// re-usable code for the heaps.io framework
-// but apart from the heapspunk helper classes
+// a helper/utility ds for the heaps.io framework
+// but apart from the HeapsPunk helper ds'es
 // more for my own personal use / not useful to others
-class Heaps {
+class Heaps { // todo: HeapsHelper.hx?
 	// public static var
 
 }
