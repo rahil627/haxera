@@ -7,7 +7,7 @@ import haxe.ds.list;
 // designed to be an extendable replacement for haxe.ds.List or Array
 class Entities {
 	
-	//TODO: inheritance (extends List) or create a new generic (entities:ListEx<Entity>)?
+	// maybe can use inheritance (extends List) or create a new generic (entities:ListEx<Entity>) somehow..?
 	// see https://haxe.org/manual/type-system-generic.html
 	
 	// todo: slowly implement List as you need it
@@ -64,8 +64,8 @@ class Entities {
 	// extensions begin here
 	
 	public function dispose() {
-		for (i in container)
-			i.remove();
+		for (e in container)
+			e.remove();
 		entities.clear();
 	}
 
