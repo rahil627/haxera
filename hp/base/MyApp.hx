@@ -9,7 +9,7 @@ import h2d.Layers;
 class MyApp extends PunkApp {
 
 	var world:Layers; // just a helper tool to put things in the right place in the scene tree
-	var entities:Entities<Entity>;
+	var entities:EntityList<Entity>;
 	//var players:Array<PlayerEntity>; // TODO: static vs global reference
 
 	// called during application setup after `loadAssets` completed (from docs)
@@ -28,7 +28,7 @@ class MyApp extends PunkApp {
 		*/
 		 // init app stuff
 		 world = new Layers(HP.scene);
-		 entities = new Entities<Entity>();
+		 entities = new EntityList<Entity>();
 		 //players = new Array<PlayerEntity>();
 		 //var monster = new Entity(); // just be sure to store the reference to entities somewhere safe!
 
