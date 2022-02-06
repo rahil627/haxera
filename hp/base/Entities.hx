@@ -23,7 +23,19 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	//@:allow(elke.entity.Entity3D, elke.entity.Entity2D)
 	//static var _NEXT_ID = 0;
 	
-	public var entities:List<Entity:T>; // todo: temporarily public until this class is complete
+	
+	
+	// i think this is the only important data structure choice to make
+	// given that you're constantly adding 'n removing stuff, such as projectiles, then
+	// List is not only the best option, but the simplest too!
+	// array / vector and map are generally for optimization purposes only
+	// array is O(1) access complexity vs O(log(n)) access complexity
+	// ..but really tho, it'd be limited to things you're constantly accessing,
+	// and if you're already constantly accessing them.., well,
+	// you'd probably already have stored pointers/references to those things anyway (i.e. players)!, soooo...:
+	// (on the other hand, i've seen Arrays used in Haxe everywhere, soooooo ???)
+	
+	var entities:List<Entity:T>;
 	//var entities:Array<Entity:T>; // choose your ds impl;
 	
 	// the core shared functions of haxe.ds.List and Array
