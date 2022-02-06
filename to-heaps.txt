@@ -42,38 +42,40 @@ Window[.js/hl/.etc]
   - from FP/HXP, this is HXP.Window
   - from Godot/Unity, this is where you check-mark full-screen, borderless, etc. (DisplayMode)
 Scene
-  - extends Layers, InteractableScene (??)
+  - extends Layers and  InteractableScene (??)
+    - logic-wise this is quite confusing, but functionality-wise it makes sense:
+    - it contains the same functionality of Layers: it maitains an array of Objects ordered from back to front (index 0-n)
   - this data structure is the largest and handles a lot of stuff
   - edits the Window for different ScaleMode
   - draws the entire scene tree front-to-back via render() and drawContent()
   - can add/remove cameras
-  - has interactiveCamera which is used to handl mouse/touch input through Interactive
+  - has an interactiveCamera which is the one used to handle mouse/touch input through Interactive
   - provides getInteractive, which might be used by Interactive (??)
-  - can also use add/removeEventListener to check for all input events
+  - propogates input events through add/removeEventListener
   - handles changing Scene (?? or in App?)
-  - from FP/HXP, maybe a combo of HXP.scene, HXP.screen (ScaleMode, mouse/touch input), and FP/HXP.world? (?? not sure...)
+  - from FP/HXP, maybe a combo of HXP.scene, HXP.screen (ScaleMode, mouse/touch input), and FP/HXP.world
 App
   - designed to be inherited, providing entry to the main init() and main update()
   - contains a single static instance of itself (can store a reference of it yourself)
   - has the first default instance of Scene (s2d/s3d)
   - has the main game loop (it's internal, no need to touch)
   - initalizes Key
-  - from FP/HXP, this is HXP.Engine (and HXP.App deprecated?)
+  - from FP/HXP, this is HXP.Engine (and deprecated HXP.App)
 Key
   - a static helper class for key inputs
   - although called "keys", they include mouse buttons, and
   - although called "mouse buttons", they double for touch input
-    - (or at least the left mouse button counts as the first touch input)
+    - (or at least the left mouse button counts as the first touch input; not sure about the others)
   - are you confused yet?
   - from FP/HXP, this is also Key!
 
 input flow / propogation:
-  - input events are setup in Window via addEventListener, accordingly to each target
-    - then handled by Scene via addSceneEventListener
+  - input events are setup in Window via addEventListener, accordingly to each target ("global level")
+    - then handled by Scene via addSceneEventListener ("scene level")
     - then handled and simplified by Key
-    - ...then optionally accessed by Interactive?
-  - although you can directly access and hook into the global input events, you will likely want to use Key for keys and Interactive for handling mouse/touch positions
-  - note: can use Key to handle keyboard events from anywhere, even without Interactive!
+    - ...then optionally accessed by Interactive? ("Interactive level")
+  - although you can directly access and hook into the global input events, you will likely want to use Key for keys, scene.mouseX and scene.mouseY for screen-level mouse/touch inputs, and Interactive for handling mouse/touch based on the game's scene Objects
+  - note: can use Key to handle keyboard events from anywhere, even without Interactive! it is automatically initialized by App, so there is no need to do anything
   - Interactive provides a link between scene tree objects and input, figuring out which object should receive the input
     - imagine you have a 3d world on a tablet device, you will likely want the top-most camera-facing objects to capture input
   - Scene has getInteractable (among other things...) which figures out and fetches the top-most Interactable
@@ -83,7 +85,8 @@ input flow / propogation:
 object, and all of it's inherited classes:
   - think of these as components of an entity: transform, render, input, vector graphics, etc.
     - as in, something that provides a suite of vars 'n functions to help do something in particular: a library?
-  - maybe can inherit Object to write your own component (?)
+  - maybe can inherit Object to write your own components (?)
+    - more likely though, all you need is to write some logical code alongside it (a "script" in Unity), often combined toegher into a single data structure called an "entity"
 Object
   - base scene tree object
   - can have a parent Object and can have children Objects, like Flash api
@@ -119,7 +122,7 @@ hxd.Vector
 
 snd (sound)
   - Manager.getInstance() can be used to handle all audio needs
-  - the sound resource ds (hxd.res.sound) itself also contains a few helper functions: play(), stop()
+  - the sound resource ds (hxd.res.sound) itself also contains a few helper functions: play(), stop(); that might be just enough for a small game or for quickly testing the sound file
 
 res (resource)
   - used to load various files (resources, "assets") into the game: fonts, sounds, images, animations, data (castle db), etc.
@@ -146,18 +149,21 @@ https://github.com/Yanrishatum/cherry-jam
 selected "game bases":
 https://github.com/jefvel/game-base/tree/master/src
   - **this looks like what would happen if i tried to make a complete game base**
+  - i likely will use ds from this game base as a base for my own game base... yep, i'm based
 
 https://github.com/deepnight/gameBase/tree/master/src
-  - a lot of unnecessary stuff specific to his games... but he made Dead Cells!
+  - i feel like there's a lot of unneccary stuff specific to his games... I avoided using his game base because i felt it was better to stick with just core Heaps than to add another rather large layer on top of that, which itself might just depend on his own library (deepnightLibs)... For example his entity class is already quite large, with a ton of stuff i prolly don't need, at least not at first... but he made Dead Cells tho!!
+  - having said that, he probably has some of the most useful in-production code regarding: gamepad controls (device input), 2d platformer controls (2d movement), porting (especially Nintendo Switch), cross-platform building and distributing, and a ton of other useful things
 
 https://github.com/TerryCavanagh/terryheaps/tree/master/terryheaps
-  - more game jam style of coding, lol, but has a raw primitive beauty :)
+  - more "creative" framework style of coding, lol, but has a raw primitive beauty to it :)
+  - because it's so simple, some of his ds can be used as primitive bases to start with (sound, mouse, graphics extensions, etc.), but, for the most part, it's all just janky game jam style get-shit-done type of code. Most of it does not scale well, if at all.
 
 
 
 other:
 https://github.com/HaxePunk/HaxePunk
-  - still an amazing feat, and since it was in Haxe, can use nearly any code from it
+  - still an amazing feat, and since it was in Haxe, can use nearly any code from it, especially the math/geometry ones
   - Vector2, utility classes, functions, there's a ton of stuff in there
 
 
