@@ -7,5 +7,5 @@ package ra.hp.base // DELETE ME!!
 interface EntitySkeleton {
     //public function init():Void; // at the moment, the init code is in the constructor! ...i like it better there...
     public function update(dt:Float):Void; // called in the main update loop
-    public function remove():Void; // what if there's nothing to remove, except itself?
+    public function remove():Void; // called in the main remove everything function
 }
