@@ -1,4 +1,4 @@
-package hp.base.entities; // DELETE ME
+package hp.base; // DELETE ME
 import hp.base.Entity; // DELETE ME
 
 import haxe.ds.list;
