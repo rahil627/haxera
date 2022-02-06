@@ -1,4 +1,4 @@
-package ra.hp.base // DELETE ME!!
+package hp.base // DELETE ME!!
 
 import haxe.ds.List;
 //import ?.Layers;
