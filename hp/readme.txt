@@ -1,4 +1,5 @@
-from repo about: from the great and powerful ancestral lineage of HaxePunk and FlashPunk... HeapsPunk!!! :o :O <3
+from repo about:
+from the great and powerful ancestral lineage of HaxePunk and FlashPunk... HeapsPunk!!! :o :O <3
 
 okay okay, it won't ever live up to that name... but.. you know.. inspired by it! :)
 
