@@ -7,6 +7,7 @@ import hxd.Window.DisplayMode;
 import h2d.Console;
 import h2d.Interactive;
 import hxd.Scene.ScaleMode;
+import hxd.snd.Manager
 
 // static global helper class similar to FP in FlashPunk and HXP in HaxePunk
 // abstracts the commonly used data 'n functions from App, Scene, Window
@@ -20,6 +21,8 @@ class HP {
 	// overrides setter 'scene = new Scene(...)' to call app.setScene()
 	public static var scene:Scene(default, set);
 	public static var app:App(default, never);
+	
+	public static var soundManager:Manager(get, never);
 	
 	// PunkApp
 	public static var dt:Float(get, never); // TODO: are basic types not stored by reference?
@@ -58,6 +61,9 @@ class HP {
 	// HP.window, HP.scene, HP.app all have "real/physical" reference vars set in PunkApp
 	static function set_scene(s:hxd.SceneEvents.InteractiveScene, disposePrevious:Bool = true) app.setScene(s, disposePrevious);
 	//static function get_scene() return app.s3d; // TODO: ?? has both at the same time? 3d unimpl
+
+	// other properties
+	static function get_soundManager() return hxd.snd.Manager.get();
 
 	// PunkApp properties
 	//static function get_dt() return hxd.Timer.dt;  // TODO: dt passed into update vs hxd.Timer.dt? (currently using passed in as reference)
