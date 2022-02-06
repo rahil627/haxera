@@ -37,7 +37,7 @@ class PunkApp extends App {
 		HP.window = hxd.Window.getInstance();
 		
 		HP.engine = HP.app.engine;
-		HP.soundManager = hxd.snd.Manager.get();
+		HP.soundManager = hxd.snd.Manager.get();  // TODO: maybe initializes here, also maybe optional
 	
 		// init global stuff
 		HP.window.title = "heaps <3 p u n k"; // i've seen this set in the hxml build file
