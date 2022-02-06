@@ -11,7 +11,7 @@ class Touch {
 	// beyond that, however, they are very different: multi-touch, no other mouse buttons nor wheel
 	
 	// TODO: multi-touch
-	// TODO: 3 levels: global vs scene, interactive?
+	// 3 levels: global vs scene, interactive?
 	
 	// TODO: inline?	
 	public static var x(get, null):Float; 
