@@ -8,6 +8,10 @@ import haxe.Math;
 // note to self: there should be no other dependencies
 class Haxe {
 
+	public static inline function randomInt(max = Int64.high):Int { // TODO: 32bit max?
+		return std.int(Math.random(max));
+	}	
+	
 	public static inline function randomHex():Int {
 		return Math.randomInt(0xFFFFFF);
 	}
