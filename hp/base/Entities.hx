@@ -51,7 +51,7 @@ class Entities {
 		// but then you'd have to still use remove() and go through the entire list to remove it
 	//}
 
-	// n complexity, not sure how it works though
+	// n complexity, but surely has optimization magic in it
 	function remove(e:Entity) {
 		entities.remove(e);
 	}
