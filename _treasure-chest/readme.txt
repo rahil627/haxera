@@ -60,10 +60,26 @@ tweens
 
 resources:
 haxepunk
-tefvel's gamebase
+  - https://github.com/HaxePunk/HaxePunk
+jefvel's gamebase
+  - https://github.com/jefvel/game-base
 deepnight's gamebase
+  - https://github.com/deepnight/gameBase
 deepnightlib
+  - https://github.com/deepnight/deepnightLibs
 terryheaps
+
+
+
+nicholas cannasse's game jam games
+  - https://github.com/ncannasse/
+  - ld40
+    - https://github.com/ncannasse/ld40/blob/master/src/Game.hx
+  
+yanrishatum's game jam games
+  - https://github.com/Yanrishatum/cherry-jam
+
+
 
 openfl
   - https://github.com/openfl/openfl/tree/develop/src/openfl/geom
