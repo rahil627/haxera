@@ -5,7 +5,7 @@ import h2d.Layers;
 
 // just a bare-bones App/Main to copy to begin a new project with
 // the data is all optional, feel free to delete!
-// rename the class 'n filename and you're good to go!
+// rename the class, constructor call, 'n filename and you're good to go!
 class MyApp extends PunkApp {
 
 	var world:Layers; // just a helper tool to put things in the right place in the scene tree
