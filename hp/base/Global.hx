@@ -9,9 +9,9 @@ import h2d.Layers;
 // the scope of this is local to this specific app
 // TODO: singleton vs static
 class Global {
-	// only keep references to these here
-
-	public static var world:Layers;
+	
+	// only keep references to stuff here // TODO: huh? my brain hurts
+ 	public static var world:Layers;
 	
 	public static var entities:EntityList<Entity>;
 	//public static var players:Array<Player>;	
