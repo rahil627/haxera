@@ -11,7 +11,7 @@ import h2d.Layers;
 class Global {
 	// only keep references to these here
 	
-	public static var entities:List<Entities>;
+	public static var entities:EntityList<Entity>;
 	
 	// for example, in special cases can use stuff like this:
 	//public static var players:Array<Player>
