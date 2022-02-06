@@ -19,8 +19,8 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	//@:allow(elke.entity.Entity3D, elke.entity.Entity2D)
 	//static var _NEXT_ID = 0;
 	
-	public var entities:List<Entity:T>;
-	//public var entities:Array<Entity:T>; // choose your ds impl
+	var entities:List<Entity:T>;
+	//var entities:Array<Entity:T>; // choose your ds impl
 	
 	// the core of haxe.ds.List and Array
 	
