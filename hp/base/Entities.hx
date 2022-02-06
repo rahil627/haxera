@@ -5,7 +5,7 @@ import ra.hp.base.Entity // DELETE ME
 // a specialized container for Entity
 // designed to be an extendable replacement for haxe.ds.List or Array
 class Entities {
-	// TODO: maybe can create a template class?	
+	//TODO: maybe can create a template/ds class?: ListEx	
 
 	//@:allow(elke.entity.Entity3D, elke.entity.Entity2D)
 	//static var _NEXT_ID = 0;
