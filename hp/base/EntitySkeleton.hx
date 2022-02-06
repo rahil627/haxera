@@ -1,4 +1,4 @@
-package ra.hp.base // DELETE ME!!
+package hp.base // DELETE ME!!
 
 // the skeletal structure of entities
 // just something to ensure that all entities provide certain functionalites
