@@ -70,28 +70,27 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	}
 	
 	
+	
+	
+	
 	// other native array/list ds functions
 	
 	// list functions (not comprehensive)
 	public var first(get, never); public function getFirst():Null<T> return entities.first();
 	public var last(get, never); public function getLast():Null<T> return entities.last();	
 	
-	// todo: List.filter?
-	
-	
-	
-	
-	
-	
-	// Call a function on all Entities in an EntityList.
-	// from HaxePunk.EntityList
+	//filter(f:T ‑> Bool):List<T>
+	//map<X>(f:T ‑> X):List<X>
+
+	// call a function on all Entities in an EntityList.
+	// @author from HaxePunk.EntityList
 	public function apply(f:(T->Void)):Void {
 		for (entity in entities) f(entity);
 	}
 
-	// Call a function on all Entities in an EntityList, and return it's value
-	// from HaxePunk.EntityList	
-	public function map<R>(f:(T->R)):List<R> { // todo array vs list
+	// call a function on all Entities in an EntityList, and return it's value
+	// @author from HaxePunk.EntityList	
+	public function map<R>(f:(T->R)):List<R> {
 		return [for (entity in entities) f(entity)];
 	}
 	
@@ -104,7 +103,7 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	
 	public function dispose() {
 		for (e in entities) {
-			entity.remove();
+			entity.remove(); // remove Object, etc.
 		}
 		
 		entities.clear();
