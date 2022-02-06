@@ -35,8 +35,8 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	// you'd probably already have stored pointers/references to those things anyway (i.e. players)!, soooo...:
 	// (on the other hand, i've seen Arrays used in Haxe everywhere, soooooo ???)
 	
-	var entities:List<Entity:T>;
-	//var entities:Array<Entity:T>; // choose your ds impl;
+	var entities:List<T>;
+	//var entities:Array<T>; // choose your ds impl;
 	
 	// the core shared functions of haxe.ds.List and Array
 	
@@ -55,7 +55,7 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	}
 	
 	// removes one entity from the beginning of the list
-	public function removeFirst():Null<T> { // "remove" can be ambiguous
+	public function removeFirst():Null<T> { // "remove" is too ambiguous
 		return entities.pop();
 	}
 	public function pop():Null<T> { // alt
@@ -132,7 +132,7 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 		this.removeAll()
 	}
 		
-	//public function remove() { // alt, TODO: this is just too ambiguous
+	//public function remove() { // alt, too ambiguous, i'd rather throw an error
 	//	this.removeAll();
 	//}
 	
