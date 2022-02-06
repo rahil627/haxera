@@ -31,11 +31,11 @@ class Global {
 
 }
 
-/*
 // careful: not to be confused with Layers with an 's'
 enum Layer {
 	background;
 	players;
 	projectiles;
+	effects;
+	ui;
 }
-*/
