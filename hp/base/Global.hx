@@ -4,22 +4,20 @@ import haxe.ds.List;
 import h2d.Layers;
 	
 // just an optional bare-bones global class to copy to begin a new project with
-// rename it to something short, or create a short alias in import.hx
+// rename it to something short, or create a short alias such as 'GG' in import.hx
 // store references to commonly-used data structures here
-// the scope of this is local to this specific game
+// the scope of this is local to this specific app
 // TODO: singleton vs static
 class Global {
 	// only keep references to these here
+
+	public static var world:Layers;
 	
 	public static var entities:EntityList<Entity>;
-	
-	// for example, in special cases can use stuff like this:
-	//public static var players:Array<Player>
-	//public static var players:Vector<Player>; // if the max amount of players never change, otherwise:
-	//public static var entitiesBackpack:Map<Int, TargetEntities>; // to search for commonly-searched stuff by id (key)	
+	//public static var players:Array<Player>;	
+	//public static var players:Vector<Player>; // or this, if the max amount of players never change
+	//public static var entitiesBackpack:Map<Int, TargetEntities>; // to search commonly-searched stuff by id (key)	
 
-	// this is the second-most import ds, and thankfully it's already implemented
-	public static var world:Layers;
 
 	// constants
 	//public static inline final laserWidth = 50;
