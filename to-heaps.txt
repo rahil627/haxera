@@ -61,6 +61,10 @@ App
   - from FP/HXP, this is HXP.Engine (and HXP.App deprecated?)
 Key
   - a static helper class for key inputs
+  - although called "keys", they include mouse buttons, and
+  - although called "mouse buttons", they double for touch input
+    - (or at least the left mouse button counts as the first touch input)
+  - are you confused yet?
   - from FP/HXP, this is also Key!
 
 input flow / propogation:
@@ -74,6 +78,7 @@ input flow / propogation:
   - Interactive provides a link between scene tree objects and input, figuring out which object should receive the input
     - imagine you have a 3d world on a tablet device, you will likely want the top-most camera-facing objects to capture input
   - Scene has getInteractable (among other things...) which figures out and fetches the top-most Interactable
+  
 
 
 object, and all of it's inherited classes:
@@ -95,15 +100,32 @@ Interactive
   - provides an input capture handling component
 Layers
   - extends Object
-  - ...?? provides a special container data structure tailored to the scene tree: the 2d array of the scene tree
+    - although this extends object for the sake of inheriting functionality, it's logically very confusing
+  - provides a special container data structure tailored to the scene tree: an array of layers indicies
   - it provides ways to put/remove things where you want in the scene tree: under this object, above that layer, etc.,
+  - although an optional feature, this is very very likely needed for nearly kind of every game
 
 
 std.Math
-Math (heaps.hxd.Math)
-Point
-col
-  - 
+  - sin, cos, abs, random, etc.
+Math (hxd.Math)
+  - clamp, lerp, etc., more game-related
+h2d.col (collider)
+  - contains most 2d geometry ds: Point, Bounds (rectangle), etc.
+    - these ds provide most of the useful 2d math functionalities, not just for collisions
+  - also a very confusing place to hide it...
+hxd.Vector
+  - 4 value vector
+  - todo: i wasn't able to find a 2d vector...
+
+snd (sound)
+  - Manager.getInstance() can be used to handle all audio needs
+  - the sound resource ds (hxd.res.sound) itself also contains a few helper functions: play(), stop()
+
+res (resource)
+  - used to load various files (resources, "assets") into the game: fonts, sounds, images, animations, data (castle db), etc.
+
+
   
 
 -- (end of structure)
