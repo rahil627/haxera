@@ -37,13 +37,19 @@ class SoundLoader {
 
 	// requires init to use
 	public static function loadFolder() {
-		for(s in hxd.Res.load(folderPath))
-			s.toSound().getData();
+		try
+			for(s in hxd.Res.load(folderPath))
+				s.toSound().getData();
+		catch(e:hxd.res.NotFound)
+			break;
 	}
 	
 	public static function loadFolder(folderPath:String) {
-		for(s in hxd.Res.load(folderPath))
-			s.toSound().getData();
+		try	
+			for(s in hxd.Res.load(folderPath))
+				s.toSound().getData();
+		catch(e:hxd.res.NotFound) // todo: look at other exceptions
+			break;
 	}
 }
 
