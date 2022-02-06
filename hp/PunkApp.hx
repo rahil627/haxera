@@ -1,4 +1,4 @@
-package ra;
+package hp;
 
 import hxd.App;
 import h2d.Console;
