@@ -10,8 +10,9 @@ class Touch {
 	// currently just copy-pasta from Mouse, because mouseX, mouseY and Key.MOUSE_LEFT are also used for touch input, but
 	// beyond that, however, they are very different: multi-touch, no other mouse buttons nor wheel
 	
+	// TODO: global vs scene?
 	// TODO: multi-touch
-	// 3 levels: global vs scene, interactive?
+	// 3 levels: global, scene, interactive?
 	
 	// TODO: inline?	
 	public static var x(get, null):Float; 
