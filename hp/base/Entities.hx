@@ -59,6 +59,27 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	}
 	
 	
+	// other native array/list ds functions
+	
+	// todo: List.filter?
+	
+	
+	
+	
+	
+	// Call a function on all Entities in an EntityList.
+	// from HaxePunk.EntityList
+	public function apply(f:(T->Void)):Void {
+		for (entity in entities) f(entity);
+	}
+
+	// Call a function on all Entities in an EntityList, and return it's value
+	// from HaxePunk.EntityList	
+	public function map<R>(f:(T->R)):Array<R> {
+		return [for (entity in entities) f(entity)];
+	}
+	
+	
 	
 	
 	
@@ -66,8 +87,10 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	// extensions begin here
 	
 	public function dispose() {
-		for (e in container)
+		for (e in container) {
 			entity.remove();
+		}
+		
 		entities.clear();
 	}
 
