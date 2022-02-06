@@ -16,9 +16,10 @@ class Entities {
 	//@:allow(elke.entity.Entity3D, elke.entity.Entity2D)
 	//static var _NEXT_ID = 0;
 	
-	public var entities:List<Entity>; // or Array
+	public var entities:List<Entity>;
+	//public var entities:Array<Entity>; // choose your ds impl
 	
-	// the core of haxe.dsList
+	// the core of haxe.ds.List and Array
 	
 	public function new() {
 		entities = [];
@@ -63,17 +64,17 @@ class Entities {
 	// extensions begin here
 	
 	public function dispose() {
-		for (e in entities)
-			e.remove();
+		for (i in container)
+			i.remove();
 		entities.clear();
 	}
 
 	public function update(dt:Float) {
-		for (e in entities)
+		for (e in container)
 			e.update(dt);
 	}
 	
-
+	/*
 	public function search(e:Entity)Entity {
 		for (i in entities) {
 			//if (i.kind != e.kind)
@@ -90,7 +91,7 @@ class Entities {
 			// do stuff
 		}
 	}
-	
+	*/
 	
 	
 	
