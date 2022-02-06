@@ -1,5 +1,5 @@
-package ra.hp.base.entities; // DELETE ME
-import ra.hp.base.Entity; // DELETE ME
+package hp.base.entities; // DELETE ME
+import hp.base.Entity; // DELETE ME
 
 import haxe.ds.list;
 
