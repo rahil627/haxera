@@ -4,29 +4,44 @@ think of it as a useful junk bin that you go to when you need to make something 
 TODO: learn how licenses work
 
 need:
-gamepad input manager
+gamepad input
   - **complex one from deepnight**
   - simple one from tefvel
+  
+touch input
+  - including multi-touch
 
 
 want:
-vector graphics drawing functions
-color
+simpler input management (mouse, touch, key: all together?)
+  - Mouse from terryheaps
+    - **use this as a base**
+    
+sound helper
+  - simple one from terryheaps
+    - **use this as a base, also see ld40**
+  - complex one already exists in Heaps (snd.Manager)
+  
 geometry / 2d math
+  - **hxd.h2d.col**
+    - Heaps already provides most of the geometry classes; note: Bounds = rectangle
   - classes
-    - h2d.col (collider) provide most of the geometry classes; note: Bounds = rectangle
     - Vector2d
       - HaxePunk
-      - or use Heaps.Vector (4d) as a base
-  - functions
+      - or use Heaps.Vector (4d) as a base  
+
+**vector graphics drawing functions**
+  - ?
+
+color
+  - deepnight has a good one
+  - there are many others out there too
+      
 tweens
   - **does heaps even have any?? :o**
   - TODO: get haxepunk/tweens, especially motion tweens
-even simpler input manager (mouse, touch, key: all together)
-  - Mouse from terryheaps
-sound manager
-  - simple one from terryheaps
-  - complex one already exists in Heaps (snd.Manager)
+  
+
 
 
 
