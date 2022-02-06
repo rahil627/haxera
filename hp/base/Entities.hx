@@ -35,7 +35,7 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	}
 
 	// adds an entity to the beginning of the list
-	public function add(entity:T) { // i personally prefer "add" to keep it simple
+	public function add(entity:T) { // i personally prefer "add"/"remove" to keep it simple, and match the rest of the framework
 		entities.push(entity);
 	}
 	
@@ -47,7 +47,11 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	public function remove():Null<T> {
 		return entities.pop();
 	}
-
+	
+	public function pop():Null<T> {
+		return entities.pop();
+	}
+	
 	// note: use this to try to keep more permanent stuff at the end
 	public function addToEnd(entity:T) {
 		entities.add(entity);
@@ -75,7 +79,7 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	
 	// other native array/list ds functions
 	
-	// list functions (not comprehensive)
+	// List functions (not comprehensive)
 	public var first(get, never); public function getFirst():Null<T> return entities.first();
 	public var last(get, never); public function getLast():Null<T> return entities.last();	
 	
