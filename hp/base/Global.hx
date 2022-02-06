@@ -9,7 +9,7 @@ class Global {
 	// only keep references to these here
 	
 	// i think this is the only important data structure to choose
-	// give that you're constantly adding ' removing stuff, such as projectiles, then
+	// given that you're constantly adding 'n removing stuff, such as projectiles, then
 	// List is not only the best option, but the simplest too!
 	// array / vector and map are generally for optimization purposes only
 	// array is O(1) access complexity vs O(log(n)) access complexity
@@ -24,7 +24,7 @@ class Global {
 	//public static var entitiesBackpack:Map<Int, TargetEntities>; // to search for commonly-searched stuff by id (key)	
 
 	// this is the second-most import ds, and thankfully it's already implemented
-	public static var world:Layer;
+	public static var world:Layers;
 
 	// constants
 	//public static inline final laserWidth = 50;
