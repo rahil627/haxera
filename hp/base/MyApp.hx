@@ -8,8 +8,8 @@ import h2d.Layers;
 // rename the class 'n filename and you're good to go!
 class MyApp extends PunkApp {
 
-	var world:Layers; // TODO: not really world, is it? Just some helper class
-	var entities:Entities;
+	var world:Layers; // just a helper tool to put things in the right place in the scene tree
+	var entities:Entities<Entity>;
 	//var players:Array<PlayerEntity>; // TODO: static vs global reference
 
 	// called during application setup after `loadAssets` completed (from docs)
@@ -28,7 +28,7 @@ class MyApp extends PunkApp {
 		*/
 		 // init app stuff
 		 world = new Layers(HP.scene);
-		 entities = new Entities();
+		 entities = new Entities<Entity>();
 		 //players = new Array<PlayerEntity>();
 		 //var monster = new Entity(); // just be sure to store the reference to entities somewhere safe!
 
