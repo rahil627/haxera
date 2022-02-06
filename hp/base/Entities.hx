@@ -61,7 +61,7 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	//}
 
 	// n complexity, but surely has optimization magic in it
-	function remove(entity:T)Null<T> {
+	function remove(entity:T)Bool {
 		return entities.remove(entity);
 	}
 	
