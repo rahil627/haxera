@@ -1,6 +1,6 @@
-package ra.hp.input;
+package hp.input;
 
-import ra.hp.HP; // depends on HP!!
+import hp.HP; // depends on HP!!
 import hxd.Key;
 
 // mouse input is all over the place in heaps
