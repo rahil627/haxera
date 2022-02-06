@@ -6,8 +6,8 @@ package hp; // TODO: still not sure if this should be in hp or my own personal l
 import hxd.Math;
 
 // note: don't use 'import', use 'using': using ra.hp.MathEx
+// somes IDEs cannot generate tags / autocomplete for static extensions
 // it might just be more convenient to throw it in a normal global static class :/
-// vim / vaxe / ctags can't generate autocomplete for it
 class MathEx { // std.Math < hxd.Math < ra.hp.MathEx
 	
 	// this was taken from the Haxe docs / code book
