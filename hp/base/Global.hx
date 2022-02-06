@@ -25,8 +25,6 @@ class Global {
 
 	// this is the second-most import ds, and thankfully it's already implemented
 	public static var world:Layer;
-	
-	//public static var canvas:h2d.Graphics;  // a top-level thing to draw to
 
 	// constants
 	//public static inline final laserWidth = 50;
