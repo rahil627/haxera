@@ -1,4 +1,4 @@
-package ra.hp.input;
+package hp.input;
 
 import hxd.Key;
 
