@@ -1,4 +1,4 @@
-this package is for "base"/"bare-bones" code, not actual classes
+this package is for "base"/"bare-bones" code, not actual library ds'es
 
 everything here is optional
 
