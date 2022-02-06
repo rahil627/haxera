@@ -3,8 +3,7 @@ package ra.hp.input;
 import hxd.Key;
 
 // just a stupid extension to avoid being confused by isPressed
-// onDown/onUp = justPressed/justReleased
-// choose what your prefer!
+// onDown/onUp = justPressed/justReleased, choose what your prefer!
 class KeyEx {
 
   // TODO: no clue how inline actually works
