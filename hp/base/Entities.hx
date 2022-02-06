@@ -43,7 +43,7 @@ class Entities<T:Entity> { // in HaxePunk, it extends Entity??
 	}
 	
 	// removes one entity from the beginning of the list
-	public function remove():Null<T> {
+	public function remove():Null<T> { // TODO: confused with dispose
 		return entities.pop();
 	}
 	public function pop():Null<T> { // alt
