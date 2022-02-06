@@ -28,7 +28,7 @@ class Entity /*implements EntitySkeleton*/ {
 		//this.x = x; // just a wrapper for e.sprite.x?
 		//this.y = y;
 		//sprite = new h2d.Anim(getAnim(), 15);
-		//Global.world.add(sprite, hasFlag(Under) ? LayerKind.under : LayerKind.players);
+		//Global.world.add(sprite, hasFlag(Under) ? LayerKind.under : LayerKind.players);  // add Object to Layers
 		Global.entities.push(this); // 1 complexity
 	}
 
