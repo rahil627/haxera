@@ -22,6 +22,7 @@ class HP {
 	public static var scene:Scene(default, set);
 	public static var app:App(default, never);
 	
+	// from other places
 	public static var soundManager:Manager(get, never);
 	
 	// PunkApp
