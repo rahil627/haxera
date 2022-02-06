@@ -3,6 +3,9 @@ think of it as a useful junk bin that you go to when you need to make something 
 
 TODO: learn how licenses work
 
+
+NOTE: Heaps has nearly everything, just have to search for it, just use github to search the repo
+
 need:
 gamepad input
   - **complex one from deepnight**
@@ -34,6 +37,7 @@ geometry / 2d math
   - ?
 
 color
+  - check what heaps has
   - deepnight has a good one
   - there are many others out there too
       
