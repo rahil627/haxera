@@ -19,11 +19,15 @@ class Entity implements EntitySkeleton {
 	//var kind:EntityKind; // maybe useful narrowing down searches; one big container vs keeping multiple containers
 	//var class = Type.getClassName(Type.getClass(this)); // @author MikeTuttle/HaxePunk
 	
-	// unimpl: todo: maybe can create getter/setter to work with Layers
+	// maybe can create getter/setter to work with Layers	
+	// unimpl: associating a 1:1 relationship to layer would create a limit:
+	// all of the Objects within entity would be expected to have the same layer
 	//var layer(get, set):Layer; // layer = Layer enum value = used as index in Layers
 	//var positionWithinLayer(get, set):Int; // optionally used in layers for positioning within a layer
+	// also can provide a few helper functions like Layer.under/over for moveToTopOfLayer/moveToBottomOfLayer
 	
 	//var sprite:Object; // Object and it's extensions: Drawable, Graphics, Anim, etc.
+	//var sprite2:Object; // can have multiple!
 
 	// override me! and remember to call super()
 	// TODO: init in constuctor vs in init()
