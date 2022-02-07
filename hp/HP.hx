@@ -16,7 +16,7 @@ import hxd.snd.Manager
 class HP {
 	// TODO: learn how references work in Haxe, and how to create an actual copy
 	// TODO: inline everything?
-	// use FP in FlashPunk and HXP in HaxePunk as bases
+	// use FP in FlashPunk and HXP in HaxePunk as models
 
 	// generally don't touch these, abstract them here
 	public static var window:Window(default, never);
