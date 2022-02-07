@@ -60,10 +60,14 @@ class Entity implements EntitySkeleton {
 	}
 	
 	
-	// HaxePunk's Entity contains a *ton* of helper collision functions, it's a massive class
-	// ...but i don't think i'll abstract them... I'd rather keep collision on the Object itself
-	// so, you'd have to do something like entity.spriteObject.getBounds... or something...	
-
+	// note:
+	// HaxePunk's Entity contains a *ton* of helper collision functions, it's a massive class containing things like:
+	// CollidesWith(Entity, Type, Class, Point, Rect, etc.)
+	// but i don't think i'll abstract collision from Object,
+	// i'd rather just stick to using core Heaps, than to create a giant framework
+	// so, you'd have to do something like entity.spriteObject.getBounds().intersects/contains(anotherObject.getBounds()) or something	
+	// ...and i'm not sure about how Objects are associated to colliders yet..
+	
 	// i found these two from deepnight's libs
 	// TODO: i don't understand the <T:Entity> part... it's not a parameter...
 	// also, the parameter is generic?
