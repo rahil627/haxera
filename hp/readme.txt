@@ -22,7 +22,7 @@ how classes are associated to HaxePunk:
 HeapsPunk = HaxePunk
 HP = HXP's references section
 MyApp = Engine
-h2d.Layer = World
+h2d.Layers = World
 Entity = Entity without collision helper functions, without transform (for now)
 EntityList = EntityList
 DsEx = HXP's extra helper functions (temporary)
