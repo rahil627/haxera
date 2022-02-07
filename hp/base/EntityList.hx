@@ -142,7 +142,7 @@ class EntityList<T:Entity> { // in HaxePunk, it extends Entity??
 	}
 	
 	/*
-	public function search(entity:T)T {
+	public function search(entity:T)T { // aka contains
 		for (i in entities) {
 			//if (i.kind != e.kind)
 				//return null; // todo: or false?
@@ -157,6 +157,47 @@ class EntityList<T:Entity> { // in HaxePunk, it extends Entity??
 		for (var i = i.entities.length(), i >=0, i--) {
 			// do stuff
 		}
+	}
+	*/
+	
+	
+	
+	
+	
+	
+	/* just some ideas from Object
+	//Tells if the object is contained into this object children, recursively.
+	public function contains( o : Object ) {
+		while( o != null ) {
+			o = o.parent;
+			if( o == this ) return true;
+		}
+		return false;
+	}
+
+	//Find a single object in the tree by calling `f` on each and returning the first not-null value returned, or null if not found.
+	public function find<T>( f : Object -> Null<T> ) : Null<T> {
+		var v = f(this);
+		if( v != null )
+			return v;
+		for( o in children ) {
+			var v = o.find(f);
+			if( v != null ) return v;
+		}
+		return null;
+	}
+
+	
+	//Find several objects in the tree by calling `f` on each and returning all the not-null values returned.
+	//@param arr An optional array instance to fill results with. Allocates a new array if not set.
+	public function findAll<T>( f : Object -> Null<T>, ?arr : Array<T> ) : Array<T> {
+		if( arr == null ) arr = [];
+		var v = f(this);
+		if( v != null )
+			arr.push(v);
+		for( o in children )
+			o.findAll(f,arr);
+		return arr;
 	}
 	*/
 	
