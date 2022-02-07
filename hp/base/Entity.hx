@@ -87,10 +87,13 @@ class Entity implements EntitySkeleton {
 	// CollidesWith(Entity, Type, Class, Point, Rect, etc.)
 	// but i don't think i'll abstract collision from Object (...i'm not even sure if there is any in there!!),
 	// i'd rather just stick to using core Heaps, than to create a giant framework
-	// you'd have to do something like entity.spriteObject.getBounds().intersects/contains(anotherObject.getBounds()) or something	
+	// you'd have to do something like entity.spriteObject.getBounds().intersects/contains(anotherObject.getBounds())...	
 	// from the sample: https://github.com/HeapsIO/heaps/blob/master/samples/CollideCheck.hx
-	// it's just a matter of creating a new Collider and using some function such as inside, contains, etc.!! woww!! so simple!! :D :D
-	
+	// it's just a matter of creating a new Colliders every frame and using some function (inside..) woww!! so simple!! :D :D
+	// ...i think HaxePunk's entity class had a hitbox/collision-mask... so, maybe you can add a collider to entity, if you want..
+	// but the only common function the colliders have is contain() (found in the ICollider interface)
+	// so you might be able to do entity.collider.contains(entity.collider)? I dunno...
+	// anyway, i'd rather not couple collision with entity, for now
 	
 	
 	
