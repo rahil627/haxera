@@ -92,14 +92,14 @@ public static class DsHelper {
 	/**
 	 * Sets a time flag.
 	 * @return	Time elapsed (in milliseconds) since the last time flag was set.
-	 */
+	 */ /*
 	public static inline function timeFlag():Float
 	{
 		var t:Float = Timer.stamp(),
 			e:Float = t - _time;
 		_time = t;
 		return e;
-	}
+	} */
 
 	/**
 	 * Tweens numeric public properties of an Object. Shorthand for creating a MultiVarTween tween, starting it and adding it to a Tweener.
@@ -114,7 +114,7 @@ public static class DsHelper {
 	 * @return	The added MultiVarTween object.
 	 *
 	 * Example: HXP.tween(object, { x: 500, y: 350 }, 2.0, { ease: Float -> Float, complete: onComplete } );
-	 */
+	 */ /*
 	public static function tween(object:Dynamic, values:Dynamic, duration:Float, options:Dynamic = null):MultiVarTween
 	{
 		if (options != null && Reflect.hasField(options, "delay"))
@@ -142,7 +142,7 @@ public static class DsHelper {
 		tween.tween(object, values, duration, ease);
 		tweener.addTween(tween, true);
 		return tween;
-	}
+	} */
 
 	/**
 	 * Schedules a callback for the future. Shorthand for creating an Alarm tween, starting it and adding it to a Tweener.
@@ -153,7 +153,7 @@ public static class DsHelper {
 	 * @return	The added Alarm object.
 	 *
 	 * Example: HXP.alarm(5.0, callbackFunction, TweenType.Looping); // Calls callbackFunction every 5 seconds
-	 */
+	 */ /*
 	public static function alarm(delay:Float, complete:Void -> Void, ?type:TweenType, ?tweener:Tweener):Alarm
 	{
 		if (type == null) type = TweenType.OneShot;
@@ -162,7 +162,7 @@ public static class DsHelper {
 		var alarm:Alarm = new Alarm(delay, complete, type);
 		tweener.addTween(alarm, true);
 		return alarm;
-	}
+	} */
 
 	/**
 	 * Gets an array of frame indices.
