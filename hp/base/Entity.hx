@@ -19,6 +19,10 @@ class Entity implements EntitySkeleton {
 	//var kind:EntityKind; // maybe useful narrowing down searches; one big container vs keeping multiple containers
 	//var class = Type.getClassName(Type.getClass(this)); // @author MikeTuttle/HaxePunk
 	
+	// maybe can create getter/setter to work with Layers
+	//var layer:Layer;
+	//var positionWithinLayer:Int;
+	
 	//var sprite:Object; // Object and it's extensions: Drawable, Graphics, Anim, etc.
 
 	// override me! and remember to call super()
