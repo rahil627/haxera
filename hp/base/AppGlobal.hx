@@ -1,9 +1,9 @@
 
 // just an optional bare-bones global class to copy to begin a new project with
 // rename it to something short, or create a short alias such as 'GG' in import.hx
-package hp.base // DELETE ME!!
-
-import haxe.ds.List;
+package hp.base; // DELETE ME!!
+import hp.base.*; // DELETE ME!!
+	
 import h2d.Layers;
 
 // a static global helper class, with a scope specific to this app
