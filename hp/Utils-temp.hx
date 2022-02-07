@@ -1,6 +1,6 @@
 	// @author MikeTuttle/HaxePunk
     // copy/pasta from HXP, just the helper functions
-    // some can be moved to ArrayEx/ListEx
+    // some can be moved to ArrayEx/ListEx or dsTools or something
     // the tween part will needs it's own file
 
     /**
