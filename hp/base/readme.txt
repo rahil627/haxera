@@ -12,5 +12,5 @@ it's all very HaxePunk'esque, but even more minimal, more modular. In fact:
 maybe you need to use EntityList, or maybe a normal List or Array is enough, or maybe no container at all.. Maybe you need Layers, maybe you don't. Maybe you need id or kind properties, or maybe you don't. Whatever!! do what you want! Use what you want! *everything is optional.*
 
 *warning:* there's currently one interconnectedness / dependency:
-EntityList has helper functions in it that require Entity provide a remove(), and maybe an update() (even if it's empty), hence the EntitySkeleton interface ...but even without EntityList, i'd still want those functions, to be able to safely call them in a loop. TODO: make this optional too?
+EntityList has helper functions in it that require Entity provide a remove(), and maybe an update() (even if it's empty), hence the EntitySkeleton interface ...but even without EntityList, i'd still want those functions, to be able to safely call them in the main update loop. TODO: make this optional too?
 
