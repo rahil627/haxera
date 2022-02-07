@@ -204,4 +204,29 @@ class EntityList<T:Entity> { // in HaxePunk, it extends Entity??
 	
 	
 	
+	
+	
+	/* just some ideas from MikeTuttle/HaxePunk
+	override function set_type(value:String):String
+	{
+		if (value != "") for (entity in entities) entity.type = value;
+		return _type = value;
+	}
+
+	override function set_layer(value:Int):Int
+	{
+		var originalLayer = layer;
+		var value = super.set_layer(value);
+		for (entity in entities)
+			entity.layer = entity.layer - originalLayer + value;
+		return value;
+	}
+
+	override function set_camera(value:Camera):Camera
+	{
+		for (entity in entities) entity.camera = value;
+		return camera = value;
+	}
+	*/
+	
 }
