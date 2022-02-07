@@ -2,7 +2,7 @@
     // temporary copy/pasta HXP's helper functions
     // some would move into ArrayEx and ListEx classes, in a single DsEx file?
     // the tween part will needs it's own file
-public static class DsUtils {
+public static class DsHelper {
     /**
 	 * Optimized version of Lambda.indexOf for Array on dynamic platforms (Lambda.indexOf is less performant on those targets).
 	 *
