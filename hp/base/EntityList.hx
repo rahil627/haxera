@@ -38,7 +38,8 @@ class EntityList<T:Entity> {
 	// ..but really tho, it'd be limited to things you're constantly accessing,
 	// and if you're already constantly accessing them.., well,
 	// you'd probably already have stored pointers/references to those things anyway (i.e. players)!, soooo...:
-	// (on the other hand, i've seen Arrays used in Haxe everywhere, soooooo ???)
+	// (on the other hand, i've seen Arrays used in Haxe everywhere, soooooo ???
+	//  there's very likely optimization / cross-platform magic, so might be better to use Array after all)
 	
 	// the main internal container
 	public var entities:List<T>; // just keep it public for advanced use / native Haxe users
