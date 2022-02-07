@@ -2,9 +2,9 @@ package hp.base // DELETE ME!!
 
 // the skeletal structure of entities
 // just something to ensure that all entities provide certain functionalites
-// so that when you do iterate through entities and you can call those functions without error
-// those functions can be empty, so no worries
-// example use: BaseEntity implements EntitySkeleton
+// so that when you do iterate through entities, you can call those functions without error
+// those functions can be empty, so no worries about cases when you don't need them
+// example use: Entity implements EntitySkeleton
 interface EntitySkeleton {
     //public function init():Void; // in case you need to separate constructor from init
     //public function add():Void; // in case you need to init something, but not add it to the scene yet
