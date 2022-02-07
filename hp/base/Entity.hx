@@ -1,3 +1,4 @@
+// just an optional bare-bones entity class to copy to begin a new project with
 package hp.base // DELETE ME!!
 
 /*
@@ -10,7 +11,7 @@ enum EntityKind {
 	etc;
 }
 */
-// just an optional bare-bones entity class to copy to begin a new project with
+
 // likely contains an Object, or something that extends an Object,
 // which itself will be added to the Scene, or first to Layers, then Scene
 class Entity implements EntitySkeleton {	
