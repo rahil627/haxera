@@ -6,7 +6,7 @@ import haxe.ds.list;
 // a specialized generic container for Entity
 // designed to be an extendable replacement for haxe.ds.List or Array
 //@:generic TODO: don't i need this?
-class EntityList<T:Entity> { // in HaxePunk, it extends Entity??
+class EntityList<T:Entity> {
 	
 	// maybe can use inheritance (extends List) or create a new generic (entities:ListEx<Entity>) somehow..?
 	// see https://haxe.org/manual/type-system-generic.html
@@ -14,8 +14,13 @@ class EntityList<T:Entity> { // in HaxePunk, it extends Entity??
 	// use HaxePunk's EntityList as a base?
 	// https://github.com/HaxePunk/HaxePunk/blob/987b915486b9ea9ce23180cc17345ad805d87021/haxepunk/EntityList.hx
 	// it's interesting... entity has type, layer, camera, and can be added to the scene, much like Object
-	// in my case, however, all of that stuff is in handled by Object, except the type (i use "kind")
+	// in my case, however, all of that stuff is in handled by Object, except the type (i use "kind") and layer
 	// so this ds will be much simpler
+	// also, HaxePunk's EntityList extends Entity(!!), making it more of a parent Object
+	
+	// see h2d.Object, so as not to overlap functionality with that
+	// avoid re-creating a whole nother scene tree! lol
+	// this is just a simple one-dimensional list, not a tree!!
 	
 	// todo: slowly implement List as you need it
 	// https://api.haxe.org/haxe/ds/List.html
@@ -167,6 +172,8 @@ class EntityList<T:Entity> { // in HaxePunk, it extends Entity??
 	
 	
 	/* just some ideas from Object
+
+
 	//Tells if the object is contained into this object children, recursively.
 	public function contains( o : Object ) {
 		while( o != null ) {
@@ -206,8 +213,10 @@ class EntityList<T:Entity> { // in HaxePunk, it extends Entity??
 	
 	
 	
-	/* just some ideas from MikeTuttle/HaxePunk
-	override function set_type(value:String):String
+	/* just some ideas from MikeTuttle/HaxePunk...
+	// whatever properties Entity has, can make a helper fucntion to set it for the entire list
+
+	override function set_type(value:String):String // set_kind
 	{
 		if (value != "") for (entity in entities) entity.type = value;
 		return _type = value;
