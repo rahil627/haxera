@@ -93,7 +93,7 @@ class Entity implements EntitySkeleton {
 	// ...i think HaxePunk's entity class had a hitbox/collision-mask... so, maybe you can add a collider to entity, if you want..
 	// but the only common function the colliders have is contain() (found in the ICollider interface)
 	// so you might be able to do entity.collider.contains(entity.collider)? I dunno...
-	// anyway, i'd rather not couple collision with entity, for now
+	// anyway, i'd rather not couple collision with entity, for now..
 	
 	
 	
