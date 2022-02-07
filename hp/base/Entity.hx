@@ -1,5 +1,6 @@
 // just an optional bare-bones entity class to copy to begin a new project with
 package hp.base // DELETE ME!!
+import hp.base.*; // DELETE ME!!
 
 /*
 // still useful in case you need to search for something but
