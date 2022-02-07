@@ -13,7 +13,7 @@ class EntityList<T:Entity> {
 	// maybe can use inheritance (extends List) or create a new generic (entities:ListEx<Entity>) somehow..?
 	// see https://haxe.org/manual/type-system-generic.html
 	
-	// use HaxePunk's EntityList as a base?
+	// use HaxePunk's EntityList as a model
 	// https://github.com/HaxePunk/HaxePunk/blob/987b915486b9ea9ce23180cc17345ad805d87021/haxepunk/EntityList.hx
 	// it's interesting... entity has type, layer, camera, and can be added to the scene, much like Object
 	// in my case, however, all of that stuff is in handled by Object, except the type (i use "kind") and layer
@@ -26,16 +26,13 @@ class EntityList<T:Entity> {
 	
 	// todo: slowly implement List as you need it
 	// https://api.haxe.org/haxe/ds/List.html
-
-	//@:allow(elke.entity.Entity3D, elke.entity.Entity2D)
-	//static var _NEXT_ID = 0;
 	
 	
 	
 	// i think this is the only important data structure choice to make
 	// given that you're constantly adding 'n removing stuff, such as projectiles, then
 	// List is not only the best option, but the simplest too!
-	// array / vector and map are generally for optimization purposes only
+	// array, vector, and map are generally for optimization purposes only
 	// array is O(1) access complexity vs O(log(n)) access complexity
 	// ..but really tho, it'd be limited to things you're constantly accessing,
 	// and if you're already constantly accessing them.., well,
@@ -122,7 +119,7 @@ class EntityList<T:Entity> {
 	
 	
 	
-	// extensions begin here
+	// specialized entity helper extensions
 	public function dispose() {
 		this.removeAll();
 		this = null;
