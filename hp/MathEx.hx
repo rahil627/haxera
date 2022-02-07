@@ -1,4 +1,4 @@
-package hp; // TODO: still not sure if this should be in hp or my own personal libs..
+package hp;
 
 // TODO: maybe better not to explicitly state the package,
 // and instead let the file-path decide
