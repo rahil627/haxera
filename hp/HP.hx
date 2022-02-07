@@ -9,12 +9,14 @@ import h2d.Interactive;
 import hxd.Scene.ScaleMode;
 import hxd.snd.Manager
 
-// static global helper class similar to FP in FlashPunk and HXP in HaxePunk
-// abstracts the commonly used data 'n functions from App, Scene, Window
-// try to keep just references of stuff, no actual objects
+// static global helper class
+// abstracts commonly used data 'n functions from mainly App, Scene, Window
+// by storing references to everything
+// try to keep only references of stuff, no actual objects (except simple types)
 class HP {
 	// TODO: learn how references work in Haxe, and how to create an actual copy
 	// TODO: inline everything?
+	// use FP in FlashPunk and HXP in HaxePunk as bases
 
 	// generally don't touch these, abstract them here
 	public static var window:Window(default, never);
