@@ -60,16 +60,6 @@ class Entity implements EntitySkeleton {
 	}
 	
 	
-	// note:
-	// HaxePunk's Entity is massive class containing a *ton* of helper collision functions like
-	// CollidesWith(Entity, Type, Class, Point, Rect, etc.)
-	// but i don't think i'll abstract collision from Object (...i'm not even sure if there is any in there!!),
-	// i'd rather just stick to using core Heaps, than to create a giant framework
-	// you'd have to do something like entity.spriteObject.getBounds().intersects/contains(anotherObject.getBounds()) or something	
-	// from the sample: https://github.com/HeapsIO/heaps/blob/master/samples/CollideCheck.hx
-	// it's just a matter of creating a new Collider and using some function such as inside, contains, etc.!! woww!! so simple!! :D :D
-	
-	
 	
 	// i found these two from deepnight's libs
 	// TODO: i don't understand the <T:Entity> part... it's not a parameter...
@@ -87,6 +77,21 @@ class Entity implements EntitySkeleton {
 	// This method is not guaranteed to work with core types such as String, Array and Date.
 	// If value is null, the result is null. If c is null, the result is unspecified.
 	public function as<T:Entity>(c:Class<T>):T return Std.downcast(this, c); // ?? not sure when to use, but seems handy!
+	
+	
+	
+	
+	
+	// note:
+	// HaxePunk's Entity is massive class containing a *ton* of helper collision functions like
+	// CollidesWith(Entity, Type, Class, Point, Rect, etc.)
+	// but i don't think i'll abstract collision from Object (...i'm not even sure if there is any in there!!),
+	// i'd rather just stick to using core Heaps, than to create a giant framework
+	// you'd have to do something like entity.spriteObject.getBounds().intersects/contains(anotherObject.getBounds()) or something	
+	// from the sample: https://github.com/HeapsIO/heaps/blob/master/samples/CollideCheck.hx
+	// it's just a matter of creating a new Collider and using some function such as inside, contains, etc.!! woww!! so simple!! :D :D
+	
+	
 	
 	
 }
