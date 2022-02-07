@@ -1,6 +1,5 @@
-
-// just an optional bare-bones global class to copy to begin a new project with
-// rename it to something short, or create a short alias such as 'GG' in import.hx
+// just an optional bare-bones ds to copy and begin a new project with
+// delete these lines and you're good to go!
 package hp.base; // DELETE ME!!
 import hp.base.*; // DELETE ME!!
 	
