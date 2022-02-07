@@ -15,3 +15,15 @@ This project is far far smaller than the past Punk projects. This is not an engi
 I hope to add *nothing* on top of Heaps. No actual data. I personally think the engine is **perfect** the way it is, and coded *exactly* the way it is supposed to be. I'm merely gathering a bunch of references to one place, so that my little mind doesn't have to remember where everything is, and can begin making a new project without my mind exploding again.
 
 Enjoy. :)
+
+
+
+how classes are associated to HaxePunk:
+HeapsPunk = HaxePunk
+HP = HXP references
+MyApp = Engine
+h2d.Layer = World
+Entity = Entity without collision helper functions, without transform (for now)
+EntityList = EntityList
+DsEx = HXP's extra helper functions (temporary)
+todo? = Tween/Tweener
