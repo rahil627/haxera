@@ -4,6 +4,10 @@ can put notes i gather from the web on my iPad more easily here,
 just use the web interface from github
 
 
+forums:
+https://community.heaps.io/t/the-path-from-flashpunk-to-haxepunk-to-heaps-punk/849/16
+
+
 heaps structure:
 
 file / package stucture:
