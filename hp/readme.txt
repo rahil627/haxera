@@ -17,13 +17,13 @@ I hope to add *nothing* on top of Heaps. No actual data. I personally think the 
 Enjoy. :)
 
 
-
+this isn't a port, but, this is
 how classes are associated to HaxePunk:
 HeapsPunk = HaxePunk
 HP = HXP's references section
 MyApp = Engine
 h2d.Layers = World
-Entity = Entity without collision helper functions, without transform (for now)
+Entity = Entity without built-in 2d collision system functions (collides(entity)), without transform (for now), without transform helper functions (moveBy, moveAtAngle), without 2d "solid body" movement handling, without distance helper functions
 EntityList = EntityList
 DsEx = HXP's extra helper functions (temporary)
 todo? = Tween/Tweener
