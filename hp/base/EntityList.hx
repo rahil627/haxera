@@ -172,6 +172,8 @@ class EntityList<T:Entity> {
 	
 	
 	/* just some ideas from Object
+	// i think the second and third one are like List.filter and List.map
+	// contains = search, just not recursive
 
 
 	//Tells if the object is contained into this object children, recursively.
