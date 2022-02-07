@@ -29,18 +29,17 @@ class Entity implements EntitySkeleton {
 	//var positionWithinLayer(get, set):Int; // optionally used in layers for positioning within a layer
 	// also can provide a few helper functions like Layer.under/over for moveToTopOfLayer/moveToBottomOfLayer
 	
-	//var sprite:Drawable; // Object and it's extensions: Drawable, Graphics, Anim, etc.
+	//var sprite:Anim; // Object and it's extensions: Drawable, Graphics, Anim, etc.
 	//var effects:Graphics; // can have as many as you want!
 
 	// override me! and remember to call super()
 	// TODO: init in constuctor vs in init()
 	public function new() {
-		//game = Game.inst; // just use global (TODO: multiple scenes problem?)
 		//inf = Data.object.get(kind); // castle db stuff
 		//this.x = x; // just a wrapper for e.sprite.x?
 		//this.y = y;
 		//sprite = new h2d.Anim(getAnim(), 15);
-		//AppGlobal.world.add(sprite, hasFlag(Under) ? LayerKind.under : LayerKind.players);  // add Object to Layers
+		//AppGlobal.world.add(sprite, Layer.monster);  // add Object to Layers
 		AppGlobal.entities.push(this);
 	}
 
