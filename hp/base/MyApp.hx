@@ -1,4 +1,5 @@
-package hp.base // DELETE ME!!
+package hp.base; // DELETE ME!!
+import hp.base.*; // DELETE ME!!
 
 import haxe.ds.List;
 import h2d.Layers;
