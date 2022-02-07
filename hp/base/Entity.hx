@@ -26,8 +26,8 @@ class Entity implements EntitySkeleton {
 	//var positionWithinLayer(get, set):Int; // optionally used in layers for positioning within a layer
 	// also can provide a few helper functions like Layer.under/over for moveToTopOfLayer/moveToBottomOfLayer
 	
-	//var sprite:Object; // Object and it's extensions: Drawable, Graphics, Anim, etc.
-	//var sprite2:Object; // can have multiple!
+	//var sprite:Drawable; // Object and it's extensions: Drawable, Graphics, Anim, etc.
+	//var effects:Graphics; // can have as many as you want!
 
 	// override me! and remember to call super()
 	// TODO: init in constuctor vs in init()
