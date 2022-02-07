@@ -14,9 +14,10 @@ enum EntityKind {
 }
 */
 
+// just a place to group together some code
 // likely contains an Object, or something that extends an Object,
 // which itself will be added to the Scene, or first to Layers, then Scene
-class Entity implements EntitySkeleton {	
+class Entity implements EntitySkeleton {
 	//var id:Int; // maybe useful for finding it later..?, can be used as a map key, TODO: storing temp int vs reference?
 	//var name:String; // although strange, i've seen HaxePunk and Armory use this for searching, secret optimization magic??
 	//var kind:EntityKind; // maybe useful narrowing down searches; one big container vs keeping multiple containers
@@ -57,6 +58,11 @@ class Entity implements EntitySkeleton {
 		AppGlobal.entities.remove(this);
 		this = null; // TODO: lol, not sure about doing this from within the class...
 	}
+	
+	
+	// HaxePunk's Entity contains a *ton* of helper collision functions, it's a massive class
+	// ...but i don't think i'll abstract them... I'd rather keep collision on the Object itself
+	// so, you'd have to do something like entity.spriteObject.getBounds... or something...	
 
 	// i found these two from deepnight's libs
 	// TODO: i don't understand the <T:Entity> part... it's not a parameter...
@@ -74,4 +80,6 @@ class Entity implements EntitySkeleton {
 	// This method is not guaranteed to work with core types such as String, Array and Date.
 	// If value is null, the result is null. If c is null, the result is unspecified.
 	public function as<T:Entity>(c:Class<T>):T return Std.downcast(this, c); // ?? not sure when to use, but seems handy!
+	
+	
 }
