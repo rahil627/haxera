@@ -1,7 +1,7 @@
 this package is for "base"/"bare-bones" code, not actual library ds'es, hence the seperate package
 
 in it lies a very basic entity system (ecs?). Basically:
-Entity is mainly just a container for unwritten game logic and h2d.Object(s) (or something that extends Object). Otherwise, it might have a few properties: layer, id, kind, etc.
+Entity is mainly just a container for unwritten game logic and often h2d.Object(s) (or something that extends Object). Otherwise, it might have a few properties: layer, id, kind, etc.
 EntityList is a special container for Entity, providing a place for helper functions: find, findByType/Class, etc.
 then, finally, in MyApp, there is an example of how both are used
 
