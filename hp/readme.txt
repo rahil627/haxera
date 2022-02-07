@@ -22,8 +22,13 @@ how classes are associated to HaxePunk:
 HeapsPunk = HaxePunk
 HP = HXP's references section
 MyApp = Engine
-h2d.Layers = World
-Entity = Entity without built-in 2d collision system functions (collides(entity)), without transform (for now), without transform helper functions (moveBy, moveAtAngle), without 2d "solid body" movement handling, without distance helper functions
+h2d.Layers = a part of Scene? (used to be World in FlashPunk)
+Entity = Entity without built-in 2d collision system functions (collides(entity)), without transform, without transform helper functions (moveBy, moveAtAngle), without 2d "solid body" movement handling, without distance helper functions
 EntityList = EntityList
 DsEx = HXP's extra helper functions (temporary)
-todo? = Tween/Tweener
+todo? = Tween/Tweener, note: i'm not sure if heaps has a tween system
+
+h2d.Object = Entity transform, spartan transform helper functions (move), but no rigid body movement handling
+h2d.col = masks, note: heaps doesn't have a collision system, it just provides you with geometry functions for various shapes
+
+
