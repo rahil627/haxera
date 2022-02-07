@@ -1,8 +1,8 @@
-	// @author MikeTuttle/HaxePunk
-    // copy/pasta from HXP, just the helper functions
+    // @author MikeTuttle/HaxePunk
+    // copy/pasta HXP's helper functions
     // some can be moved to ArrayEx/ListEx or dsTools or something
     // the tween part will needs it's own file
-
+public static class HXP {
     /**
 	 * Optimized version of Lambda.indexOf for Array on dynamic platforms (Lambda.indexOf is less performant on those targets).
 	 *
@@ -209,3 +209,6 @@
 			a[j] = t;
 		}
 	}
+	
+	
+}
