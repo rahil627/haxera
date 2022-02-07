@@ -20,7 +20,7 @@ Enjoy. :)
 
 how classes are associated to HaxePunk:
 HeapsPunk = HaxePunk
-HP = HXP references
+HP = HXP's references section
 MyApp = Engine
 h2d.Layer = World
 Entity = Entity without collision helper functions, without transform (for now)
