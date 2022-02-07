@@ -1,9 +1,16 @@
-this package is for "base"/"bare-bones" code, not actual library ds'es
+this package is for "base"/"bare-bones" code, not actual library ds'es, hence the seperate package
 
-everything here is optional
+in it lies a very basic entity system (ecs?). Basically:
+Entity is mainly just a container for unwritten game logic and h2d.Object(s) (or something that extends Object). Otherwise, it might have a few properties: layer, id, kind, etc.
+EntityList is a special container for Entity, providing a place for helper functions: find, findByType/Class, etc.
+then, finally, in MyApp, there is an example of how both are used
 
-maybe you need to use EntityList, or maybe a normal List or Array is enough, or maybe no container at all, whatever!!
-do what you want!
+it's all very HaxePunk'esque, but even more minimal, more modular, more optional. In fact:
 
-there's one interconnectedness / dependency:
-EntityList requires that Entity provide a remove(), and maybe an update() (even if it's empty), hence the EntitySkeleton interface ...even without EntityList, i'd still want those functions, to be able to call them in a loop
+**_everything_ here is optional**
+
+maybe you need to use EntityList, or maybe a normal List or Array is enough, or maybe no container at all.. Maybe you need Layers, maybe you don't. Maybe you need id or kind properties, or maybe you don't. Whatever!! do what you want! Use what you want! *everything is optional.*
+
+*warning:* there's one interconnectedness / dependency:
+EntityList has helper functions in it that require Entity provide a remove(), and maybe an update() (even if it's empty), hence the EntitySkeleton interface ...but even without EntityList, i'd still want those functions, to be able to safely call them in a loop
+
