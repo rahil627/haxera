@@ -15,3 +15,12 @@ maybe you need to use EntityList, or maybe a normal List or Array is enough, or 
 EntityList has helper functions in it that require Entity provide a remove(), and maybe an update() (even if it's empty), hence the EntitySkeleton interface ...but even without EntityList, i'd still want those functions, to be able to safely call them in the main update loop. TODO: make this optional too?
 
 NOTE/TODO: as of now, you must remove the top 4 lines on the top of each file... that's annoying! :( But if it wasn't in it's own package, it would clog up the namespace, so... ??? create a separate repo? :/
+
+
+how classes are associated to HaxePunk:
+HeapsPunk = HaxePunk
+HP = HXP references
+Entity = Entity without collision helper functions, without transform (for now)
+EntityList = EntityList
+MyApp = Engine
+DsEx = HXP's helper functions
