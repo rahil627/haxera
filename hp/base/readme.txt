@@ -1,4 +1,4 @@
-this package is for "base"/"bare-bones" code, not actual library ds'es, hence the seperate package
+this package is for "base"/"bare-bones" code for an app/game, not actual library ds'es, hence the seperate package
 
 in it lies a very basic entity system (ecs?). Basically:
 Entity is mainly just a container for unwritten game logic and often h2d.Object(s) (or something that extends Object). Otherwise, it might have a few properties: layer, id, kind, etc.
@@ -14,3 +14,4 @@ maybe you need to use EntityList, or maybe a normal List or Array is enough, or 
 *warning:* there's currently one interconnectedness / dependency:
 EntityList has helper functions in it that require Entity provide a remove(), and maybe an update() (even if it's empty), hence the EntitySkeleton interface ...but even without EntityList, i'd still want those functions, to be able to safely call them in the main update loop. TODO: make this optional too?
 
+TODO: as of now, you must remove the top 4 lines on the top of each file... that's annoying. :(
