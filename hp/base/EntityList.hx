@@ -215,6 +215,8 @@ class EntityList<T:Entity> {
 	
 	/* just some ideas from MikeTuttle/HaxePunk...
 	// whatever properties Entity has, can make a helper fucntion to set it for the entire list
+	// changing the layer seems useful, although, more likely, you'd just move the layer itself
+	// and even then, you'd need a setter for layer to actually do something when it's changed
 
 	override function set_type(value:String):String // set_kind
 	{
