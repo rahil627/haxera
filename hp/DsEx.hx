@@ -1,5 +1,5 @@
     // @author MikeTuttle/HaxePunk
-    // copy/pasta HXP's helper functions
+    // temporary copy/pasta HXP's helper functions
     // some can be moved to ArrayEx/ListEx or dsTools or something
     // the tween part will needs it's own file
 public static class DsEx {
