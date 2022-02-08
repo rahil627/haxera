@@ -24,8 +24,8 @@ class PunkApp extends App {
 	// just use HP to keep references to everything
 	
 	#if debug
-	var console:Console;
-	var screenInputHandler:h2d.Interactive; // TODO: temp input solution
+	public var console:Console;
+	public var screenInputHandler:h2d.Interactive; // TODO: temp input solution
 	#end
 	
 	// override me and remember to call super.init()
