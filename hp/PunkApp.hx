@@ -42,8 +42,12 @@ class PunkApp extends App {
 		// warning: maybe initializes sound manager on this first call?
 		HP.init(this, this.s2d, hxd.Window.getInstance(), hxd.snd.Manager.get(), console);
 		
+		// set some stuff
+		HP.window.title = "heaps <3 p u n k"; // i've seen this set in the hxml build file
+	
+		
+		
 		#if debug
-		// setup input	
 		// TODO: temporary global input handler solution until i actually fix keys
 		HP.screenInputHandler = new h2d.Interactive(HP.scene.width, HP.scene.height, HP.scene); // ?collider = HP.scene.getBounds()
 		//touchHandler.onOver = function(_) b.alpha = 0.5;
