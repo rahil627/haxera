@@ -1,6 +1,8 @@
 package hp;
 
 import hxd.App;
+import h2d.Console;
+
 /*
 // the HaxePunk states, only needed for special cases
 // unimpl
@@ -20,9 +22,9 @@ class PunkApp extends App {
 
 	// generally don't want any data in this class
 	// just use HP to keep references to everything
-
+	
 	#if debug
-	public static var console:Console;
+	var console:Console;
 	var screenInputHandler:h2d.Interactive; // TODO: temp input solution
 	#end
 	
@@ -37,7 +39,7 @@ class PunkApp extends App {
 		#end
 		
 		// init global ds
-		// warning: maybe initiazlies sound manager on this first call
+		// warning: maybe initializes sound manager on this first call?
 		HP.init(this, this.s2d, hxd.Window.getInstance(), hxd.snd.Manager.get(), console);
 		
 		#if debug
