@@ -12,7 +12,7 @@ import hxd.snd.Manager;
 // static global helper class
 // abstracts commonly used data 'n functions from mainly App, Scene, Window
 // by storing references to everything
-// try to keep only references of stuff, no actual objects (except simple types)
+// try to keep only references of stuff, no actual objects (except maybe simple types / constants)
 class HP {
 	// TODO: learn how references work in Haxe, and how to create an actual copy
 	// TODO: inline everything?
