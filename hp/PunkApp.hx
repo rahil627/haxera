@@ -1,7 +1,6 @@
 package hp;
 
 import hxd.App;
-import h2d.Console;
 /*
 // the HaxePunk states, only needed for special cases
 // unimpl
@@ -31,15 +30,14 @@ class PunkApp extends App {
 	override function init() {
 		super.init(); // empty
 		
+		
+		
+		
 		// init global ds
 		// warning: maybe initiazlies sound manager on this first call?
-		HP.init(this, this.s2d, hxd.Window.getInstance(), hxd.snd.Manager.get(), console);
-
-		#if debug
-		HP.console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene); // TODO: font is tiny :(
-		HP.console.shortKeyChar = "`".charCodeAt(0);
-		HP.console.show(); // TODO: temp, because inputs dont work
+		HP.init(this, this.s2d, hxd.Window.getInstance(), hxd.snd.Manager.get(), ?console);
 		
+		#if debug
 		// setup input	
 		// TODO: temporary global input handler solution until i actually fix keys
 		HP.screenInputHandler = new h2d.Interactive(HP.scene.width, HP.scene.height, HP.scene); // ?collider = HP.scene.getBounds()
