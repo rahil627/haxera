@@ -43,6 +43,7 @@ class HP {
 	}
 
 	// generally don't touch these, abstract them here
+	// should be private, but kept public for advanced use
 	public static var window:Window(default, never);
 	// overrides setter 'scene = new Scene(...)' to call app.setScene()
 	public static var scene:Scene(default, set);
