@@ -7,7 +7,7 @@ import hxd.Window.DisplayMode;
 import h2d.Console;
 import h2d.Interactive;
 import hxd.Scene.ScaleMode;
-import hxd.snd.Manager
+import hxd.snd.Manager;
 
 // static global helper class
 // abstracts commonly used data 'n functions from mainly App, Scene, Window
@@ -18,10 +18,19 @@ class HP {
 	// TODO: inline everything?
 	// use FP in FlashPunk and HXP in HaxePunk as models
 	
-	// TODO: singleton?
+	// TODO: singleton? or not?
 	// https://gameprogrammingpatterns.com/singleton.html
-	public static init() {
+	public static init(app:App, scene:Scene, window:Window, soundManager:Manager) {
+		// init global ds
+		HP.app = app;
+		HP.scene = scene; // just feels better using a proper reference rather than a getter
+		HP.window = window;
 		
+		HP.engine = app.engine;
+		HP.soundManager = soundManager;
+	
+		// init global stuff
+		HP.window.title = "heaps <3 p u n k"; // i've seen this set in the hxml build file
 	}
 
 	// generally don't touch these, abstract them here
