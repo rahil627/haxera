@@ -30,12 +30,15 @@ class PunkApp extends App {
 	override function init() {
 		super.init(); // empty
 		
-		
-		
+		#if debug
+		console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene); // TODO: font is tiny :(
+		console.shortKeyChar = "`".charCodeAt(0);
+		console.show(); // TODO: temp, because inputs dont work
+		#end
 		
 		// init global ds
-		// warning: maybe initiazlies sound manager on this first call?
-		HP.init(this, this.s2d, hxd.Window.getInstance(), hxd.snd.Manager.get(), ?console);
+		// warning: maybe initiazlies sound manager on this first call
+		HP.init(this, this.s2d, hxd.Window.getInstance(), hxd.snd.Manager.get(), console);
 		
 		#if debug
 		// setup input	
