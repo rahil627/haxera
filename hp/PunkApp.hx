@@ -30,8 +30,10 @@ class PunkApp extends App {
 	// override me and remember to call super.init()
 	override function init() {
 		super.init(); // empty
+		
+		// init global ds
+		HP.init(this, this.s2d, hxd.Window.getInstance(), hxd.snd.Manager.get());
 
-		// set global vars
 		HP.app = this;
 		HP.scene = this.s2d; // just feels better setting it here, rather than putting it in a get-property
 		HP.window = hxd.Window.getInstance();
