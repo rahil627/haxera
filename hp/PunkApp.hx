@@ -32,17 +32,8 @@ class PunkApp extends App {
 		super.init(); // empty
 		
 		// init global ds
-		HP.init(this, this.s2d, hxd.Window.getInstance(), hxd.snd.Manager.get());
-
-		HP.app = this;
-		HP.scene = this.s2d; // just feels better setting it here, rather than putting it in a get-property
-		HP.window = hxd.Window.getInstance();
-		
-		HP.engine = HP.app.engine;
-		HP.soundManager = hxd.snd.Manager.get();  // warning: maybe initializes here, also maybe optional
-	
-		// init global stuff
-		HP.window.title = "heaps <3 p u n k"; // i've seen this set in the hxml build file
+		// warning: maybe initiazlies sound manager on this first call?
+		HP.init(this, this.s2d, hxd.Window.getInstance(), hxd.snd.Manager.get(), console);
 
 		#if debug
 		HP.console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene); // TODO: font is tiny :(
