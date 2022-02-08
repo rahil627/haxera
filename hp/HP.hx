@@ -23,7 +23,7 @@ class HP {
 	// another option is to hide it all in the base app class (PunkApp)
 	// either as static or public (in case of singleton)
 	// then MyApp.window or MyApp.instance.window (i think static vars are just inherited...)
-	// but that would clog the MyApp namespace...
+	// but that would still clog MyApp with a ton of method functions...
 	// ... and it just makes sense to keep it seperate from App
 	
 	public static init(app:App, scene:Scene, window:Window, soundManager:Manager, ?console:Console) {
