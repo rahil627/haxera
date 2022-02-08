@@ -20,17 +20,25 @@ class HP {
 	
 	// TODO: singleton? or not?
 	// https://gameprogrammingpatterns.com/singleton.html
-	public static init(app:App, scene:Scene, window:Window, soundManager:Manager) {
-		// init global ds
+	public static init(app:App, scene:Scene, window:Window, soundManager:Manager, ?console:Console) {
+		// init ds
 		HP.app = app;
 		HP.scene = scene; // just feels better using a proper reference rather than a getter
 		HP.window = window;
 		
 		HP.engine = app.engine;
 		HP.soundManager = soundManager;
+		
+		#if debug
+		HP.console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene); // TODO: font is tiny :(
+		HP.console.shortKeyChar = "`".charCodeAt(0);
+		HP.console.show(); // TODO: temp, because inputs dont work
+		#end
 	
-		// init global stuff
+		// set some stuff
 		HP.window.title = "heaps <3 p u n k"; // i've seen this set in the hxml build file
+		
+		
 	}
 
 	// generally don't touch these, abstract them here
