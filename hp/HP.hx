@@ -24,6 +24,7 @@ class HP {
 	// either as static or public (in case of singleton)
 	// then MyApp.window or MyApp.instance.window
 	// but that would clog the MyApp namespace...
+	
 	public static init(app:App, scene:Scene, window:Window, soundManager:Manager, ?console:Console) {
 		// init ds
 		HP.app = app;
