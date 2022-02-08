@@ -30,13 +30,8 @@ class HP {
 		HP.soundManager = soundManager;
 		
 		#if debug
-		HP.console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene); // TODO: font is tiny :(
-		HP.console.shortKeyChar = "`".charCodeAt(0);
-		HP.console.show(); // TODO: temp, because inputs dont work
+		HP.console = console;
 		#end
-	
-		// set some stuff
-		HP.window.title = "heaps <3 p u n k"; // i've seen this set in the hxml build file
 		
 		
 	}
