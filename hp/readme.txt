@@ -24,7 +24,7 @@ how classes are associated to HaxePunk:
 HeapsPunk = HaxePunk
 HP = HXP's references section
 PunkApp = Engine
-h2d.Layers = handled by Scene (used to be World in FlashPunk)
+h2d.Layers = a part of Scene (used to be World in FlashPunk)
 Entity = Entity's core
 EntityList = EntityList
 DsEx = HXP's miscelleneous helper functions (temporary)
@@ -36,8 +36,8 @@ h2d.col = masks
 
 none (modular libs: Actuate, etc.) = Tween, Tweener
 none (h2d.Math.clamp?) = Entity's primitive 2d solid/rigid body movement handling / physics
-none (modular: echo, etc.) = 2d collision system (Mask, Entity, main game loop...) and Entity collision helper functions (collides(entity))
-none = HXP's math helper functions, Entity's distance helper functions, Scene's entity collision with shape functions
-  - note: Heaps generally doesn't provide helper functions, just have to get used to using the Math libs directly, or writing your own helper functions
+none (modular libs: echo, etc.) = 2d collision system (Mask, Entity, main game loop...) and Entity collision helper functions (collides(entity))
+none = HXP's math helper functions, Entity's distance helper functions, Scene's entity collision with shape functions, etc.
+  - note: Heaps generally doesn't provide helper functions, it's lean, just have to get used to using the Math and collider libs directly, or write your own helper functions
 
 
