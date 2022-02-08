@@ -16,7 +16,7 @@ I hope to add *nothing* on top of Heaps. No actual data. I personally think the 
 
 Enjoy. :)
 
-
+...and pray that i don't destory this beautiful code by adding globals everywhere :(
 
 
 this isn't a port, but, this is
