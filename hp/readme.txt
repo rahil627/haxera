@@ -24,18 +24,20 @@ how classes are associated to HaxePunk:
 HeapsPunk = HaxePunk
 HP = HXP's references section
 PunkApp = Engine
-h2d.Layers = a part of Scene? (used to be World in FlashPunk)
-Entity = Entity without built-in 2d collision system functions (collides(entity)), without transform, without transform helper functions (moveBy, moveAtAngle), without 2d "solid body" movement handling, without distance helper functions
+h2d.Layers = handled by Scene (used to be World in FlashPunk)
+Entity = Entity's core
 EntityList = EntityList
 DsEx = HXP's miscelleneous helper functions (temporary)
-none (modular libs: Actuate, etc.) = Tween, Tweener
-none (h2d.Math.clamp?; modular: echo, etc.) = Entity's primitive 2d solid/rigid body movement handling / physics
-h2d.Math = HXP's math helper functions, Entity's distance helper functions
-  - note: Heaps generally doesn't provide helper functions, just get used to using the Math libs directly!
 
 h2d.Object = Entity transform, spartan transform helper functions (just move(), lol)
 h2d.col = masks
   - note: heaps doesn't have a collision system, it just provides you with geometry functions for various shapes
   - if you really need a collision system, grab a physics simulation library, as it contains collision-detection with it
+
+none (modular libs: Actuate, etc.) = Tween, Tweener
+none (h2d.Math.clamp?) = Entity's primitive 2d solid/rigid body movement handling / physics
+none (modular: echo, etc.) = 2d collision system (Mask, Entity, main game loop...) and Entity collision helper functions (collides(entity))
+none = HXP's math helper functions, Entity's distance helper functions, Scene's entity collision with shape functions
+  - note: Heaps generally doesn't provide helper functions, just have to get used to using the Math libs directly, or writing your own helper functions
 
 
