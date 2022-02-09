@@ -28,6 +28,7 @@ class HP {
 	
 	public static init(app:App, scene:Scene, window:Window, soundManager:Manager, ?console:Console) {
 		// init ds
+		// global references to singletons..? lol. this can't be good...
 		HP.app = app;
 		HP.scene = scene; // just feels better using a proper reference rather than a getter
 		HP.window = window;
