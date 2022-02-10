@@ -20,6 +20,7 @@ class MyApp extends PunkApp {
 		super.init();
 		/*
 		 // config screen stuff
+		 // the hxml file can set some of these too, not sure which has priority tho
 		 // not sure what defaultsmooth nor usescreenpixels do... just a sample from deepnight
 		 HP.windowDisplayMode = hxd.DisplayMode.Windowed;
 		 HP.scene.defaultSmooth = true;
@@ -28,6 +29,12 @@ class MyApp extends PunkApp {
 		 HP.window.useScreenPixels = true;
 		 #end
 		 HP.engine.backgroundColor = 0xFF31A2F2;
+
+		 #if sys
+		 hxd.Res.initLocal(); // important! allows the app access to our game's resource files: images (sprites), audio, etc.
+		 #else
+		 hxd.Res.initEmbed(); // use hxd.Res.initEmbed(); for html5/js
+		 #end
 		*/
 		 // init app stuff
 		 world = new Layers(HP.scene);
