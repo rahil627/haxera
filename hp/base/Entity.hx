@@ -18,17 +18,38 @@ enum EntityKind {
 // likely contains an Object, or something that extends an Object,
 // which itself will be added to the Scene, or first to Layers, then Scene
 class Entity implements EntitySkeleton {
-	//var id:Int; // maybe useful for finding it later..?, can be used as a map key, TODO: storing temp int vs reference?
-	//var name:String; // although strange, i've seen HaxePunk and Armory use this for searching, secret optimization magic??
-	//var kind:EntityKind; // maybe useful narrowing down searches; one big container vs keeping multiple containers
-	//var class = Type.getClassName(Type.getClass(this)); // @author MikeTuttle/HaxePunk
+	// inheritance vs composition?
+	// http://entity-systems.wikidot.com/ says composition > inheritance
+	// with composition, you can select which features you want to glue together, which makes everything re-usable
+	// with inheritance, it becomes difficult to select certain features without inheriting extra crap
+	// even the transform part (Object) should be optional, so that you can have an entity for just game logic
 	
-	// maybe can create getter/setter to work with Layers	
+	// components?
+	// https://gameprogrammingpatterns.com/component.html
+	// setting up entity to use a component design might be fine for an engine with a game editor
+	// but doing it through code seems pretty excessive:
+	// for every entity you'd have multiple individualized component classes
+	// i personally like this simple composition style better
+	
+	// "components" that come in Heaps 2d module
+	// Object = transform, scene tree container
+	// Layers = Object + scene tree container helper functions to order contained Objects for drawing
+	// Drawable = Object + draw/render
+	// Anim = Object + draw/render + animation-related functions
+	// Graphics = Object + draw/render + helper graphics drawling library
+	
+	// maybe can create getter/setter to work with Layers	?
 	// unimpl: associating a 1:1 relationship to layer would create a limit:
 	// all of the Objects within entity would be expected to have the same layer
+	// imagine a sprite class in one later, and it's particle effects on another layer
 	//var layer(get, set):Layer; // layer = Layer enum value = used as index in Layers
 	//var positionWithinLayer(get, set):Int; // optionally used in layers for positioning within a layer
 	// also can provide a few helper functions like Layer.under/over for moveToTopOfLayer/moveToBottomOfLayer
+	
+	//var id:Int; // maybe useful for finding it later..?, can be used as a map key, TODO: storing temp int vs reference?
+	//var name:String; // although strange, i've seen HaxePunk and Armory use this for searching, secret optimization magic??
+	//var kind:EntityKind; // maybe useful narrowing down searches; one big container vs keeping multiple containers
+	//var class = Type.getClassName(Type.getClass(this)); // @author MikeTuttle/HaxePunk, i think it uses reflection, which might not be good for cross-platform use
 	
 	//var sprite:Anim; // Object and it's extensions: Drawable, Graphics, Anim, etc.
 	//var effects:Graphics; // can have as many as you want!
