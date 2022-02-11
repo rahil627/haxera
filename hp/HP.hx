@@ -128,10 +128,10 @@ class HP {
 	// abstract Scene
 	// the scene inherits a lot of shit that you probably don't want to touch..
 	public static var sceneScaleMode(get, set):ScaleMode; // use this to actually set the screen size
-	public static var sceneWidth(get, null):Float;
-	public static var sceneHeight(get, null):Float;
-	public static var width(get, null):Float; // shortcut, def should be inline
-	public static var height(get, null):Float;
+	public static var sceneWidth(get, never):Float;
+	public static var sceneHeight(get, never):Float;
+	public static var width(get, never):Float; // shortcut, def should be inline
+	public static var height(get, never):Float;
 
 	static inline function get_sceneScaleMode() return scene.scaleMode;
 	static inline function set_sceneScaleMode(sm:ScaleMode):ScaleMode return scene.scaleMode = sm;
