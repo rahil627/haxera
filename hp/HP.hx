@@ -87,13 +87,18 @@ class HP {
 	public static var app(default, null):App; // TODO: App vs PunkApp
 	public static var engine(default, null):Engine; // currently using a reference; don't know what this is yet... has backgroundColor tho
 
-
+	static function set_scene(s:Scene):Scene { HP.app.setScene(s, true); return app.s2d; } // TODO: only works for 2d, but there might be a way to use event scene interactive, or whaterver the base class of both 2d and 3d scene are... see the App.setScene method on how Scene is downcasted
+	
 
 	// from other places
 	public static var soundManager(default, null):Manager;
 	// delta current time, normally you should use dt tho
 	public static var dct(get, null):Float;
 	
+	//static inline function get_soundManager() return hxd.snd.Manager.get();
+	static inline function get_dct() return hxd.Timer.dt;
+
+
 	// PunkApp
 	// updated once per frame, in App's main loop
 	// i think hxd.Timer.dt actually fetches the current time
@@ -111,6 +116,14 @@ class HP {
 	public static var windowDisplayMode(default, set):DisplayMode;
 	//public static inline var windowWidth(get, default):Float; // unimpl; no need, yet
 	//public static inline var windowHeight(get, default):Float; // unimpl
+	
+	//static inline function get_window() return hxd.Window.getInstance(); // currently using a reference
+	static inline function set_windowTitle(s:String):String return HP.window.title;
+	static inline function set_windowDisplayMode(dm:DisplayMode):DisplayMode return HP.window.displayMode = dm;
+	//HP.window.setFullScreen is deprecated, but can make my own..
+	//static inline function get_engine() return app.engine; // currently uses a reference
+	static inline function get_sceneEvents() return app.sevents; 
+
 
 	// abstract Scene
 	// the scene inherits a lot of shit that you probably don't want to touch..
@@ -119,6 +132,13 @@ class HP {
 	public static var sceneHeight(get, null):Float;
 	public static var width(get, null):Float; // shortcut, def should be inline
 	public static var height(get, null):Float;
+
+	static inline function get_sceneScaleMode() return scene.scaleMode;
+	static inline function set_sceneScaleMode(sm:ScaleMode):ScaleMode return scene.scaleMode = sm;
+	static inline function get_sceneWidth() return scene.width;
+	static inline function get_sceneHeight() return scene.height;
+	static inline function get_width() return scene.width;
+	static inline function get_height() return scene.height;
 
 
 	// abstract App
@@ -130,36 +150,14 @@ class HP {
 	//public static inline var state(get, null):MainLoopState; // unimpl
 	//public static inline var isPaused:Bool; // unimpl
 
+	// App properties
 
 
-	// note: the default access modifier is private, and the getters/setters should be private
-	// note: setters must return something, see trivia section in docs:
+
+
+	// TODO:  note: the default access modifier is private, and the getters/setters should be private
+	// TODO: note: setters must return something, see trivia section in docs:
 	// ref: https://haxe.org/manual/class-field-property-rules.html
 
-	// HP.window, HP.scene, HP.app, etc. all have "real/physical" reference vars set in init
-	static function set_scene(s:Scene):Scene { HP.app.setScene(s, true); return app.s2d; } // TODO: only works for 2d, but there might be a way to use event scene interactive, or whaterver the base class of both 2d and 3d scene are... see the App.setScene method on how Scene is downcasted
-
-	// other properties
-	//static inline function get_soundManager() return hxd.snd.Manager.get();
-	static inline function get_dct() return hxd.Timer.dt;
-	
-	// Window properties
-	//static inline function get_window() return hxd.Window.getInstance(); // currently using a reference
-	static inline function set_windowTitle(s:String):String return HP.window.title;
-	static inline function set_windowDisplayMode(dm:DisplayMode):DisplayMode return HP.window.displayMode = dm;
-	//HP.window.setFullScreen is deprecated, but can make my own..
-	//static inline function get_engine() return app.engine; // currently uses a reference
-	static inline function get_sceneEvents() return app.sevents; 
-
-	// Scene properties
-	static inline function get_sceneScaleMode() return scene.scaleMode;
-	static inline function set_sceneScaleMode(sm:ScaleMode):ScaleMode return scene.scaleMode = sm;
-	static inline function get_sceneWidth() return scene.width;
-	static inline function get_sceneHeight() return scene.height;
-	static inline function get_width() return scene.width;
-	static inline function get_height() return scene.height;
-	
-	// App properties
-	
 	
 }
