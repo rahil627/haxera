@@ -1,0 +1,6 @@
+# display completions
+-cp hp/base
+-lib heaps
+-js app.js
+-main hp.base.MyApp
+-debug
