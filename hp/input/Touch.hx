@@ -6,6 +6,7 @@ import hxd.Key;
 // touch input in heaps feel as if it was done secondary to mouse
 // this ds brings makes a home for it :)
 // note: this is a scene-level handler, not for Interactive
+// TODO: this only works for 2d
 class Touch {
 	// currently just copy-pasta from Mouse, because mouseX, mouseY and Key.MOUSE_LEFT are also used for touch input, but
 	// beyond that, however, they are very different: multi-touch, no other mouse buttons nor wheel
@@ -23,6 +24,10 @@ class Touch {
 	// note: stuff like onOver/onOut are handled by Interactive, not here
 	
 	// properties
+	
+	// note: h2d.Scene provides mouseX/mouseY, but h3d.scene.Scene doesn't...
+	// hence why this only works for 2d
+	
 	public static function get_x() return HP.scene.mouseX; // note: scene-based event, not global
 	public static function get_y() return HP.scene.mouseY;
 	public static function get_isTouching():Bool return Key.isDown(Key.MOUSE_LEFT);

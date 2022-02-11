@@ -10,6 +10,7 @@ import hxd.Key;
 // mouse input is all over the place in heaps
 // this ds brings it all together
 // note: this is a scene-level handler, not for Interactive
+// TODO: this only works for 2d
 class Mouse {
 
 	// try to model after hxd.Key
@@ -25,11 +26,16 @@ class Mouse {
 	// note: stuff like onOver/onOut are handled by Interactive, not here
 	
 	// properties
-	public static function get_x() return HP.scene.mouseX; // note: scene-based event, not global
-	public static function get_y() return HP.scene.mouseY;
-	public static function get_leftIsDown():Bool return Key.isDown(Key.MOUSE_LEFT);
-	public static function get_leftJustPressed():Bool return Key.isPressed(Key.MOUSE_LEFT); // isPressed is confusing :(
-	public static function get_leftJustReleased():Bool return Key.isReleased(Key.MOUSE_LEFT);
+
+	// note: h2d.Scene provides mouseX/mouseY, but h3d.scene.Scene doesn't...
+	// hence why this only works for 2d
+
+	public static inline function get_x() return HP.scene.mouseX;
+	public static inline function get_y() return HP.scene.mouseY;
+
+	public static inline function get_leftIsDown():Bool return Key.isDown(Key.MOUSE_LEFT);
+	public static inline function get_leftJustPressed():Bool return Key.isPressed(Key.MOUSE_LEFT); // isPressed is confusing :(
+	public static inline function get_leftJustReleased():Bool return Key.isReleased(Key.MOUSE_LEFT);
 	
 	
 }
