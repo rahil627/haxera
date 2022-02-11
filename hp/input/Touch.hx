@@ -28,11 +28,11 @@ class Touch {
 	// note: h2d.Scene provides mouseX/mouseY, but h3d.scene.Scene doesn't...
 	// hence why this only works for 2d
 	
-	public static function get_x() return HP.scene.mouseX; // note: scene-based event, not global
-	public static function get_y() return HP.scene.mouseY;
-	public static function get_isTouching():Bool return Key.isDown(Key.MOUSE_LEFT);
-	public static function get_justBeganTouching():Bool return Key.isPressed(Key.MOUSE_LEFT); // isPressed is confusing :(
-	public static function get_justStoppedTouching():Bool return Key.isReleased(Key.MOUSE_LEFT);
+	public static inline function get_x() return HP.scene.mouseX; // note: scene-based event, not global
+	public static inline function get_y() return HP.scene.mouseY;
+	public static inline function get_isTouching():Bool return Key.isDown(Key.MOUSE_LEFT);
+	public static inline function get_justBeganTouching():Bool return Key.isPressed(Key.MOUSE_LEFT); // isPressed is confusing :(
+	public static inline function get_justStoppedTouching():Bool return Key.isReleased(Key.MOUSE_LEFT);
 	
 	
 }
