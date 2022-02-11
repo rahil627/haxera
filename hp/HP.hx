@@ -27,12 +27,12 @@ class HP {
 	// ... and it just makes sense to keep it seperate from App
 
 	// called by PunkApp init
-	public static function init(app:App, scene2d:h2d.Scene, scene3d:h3d.scene.Scene, window:Window, soundManager:Manager, ?console:Console) {
+	public static function init(app:App, ?console:Console) {
 		// init ds
 		// global references to singletons..? lol. this can't be good...
 		HP.app = app;
-		HP.scene2d = scene2d; // just feels better using a proper reference rather than a getter
-		HP.scene3d = scene3d; // both s2d and s3d are used
+		HP.scene2d = app.s2d; // just feels better using a proper reference rather than a getter
+		HP.scene3d = app.s3d; // both s2d and s3d are used
 		// Entity uses this to add Object to the scene.... soooo... hmmmmmm
 		// when Entity calls HP.world.add(Object), would it work for both 2d and 3d?
 		// no, world is Layer, and Layer is part of h2d
@@ -40,14 +40,13 @@ class HP {
 		// either Object.addChild or new Object(parent) because
 		// that is the api that they have in common: Object and Scene
 		// maybe h2d.Layers is similar to h3d.World, but different
-		HP.scene = scene2d; // 2d is the default because i'll never get to 3d :( // TODO: lol, this is triggering the setter
+		HP.scene = app.s2d; // 2d is the default because i'll never get to 3d :( // TODO: lol, this is triggering the setter
 		HP.is3d = false; // TODO: maybe can't have field names begin with a number?
 
-		HP.window = window;
-		
+		HP.window = Window.getInstance();
+
 		HP.engine = app.engine;
-		HP.soundManager = soundManager;
-		
+
 		#if debug
 		HP.console = console;
 		#end
@@ -77,7 +76,7 @@ class HP {
 	// should be private, but kept public for advanced use
 	// currently these next few are set by reference, hence default get
 	
-	public static var window(default, null):Window; // TODO: note: cannot inline properties, but maybe can inline the getter/setter or this?
+	public static var window(default, null):Window; // TODO: note: cannot inline properties, but can inline the getter/setter or this?
 	// by default, this references the default 2d scene (App.s2d)
 	// either call setup() or set 3d = true
 	// overrides setter 'scene = new Scene(...)' to call app.setScene() // TODO: unimpl
@@ -91,11 +90,11 @@ class HP {
 	
 
 	// from other places
-	public static var soundManager(default, null):Manager;
+	public static var soundManager(get, null):Manager;
 	// delta current time, normally you should use dt tho
 	public static var dct(get, null):Float;
 	
-	//static inline function get_soundManager() return hxd.snd.Manager.get();
+	static inline function get_soundManager() return hxd.snd.Manager.get();
 	static inline function get_dct() return hxd.Timer.dt;
 
 
@@ -121,7 +120,6 @@ class HP {
 	static inline function set_windowTitle(s:String):String return HP.window.title;
 	static inline function set_windowDisplayMode(dm:DisplayMode):DisplayMode return HP.window.displayMode = dm;
 	//HP.window.setFullScreen is deprecated, but can make my own..
-	//static inline function get_engine() return app.engine; // currently uses a reference
 	static inline function get_sceneEvents() return app.sevents; 
 
 
@@ -146,6 +144,7 @@ class HP {
 	// s2d
 	// s3d
 	// engine
+	//static inline function get_engine() return app.engine; // currently uses a reference
 	public static var sceneEvents(get, null):hxd.SceneEvents;
 	//public static inline var state(get, null):MainLoopState; // unimpl
 	//public static inline var isPaused:Bool; // unimpl

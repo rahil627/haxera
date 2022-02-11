@@ -40,7 +40,7 @@ class PunkApp extends App {
 		
 		// init global ds
 		// warning: maybe initializes sound manager on this first call?
-		HP.init(this, this.s2d, this.s3d, hxd.Window.getInstance(), hxd.snd.Manager.get(), console);
+		HP.init(this, console);
 		
 		// set some stuff
 		HP.window.title = "heaps <3 p u n k"; // i've seen this set in the hxml build file
