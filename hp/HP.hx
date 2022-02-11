@@ -6,8 +6,8 @@ import hxd.Window;
 import hxd.Window.DisplayMode;
 import h2d.Console;
 import h2d.Interactive;
-import hxd.Scene.ScaleMode;
 import hxd.snd.Manager;
+import h3d.Engine;
 
 // static global helper class
 // abstracts commonly used data 'n functions from mainly App, Scene, Window
@@ -77,47 +77,47 @@ class HP {
 	// should be private, but kept public for advanced use
 	// currently these next few are set by reference, hence default get
 	
-	public static inline var window(default, never):Window; // TODO: lol, how do inline properties work? inline the getter/setter or this?
+	public static var window(default, never):Window; // TODO: note: cannot inline properties, but maybe can inline the getter/setter or this?
 	// by default, this references the default 2d scene (App.s2d)
 	// either call setup() or set 3d = true
 	// overrides setter 'scene = new Scene(...)' to call app.setScene()
 	public static var scene(default, set):Scene; // TODO: how to inline the getter? 
-	public static inline var scene2d(default, never):Scene; 
-	public static inline var scene3d(default, never):h3d.scene.Scene; 
-	public static inline var app(default, never):App; // TODO: App vs PunkApp
-	public static inline var engine(get, never):Engine; // currently using a reference; don't know what this is yet... has backgroundColor tho
+	public static var scene2d(default, never):Scene; 
+	public static var scene3d(default, never):h3d.scene.Scene; 
+	public static var app(default, never):App; // TODO: App vs PunkApp
+	public static var engine(default, never):Engine; // currently using a reference; don't know what this is yet... has backgroundColor tho
 
 
 
 	// from other places
-	public static inline var soundManager(default, never):Manager;
+	public static var soundManager(default, never):Manager;
 	// delta current time, normally you should use dt tho
-	public static inline var dct(get, never):Float;
+	public static var dct(get, never):Float;
 	
 	// PunkApp
 	// updated once per frame, in App's main loop
 	// i think hxd.Timer.dt actually fetches the current time
-	public static inline var dt(get, never):Float;
+	public static var dt(default, never):Float;
 	#if debug
-	public static inline var console:Console;
-	public static inline var screenInputHandler:Interactive; // TODO temp
+	public static var console:Console;
+	public static var screenInputHandler:Interactive; // TODO temp
 	#end
 		
 	// abstract Window
 	// TODO: better to just hide these and just set them in the hxml file
 	// they can be confused with sceneScaleMode, sceneWidth, sceneHeight
-	public static inline var windowTitle(default, set):String; // try to keep class name in var name for now, for learning purposes
-	public static inline var windowDisplayMode(default, set):DisplayMode;
+	public static var windowTitle(default, set):String; // try to keep class name in var name for now, for learning purposes
+	public static var windowDisplayMode(default, set):DisplayMode;
 	//public static inline var windowWidth(get, default):Float; // unimpl; no need, yet
 	//public static inline var windowHeight(get, default):Float; // unimpl
 
 	// abstract Scene
 	// the scene inherits a lot of shit that you probably don't want to touch..
-	public static inline var sceneScaleMode(get, set):ScaleMode; // use this to actually set the screen size
-	public static inline var sceneWidth(get, never):Float;
-	public static inline var sceneHeight(get, never):Float;
-	public static inline var width(get, never):Float; // shortcut, def should be inline
-	public static inline var height(get, never):Float;
+	public static var sceneScaleMode(get, set):ScaleMode; // use this to actually set the screen size
+	public static var sceneWidth(get, never):Float;
+	public static var sceneHeight(get, never):Float;
+	public static var width(get, never):Float; // shortcut, def should be inline
+	public static var height(get, never):Float;
 
 
 	// abstract App
@@ -125,7 +125,7 @@ class HP {
 	// s2d
 	// s3d
 	// engine
-	public static inline var sceneEvents(get, never):hxd.SceneEvents;
+	public static var sceneEvents(get, never):hxd.SceneEvents;
 	//public static inline var state(get, null):MainLoopState; // unimpl
 	//public static inline var isPaused:Bool; // unimpl
 
