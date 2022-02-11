@@ -1,15 +1,22 @@
 package hp.input;
 
-import hp.HP; // depends on HP!!
+import hp.HP; // depends on HP!! bad coupling, but it needs scene (App.s2d/s3d)
+// otherwise, you'd have to pass in the scene during init, then
+// know which to use, s2d or s3d
+// yeah... damn de-coupling is difficult! :/
+// scene's get_MouseX/Y itself relies on Window.getInstance().mouseX
 import hxd.Key;
 
 // mouse input is all over the place in heaps
 // this ds brings it all together
 // note: this is a scene-level handler, not for Interactive
 class Mouse {
-	
-	// TODO: global vs scene handler?
-	
+
+	// try to model after hxd.Key
+	// Key has initialize and dispose, but
+	// Key.initialize is hard-coded in: called in App.setup()
+	// TODO: and i couldn't find any calls to Key.dispose()...???
+
 	public static var x(get, null):Float; 
 	public static var y(get, null):Float;
 	public static var leftIsDown(get, null):Bool;

@@ -3,7 +3,6 @@
 package hp.base; // DELETE ME!!
 import hp.base.*; // DELETE ME!!
 
-import haxe.ds.List;
 import h2d.Layers;
 
 // just a bare-bones App/Main to copy to begin a new project with
@@ -18,6 +17,7 @@ class MyApp extends PunkApp {
 	// called during application setup after `loadAssets` completed (from docs)
 	override function init() {
 		super.init();
+		HP.setup(true);
 		/*
 		 // config screen stuff
 		 // the hxml file can set some of these too, not sure which has priority tho

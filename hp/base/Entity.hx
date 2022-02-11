@@ -61,6 +61,7 @@ class Entity implements EntitySkeleton {
 		//this.x = x; // just a wrapper for e.sprite.x?
 		//this.y = y;
 		//sprite = new h2d.Anim(getAnim(), 15);
+		//AppGlobal.scene.addChild(sprite); // if no Layers add Object to Scene
 		//AppGlobal.world.add(sprite, Layer.monster);  // add Object to Layers
 		AppGlobal.entities.push(this);
 	}
