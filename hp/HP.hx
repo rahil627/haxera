@@ -86,7 +86,8 @@ class HP {
 	public static var app(default, null):App; // TODO: App vs PunkApp
 	public static var engine(default, null):Engine; // currently using a reference; don't know what this is yet... has backgroundColor tho
 
-	static function set_scene(s:Scene):Scene { HP.app.setScene(s, true); return app.s2d; } // TODO: only works for 2d, but there might be a way to use event scene interactive, or whaterver the base class of both 2d and 3d scene are... see the App.setScene method on how Scene is downcasted
+	// TODO: how to set the initial value of a property without triggering the setter?
+	//static function set_scene(s:Scene):Scene { HP.app.setScene(s, true); return app.s2d; } // TODO: only works for 2d, but there might be a way to use event scene interactive, or whaterver the base class of both 2d and 3d scene are... see the App.setScene method on how Scene is downcasted
 	
 
 	// from other places
