@@ -81,7 +81,7 @@ class EntityList<T:Entity> {
 	//}
 
 	// n complexity, but surely has optimization magic in it
-	public function remove(entity:T)Bool {
+	public function remove(entity:T):Bool { // TODO: not sure if haxe.ds.List.remove returns a bool
 		return entities.remove(entity);
 	}
 	
@@ -96,8 +96,8 @@ class EntityList<T:Entity> {
 	// other native array/list ds functions
 	
 	// List functions (not comprehensive)
-	public var first(get, never); public function getFirst():Null<T> return entities.first();
-	public var last(get, never); public function getLast():Null<T> return entities.last();	
+	public var first(get, never):Null<T>; public function get_first():Null<T> return entities.first();
+	public var last(get, never):Null<T>; public function get_last():Null<T> return entities.last();	
 	
 	//filter(f:T ‑> Bool):List<T>
 	//map<X>(f:T ‑> X):List<X>
@@ -110,9 +110,10 @@ class EntityList<T:Entity> {
 
 	// call a function on all Entities in an EntityList, and return it's value
 	// @author from HaxePunk.EntityList	
-	public function map<R>(f:(T->R)):List<R> {
-		return [for (entity in entities) f(entity)];
-	}
+	// TODO: if i change Array to List, it throws an error
+	//public function map<R>(f:(T->R)):Array<R> {
+	//	return [for (entity in entities) f(entity)];
+	//}
 	
 	
 	
@@ -122,20 +123,20 @@ class EntityList<T:Entity> {
 	// specialized entity helper extensions
 	public function dispose() {
 		this.removeAll();
-		this = null;
+		//this = null; // TODO: FAIL
 	}
 	
 	public function removeAll() {  // or reset
 		//entities.clear(); // TODO: woudn't this work?... nah, contained Object(s) would become janky references
 		for (e in entities) {
-			entity.remove(); // remove Object, etc.
+			e.remove(); // remove Object, etc.
 		}
 		
 		entities.clear();
 	}
 	
 	public function clear() { // alt
-		this.removeAll()
+		this.removeAll();
 	}
 		
 	//public function remove() { // alt, too ambiguous, i'd rather throw an error
@@ -144,7 +145,7 @@ class EntityList<T:Entity> {
 	
 	public function update(dt:Float) {
 		for (e in entities)
-			entity.update(dt);
+			e.update(dt);
 	}
 	
 	/*

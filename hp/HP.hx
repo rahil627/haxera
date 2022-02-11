@@ -27,7 +27,7 @@ class HP {
 	// ... and it just makes sense to keep it seperate from App
 
 	// called by PunkApp init
-	public static init(app:App, scene2d:h2d.Scene, scene3d:h3d.scene.Scene, window:Window, soundManager:Manager, ?console:Console) {
+	public static function init(app:App, scene2d:h2d.Scene, scene3d:h3d.scene.Scene, window:Window, soundManager:Manager, ?console:Console) {
 		// init ds
 		// global references to singletons..? lol. this can't be good...
 		HP.app = app;
@@ -41,7 +41,7 @@ class HP {
 		// that is the api that they have in common: Object and Scene
 		// maybe h2d.Layers is similar to h3d.World, but different
 		HP.scene = scene2d; // 2d is the default because i'll never get to 3d :(
-		HP.3d = false;
+		HP.is3d = false; // TODO: maybe can't have field names begin with a number?
 
 		HP.window = window;
 		
@@ -60,15 +60,16 @@ class HP {
 	}
 
 	// CALL ME in the main app, it's up to the user to call this
-	public static function setup(3d:Bool) {
-		HP.3d = 3d;
+	// if the user forgets to set this, it will use 2d scene by default
+	public static function setup(is3d:Bool) {
+		HP.is3d = is3d;
 	}
 
 	// TODO: I TOTALLY REGRET SEPERATING THE PROPERTIES FROM THEIR FUNCTIONS :( :(
 
 
 	// these are the only actual data stored in this class
-	public static inline var 3d:Bool(default, never);
+	public static var is3d(default, never):Bool;
 
 
 	// the following are set in init and have default getter/setters
@@ -76,27 +77,27 @@ class HP {
 	// should be private, but kept public for advanced use
 	// currently these next few are set by reference, hence default get
 	
-	public static inline var window:Window(default, never); // TODO: lol, how do inline properties work? inline the getter/setter or this?
+	public static inline var window(default, never):Window; // TODO: lol, how do inline properties work? inline the getter/setter or this?
 	// by default, this references the default 2d scene (App.s2d)
 	// either call setup() or set 3d = true
 	// overrides setter 'scene = new Scene(...)' to call app.setScene()
-	public static var scene:Scene(default, set); // TODO: how to inline the getter? 
-	public static inline var scene2d:Scene(default, never); 
-	public static inline var scene3d:Scene(default, never); 
-	public static inline var app:App(default, never);
+	public static var scene(default, set):Scene; // TODO: how to inline the getter? 
+	public static inline var scene2d(default, never):Scene; 
+	public static inline var scene3d(default, never):h3d.scene.Scene; 
+	public static inline var app(default, never):App; // TODO: App vs PunkApp
 	public static inline var engine(get, never):Engine; // currently using a reference; don't know what this is yet... has backgroundColor tho
 
 
 
 	// from other places
-	public static inline var soundManager:Manager(default, never);
+	public static inline var soundManager(default, never):Manager;
 	// delta current time, normally you should use dt tho
-	public static inline var dct:Float(get, never);
+	public static inline var dct(get, never):Float;
 	
 	// PunkApp
 	// updated once per frame, in App's main loop
 	// i think hxd.Timer.dt actually fetches the current time
-	public static inline var dt:Float(get, never);
+	public static inline var dt(get, never):Float;
 	#if debug
 	public static inline var console:Console;
 	public static inline var screenInputHandler:Interactive; // TODO temp

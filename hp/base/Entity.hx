@@ -78,7 +78,8 @@ class Entity implements EntitySkeleton {
 	public function remove() {
 		//sprite.remove(); // all Objects provide this
 		AppGlobal.entities.remove(this);
-		this = null; // TODO: lol, not sure about doing this from within the class...
+		//this = null; // TODO: FAIL, lol
+		// i guess to the garbage collector it goes..?
 	}
 	
 	
