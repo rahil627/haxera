@@ -52,7 +52,7 @@ class MyApp extends PunkApp {
 	// called each frame right before rendering (from docs)
 	// first call is done after the application is set up (so `loadAssets` and `init` are called (from docs)
 	override function update(dt:Float) {
-		super.update();
+		super.update(dt);
 		entities.update(dt);
 		
 		

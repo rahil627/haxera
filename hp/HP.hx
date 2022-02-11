@@ -40,7 +40,7 @@ class HP {
 		// either Object.addChild or new Object(parent) because
 		// that is the api that they have in common: Object and Scene
 		// maybe h2d.Layers is similar to h3d.World, but different
-		HP.scene = scene2d; // 2d is the default because i'll never get to 3d :(
+		HP.scene = scene2d; // 2d is the default because i'll never get to 3d :( // TODO: lol, this is triggering the setter
 		HP.is3d = false; // TODO: maybe can't have field names begin with a number?
 
 		HP.window = window;
@@ -69,7 +69,7 @@ class HP {
 
 
 	// these are the only actual data stored in this class
-	public static var is3d(default, never):Bool;
+	public static var is3d(default, null):Bool;
 
 
 	// the following are set in init and have default getter/setters
@@ -77,27 +77,28 @@ class HP {
 	// should be private, but kept public for advanced use
 	// currently these next few are set by reference, hence default get
 	
-	public static var window(default, never):Window; // TODO: note: cannot inline properties, but maybe can inline the getter/setter or this?
+	public static var window(default, null):Window; // TODO: note: cannot inline properties, but maybe can inline the getter/setter or this?
 	// by default, this references the default 2d scene (App.s2d)
 	// either call setup() or set 3d = true
-	// overrides setter 'scene = new Scene(...)' to call app.setScene()
-	public static var scene(default, set):Scene; // TODO: how to inline the getter? 
-	public static var scene2d(default, never):Scene; 
-	public static var scene3d(default, never):h3d.scene.Scene; 
-	public static var app(default, never):App; // TODO: App vs PunkApp
-	public static var engine(default, never):Engine; // currently using a reference; don't know what this is yet... has backgroundColor tho
+	// overrides setter 'scene = new Scene(...)' to call app.setScene() // TODO: unimpl
+	public static var scene(default, null):Scene; // TODO: how to inline the getter?
+	public static var scene2d(default, null):Scene; 
+	public static var scene3d(default, null):h3d.scene.Scene; 
+	public static var app(default, null):App; // TODO: App vs PunkApp
+	public static var engine(default, null):Engine; // currently using a reference; don't know what this is yet... has backgroundColor tho
 
 
 
 	// from other places
-	public static var soundManager(default, never):Manager;
+	public static var soundManager(default, null):Manager;
 	// delta current time, normally you should use dt tho
-	public static var dct(get, never):Float;
+	public static var dct(get, null):Float;
 	
 	// PunkApp
 	// updated once per frame, in App's main loop
 	// i think hxd.Timer.dt actually fetches the current time
-	public static var dt(default, never):Float;
+	// note: be careful to not set this value
+	public static var dt(default, default):Float;
 	#if debug
 	public static var console:Console;
 	public static var screenInputHandler:Interactive; // TODO temp
@@ -114,10 +115,10 @@ class HP {
 	// abstract Scene
 	// the scene inherits a lot of shit that you probably don't want to touch..
 	public static var sceneScaleMode(get, set):ScaleMode; // use this to actually set the screen size
-	public static var sceneWidth(get, never):Float;
-	public static var sceneHeight(get, never):Float;
-	public static var width(get, never):Float; // shortcut, def should be inline
-	public static var height(get, never):Float;
+	public static var sceneWidth(get, null):Float;
+	public static var sceneHeight(get, null):Float;
+	public static var width(get, null):Float; // shortcut, def should be inline
+	public static var height(get, null):Float;
 
 
 	// abstract App
@@ -125,7 +126,7 @@ class HP {
 	// s2d
 	// s3d
 	// engine
-	public static var sceneEvents(get, never):hxd.SceneEvents;
+	public static var sceneEvents(get, null):hxd.SceneEvents;
 	//public static inline var state(get, null):MainLoopState; // unimpl
 	//public static inline var isPaused:Bool; // unimpl
 
@@ -135,8 +136,8 @@ class HP {
 	// note: setters must return something, see trivia section in docs:
 	// ref: https://haxe.org/manual/class-field-property-rules.html
 
-	// HP.window, HP.scene, HP.app all have "real/physical" reference vars set in PunkApp
-	static function set_scene(s:hxd.SceneEvents.InteractiveScene, disposePrevious:Bool = true) app.setScene(s, disposePrevious);
+	// HP.window, HP.scene, HP.app, etc. all have "real/physical" reference vars set in init
+	static function set_scene(s:Scene):Scene { HP.app.setScene(s, true); return app.s2d; } // TODO: only works for 2d, but there might be a way to use event scene interactive, or whaterver the base class of both 2d and 3d scene are... see the App.setScene method on how Scene is downcasted
 
 	// other properties
 	//static inline function get_soundManager() return hxd.snd.Manager.get();
@@ -151,7 +152,7 @@ class HP {
 	static inline function get_sceneEvents() return app.sevents; 
 
 	// Scene properties
-	static inline function get_sceneScaleMode() return sceneScaleMode;
+	static inline function get_sceneScaleMode() return scene.scaleMode;
 	static inline function set_sceneScaleMode(sm:ScaleMode):ScaleMode return scene.scaleMode = sm;
 	static inline function get_sceneWidth() return scene.width;
 	static inline function get_sceneHeight() return scene.height;
