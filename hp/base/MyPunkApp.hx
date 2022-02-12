@@ -8,7 +8,7 @@ import h2d.Layers;
 // just a bare-bones App/Main to copy to begin a new project with
 // the data is all optional, feel free to delete!
 // rename the class, constructor call, 'n filename and you're good to go!
-class MyApp extends PunkApp {
+class MyPunkApp extends PunkApp {
 
 	// note: Layers is only useful for 2d
 	var world:Layers; // just a helper tool to put things in the right place in a 2d scene tree
@@ -63,7 +63,7 @@ class MyApp extends PunkApp {
 	// note: must be placed at the end? threw an error:
 	// module main didn't define object type Main?
 	static function main() {
-		new MyApp();
+		new MyPunkApp();
 		// can store an instance of it... but, for what? for now HP.app is the parent PunkApp class
 	}
 }
