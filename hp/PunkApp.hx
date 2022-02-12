@@ -33,7 +33,8 @@ class PunkApp extends App {
 		super.init(); // empty
 		
 		#if debug
-		console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene); // TODO: font is tiny :(
+		console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene);
+		console.resizeTo(console.size*2);
 		console.shortKeyChar = "`".charCodeAt(0);
 		console.show(); // TODO: temp, because inputs dont work
 		#end
