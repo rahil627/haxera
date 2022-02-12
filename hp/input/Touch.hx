@@ -23,13 +23,15 @@ class Touch {
 	public static var justStoppedTouching(get, null):Bool; // just let go'd?
 	// note: stuff like onOver/onOut are handled by Interactive, not here
 	
-	// properties
 	
 	// note: h2d.Scene provides mouseX/mouseY, but h3d.scene.Scene doesn't...
 	// hence why this only works for 2d
 	
 	public static inline function get_x() return HP.scene.mouseX; // note: scene-based event, not global
 	public static inline function get_y() return HP.scene.mouseY;
+	
+	// for 3d, can try using either Window.mouseX/Y or perhaps from hxd.SceneEvents
+	
 	public static inline function get_isTouching():Bool return Key.isDown(Key.MOUSE_LEFT);
 	public static inline function get_justBeganTouching():Bool return Key.isPressed(Key.MOUSE_LEFT); // isPressed is confusing :(
 	public static inline function get_justStoppedTouching():Bool return Key.isReleased(Key.MOUSE_LEFT);
