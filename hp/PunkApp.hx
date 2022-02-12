@@ -43,7 +43,7 @@ class PunkApp extends App {
 		
 		// set some stuff
 		HP.windowTitle = "heaps <3 p u n k"; // i've seen this set in the hxml build file
-		HP.engine.backgroundColor = #E0C9A6;
+		HP.engine.backgroundColor = 0xE0C9A6;
 	
 		
 		
