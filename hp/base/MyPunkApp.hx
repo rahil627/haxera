@@ -59,7 +59,6 @@ class MyPunkApp extends PunkApp {
 		
 	}
 	
-	
 	// note: must be placed at the end? threw an error:
 	// module main didn't define object type Main?
 	static function main() {
