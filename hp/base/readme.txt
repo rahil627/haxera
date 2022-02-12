@@ -9,9 +9,9 @@ it's all very HaxePunk'esque, but even more minimal, more modular. In fact, **_e
 
 maybe you need to use EntityList, or maybe a normal List or Array is enough, or maybe no container at all.. Maybe you need Layers, maybe you don't. Maybe you need id or kind properties, or maybe you don't. Whatever!! do what you want! Use what you want! *everything is optional.*
 
-*warning:* there's currently one interconnectedness / dependency: the main update loop requires Entity to provide a remove(), and maybe an update() (even if it's empty), hence the EntitySkeleton interface
+*warning:* there's currently one interconnectedness / dependency: the main update loop requires Entity to provide a dispose(), and an update() (even if it's empty), hence the EntitySkeleton interface
 
 HOW TO USE:
-TODO: as of now, you must remove the top 4 lines on the top of each file... that's annoying! :( But if it wasn't in it's own package, it would clog up the namespace, so... ??? create a separate repo? :/ use "sed (-i) 1,4d filename" to do it, the -i flag deletes
+TODO: as of now, you must remove the top 4 lines on the top of each file... that's annoying! :( But if it wasn't in it's own package, it would clog up the namespace, so... ??? create a separate repo? :/ use "sed (-i) 1,4d filename" to do it. be careful: the -i flag causes the deletion
 
 there are two versions of the main app class: PunkApp, which relies on HeapsPunk, and MyApp, which has no such dependencies
