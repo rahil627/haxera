@@ -1,7 +1,5 @@
 this package is for "base"/"bare-bones" code for an app/game, not actual library ds'es, hence the seperate package
 
-there are two versions of the main app class: PunkApp, which relies on HeapsPunk, and MyApp, which has no such dependencies
-
 in it lies a very basic entity system (just simple composition, not pure component design). Basically:
 Entity is mainly just a container for unwritten game logic and often h2d.Object(s) (or something that extends Object). Otherwise, it might have a few properties: layer, id, kind, etc.
 EntityList is a special container for Entity, providing a place for helper functions: find, findByType/Class, etc.
@@ -13,4 +11,7 @@ maybe you need to use EntityList, or maybe a normal List or Array is enough, or 
 
 *warning:* there's currently one interconnectedness / dependency: the main update loop requires Entity to provide a remove(), and maybe an update() (even if it's empty), hence the EntitySkeleton interface
 
-NOTE/TODO: as of now, you must remove the top 4 lines on the top of each file... that's annoying! :( But if it wasn't in it's own package, it would clog up the namespace, so... ??? create a separate repo? :/ use "sed (-i) 1,4d filename" to do it, the -i flag deletes
+HOW TO USE:
+TODO: as of now, you must remove the top 4 lines on the top of each file... that's annoying! :( But if it wasn't in it's own package, it would clog up the namespace, so... ??? create a separate repo? :/ use "sed (-i) 1,4d filename" to do it, the -i flag deletes
+
+there are two versions of the main app class: PunkApp, which relies on HeapsPunk, and MyApp, which has no such dependencies
