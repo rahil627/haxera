@@ -48,7 +48,8 @@ color
       
 tweens
   - **does heaps even have any?? :o**
-  - TODO: get haxepunk/tweens, especially motion tweens
+  - haxepunk/tweens, especially motion tweens vs a complete tweening library such as Actuate
+    - openFL also has a tween class
   
 
 
@@ -63,22 +64,23 @@ haxepunk
   - https://github.com/HaxePunk/HaxePunk
 jefvel's gamebase
   - https://github.com/jefvel/game-base
+terryheaps
+  - https://github.com/TerryCavanagh/terryheaps  
 deepnight's gamebase
   - https://github.com/deepnight/gameBase
 deepnightlib
   - https://github.com/deepnight/deepnightLibs
-terryheaps
-
-
 
 nicholas cannasse's game jam games
   - https://github.com/ncannasse/
-  - ld40
-    - https://github.com/ncannasse/ld40/blob/master/src/Game.hx
+  - these 4 are on the 'full game samples' page of heaps
+    - https://github.com/ncannasse/ld40
+    - https://github.com/ncannasse/ld37
+    - https://github.com/ncannasse/ld32
+    - https://github.com/ncannasse/ld28
   
 yanrishatum's game jam games
   - https://github.com/Yanrishatum/cherry-jam
-
 
 
 openfl
