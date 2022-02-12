@@ -107,7 +107,9 @@ class PunkApp extends App {
 			g.drawRect(b.x, b.y, b.width, b.height);
 			g.endFill();
 		}
-		g.dispose(); // is this needed?
+		//g.dispose(); // is this needed?
+		// i'm guesing when it's added to the scene via new Object(parent) constructor,
+		// it's stored in the scene tree container and stays until removed (by Object.remove/removeChild/removeParent)
 	}
 	#end
 
