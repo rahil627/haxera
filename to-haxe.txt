@@ -4,6 +4,10 @@ just a temp place to leave some notes i get from the web with my iPad
 or from vim/server
 
 
+// TODO: init in constuctor vs in init()
+hmm, why ever seperate this?
+
+
 naming:
 classes at least two characters so that refactoring isn't bad, and that ctags 'n autocomplete all work okay
 PunkApp extends App
