@@ -3,7 +3,4 @@
 // aliases
 // holy shit(!!) this is awesome!!
 import AppGlobal as GG // game globals
-
-// examples
-//import dn.Color as C; // one letter might be a problem refectoring..? regex 'C\.'?
-//import tools.LPoint as P;
+  
