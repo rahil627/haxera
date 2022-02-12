@@ -56,7 +56,7 @@ class Entity implements EntitySkeleton {
 	//var effects:Graphics; // can have as many as you want!
 
 	// override me! and remember to call super()
-	public function new() {
+	public function new() { // note: good programming says to pass in the Scene, but mehhhh
 		//inf = Data.object.get(kind); // castle db stuff
 		//this.x = x; // just a wrapper for e.sprite.x?
 		//this.y = y;
