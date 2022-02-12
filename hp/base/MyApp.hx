@@ -10,7 +10,8 @@ import h2d.Layers;
 // rename the class, constructor call, 'n filename and you're good to go!
 class MyApp extends PunkApp {
 
-	var world:Layers; // just a helper tool to put things in the right place in the scene tree
+	// note: Layers is only useful for 2d
+	var world:Layers; // just a helper tool to put things in the right place in a 2d scene tree
 	var entities:EntityList<Entity>;
 	//var players:Array<PlayerEntity>; // TODO: static vs global reference
 
