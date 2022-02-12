@@ -18,7 +18,7 @@ class MyApp extends PunkApp {
 	// called during application setup after `loadAssets` completed (from docs)
 	override function init() {
 		super.init();
-		HP.setup(true);
+		HP.setup(false);
 		/*
 		 // config screen stuff
 		 // the hxml file can set some of these too, not sure which has priority tho
@@ -45,8 +45,8 @@ class MyApp extends PunkApp {
 
 	}
 	
-	public function resetWorld() {
-		entities.clear();
+	public function reset() {
+		entities.dipose();
 		world = new Layers(); // TODO: lol, dunno how to dispose, the array is private, *i think* it's just a tiny array of indicies anyway.., no content
 	}
 	
