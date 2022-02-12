@@ -40,6 +40,12 @@ geometry / 2d math
 
 **vector graphics drawing functions**
   - ?
+  
+a good debug mode / console:
+  - see HaxeFlixel
+  - also HaxePunk has a good simpler one
+  - try setting up HIDE
+    - this way, you don't need to code anything, *and* you get a whole gui!
 
 color
   - check what heaps has
