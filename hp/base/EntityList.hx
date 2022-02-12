@@ -122,17 +122,16 @@ class EntityList<T:Entity> {
 	
 	// specialized entity helper extensions
 	public function dispose() {  // or removeAll, or reset
+		this.clear();
+		entities = null;
+	}
+	
+	public function clear() { // original name
 		//entities.clear(); // TODO: woudn't this work?... nah, contained Object(s) would become janky references
 		for (e in entities) {
 			e.remove(); // remove Object, etc.
 		}
-		
 		entities.clear();
-		//entities = null;
-	}
-	
-	public function clear() { // original name
-		this.dispose;
 	}
 		
 	//public function remove() { // alt, too ambiguous, i'd rather throw an error
