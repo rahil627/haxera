@@ -11,4 +11,4 @@ maybe you need to use EntityList, or maybe a normal List or Array is enough, or 
 
 *warning:* there's currently one interconnectedness / dependency: the main update loop requires Entity to provide a remove(), and maybe an update() (even if it's empty), hence the EntitySkeleton interface
 
-NOTE/TODO: as of now, you must remove the top 4 lines on the top of each file... that's annoying! :( But if it wasn't in it's own package, it would clog up the namespace, so... ??? create a separate repo? :/
+NOTE/TODO: as of now, you must remove the top 4 lines on the top of each file... that's annoying! :( But if it wasn't in it's own package, it would clog up the namespace, so... ??? create a separate repo? :/ use "sed (-i) 1,4d filename" to do it, the -i flag deletes
