@@ -4,6 +4,7 @@ package hp.base; // DELETE ME!!
 import hp.base.*; // DELETE ME!!
 
 /*
+// although you can use this.is / std.isOfType, this is 
 // still useful in case you need to search for something but
 // the same class is used to make several different kinds of entities
 enum EntityKind {
@@ -55,7 +56,6 @@ class Entity implements EntitySkeleton {
 	//var effects:Graphics; // can have as many as you want!
 
 	// override me! and remember to call super()
-	// TODO: init in constuctor vs in init()
 	public function new() {
 		//inf = Data.object.get(kind); // castle db stuff
 		//this.x = x; // just a wrapper for e.sprite.x?
@@ -82,7 +82,7 @@ class Entity implements EntitySkeleton {
 		//sprite = null; // not sure if necessarry, but deepnight does it
 		AppGlobal.entities.remove(this);
 		//this = null; // TODO: FAIL, lol
-		// and off to the garbage collector it goes!
+		// and off to the garbage collector it goes?
 	}
 	
 	
