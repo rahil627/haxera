@@ -72,7 +72,7 @@ class Entity implements EntitySkeleton {
 		//AppGlobal.scene.addChild(sprite); // if no Layers add Object to Scene
 		//AppGlobal.world.add(sprite, Layer.monster);  // add Object to Layers
 		
-		AppGlobal.entities.push(this); // TODO: add this base entity class vs the actual class?
+		//AppGlobal.entities.push(this);
 	}
 
 	// override me! and remember to call super.update(dt)
@@ -89,7 +89,7 @@ class Entity implements EntitySkeleton {
 		
 		//sprite.remove(); // all Objects provide this
 		//sprite = null; // not sure if necessarry, but deepnight does it
-		AppGlobal.entities.remove(this);  // TODO: add this base entity class vs the actual class?
+		//AppGlobal.entities.remove(this);
 		// and off to the garbage collector it goes?
 	}
 	
