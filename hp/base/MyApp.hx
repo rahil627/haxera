@@ -40,7 +40,7 @@ class MyApp extends App {
 		*/
 		
 		// init app globals
-		AppGlobal.app = this; // this is a little different from HP.app, which uses the base class
+		//AppGlobal.app = this;
 		AppGlobal.scene = this.s2d;
 		AppGlobal.world = world;
 		AppGlobal.entities = entities;
