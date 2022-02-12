@@ -37,6 +37,8 @@ class PunkApp extends App {
 		console.resizeTo(console.size*2);
 		console.shortKeyChar = "`".charCodeAt(0);
 		console.show(); // TODO: temp, because inputs dont work
+		
+		redirectTracesToConsole(console);
 		#end
 		
 		// init global ds
@@ -111,6 +113,18 @@ class PunkApp extends App {
 		//g.dispose(); // is this needed?
 		// i'm guesing when it's added to the scene via new Object(parent) constructor,
 		// it's stored in the scene tree container and stays until removed (by Object.remove/removeChild/removeParent)
+	}
+	#end
+		
+	#if heaps
+	// @author deepnight, dn.Lib
+	/*public static*/ function redirectTracesToConsole(c:h2d.Console) {
+		haxe.Log.trace = function(m, ?pos) {
+			if ( pos != null && pos.customParams == null )
+				pos.customParams = ["debug"];
+
+			c.log(pos.fileName + "(" + pos.lineNumber + ") : " + Std.string(m));
+		}
 	}
 	#end
 
