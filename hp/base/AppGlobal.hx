@@ -9,7 +9,6 @@ import h2d.Scene;  //import h3d.scene.Scene;
 // a static global helper class, with a scope specific to this app
 // store references to commonly-used data structures here
 // try to store only references of stuff, no actual objects (except simple types)
-// TODO: singleton vs static
 class AppGlobal {
 	
 	// only keep references to stuff here
