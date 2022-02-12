@@ -2,5 +2,5 @@
 
 // aliases
 // holy shit(!!) this is awesome!!
-import AppGlobal as GG // game globals
+//import AppGlobal as GG // game globals
   
