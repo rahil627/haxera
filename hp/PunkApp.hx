@@ -116,7 +116,7 @@ class PunkApp extends App {
 	}
 	#end
 		
-	#if heaps
+	#if debug
 	// @author deepnight, dn.Lib
 	/*public static*/ function redirectTracesToConsole(c:h2d.Console) {
 		haxe.Log.trace = function(m, ?pos) {
