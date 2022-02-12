@@ -19,7 +19,7 @@ class MyPunkApp extends PunkApp {
 	// called during application setup after `loadAssets` completed (from docs)
 	override function init() {
 		super.init();
-		HP.setup(false);
+		HP.setup(this, false);
 		/*
 		 // config screen stuff
 		 // the hxml file can set some of these too, not sure which has priority tho
