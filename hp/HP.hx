@@ -98,6 +98,7 @@ class HP {
 	
 
 	// from other places
+	// warning: maybe "lazy" initializes sound manager on this first call?
 	public static var soundManager(get, null):Manager;
 	// delta current time, normally you should use dt tho
 	public static var dct(get, null):Float;
