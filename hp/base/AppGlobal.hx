@@ -12,6 +12,7 @@ import h2d.Scene;  //import h3d.scene.Scene;
 class AppGlobal {
 	
 	// only keep references to stuff here
+	//public static var app:PunkApp/MyApp;
 	public static var scene:Scene;
 	
  	public static var world:Layers;
