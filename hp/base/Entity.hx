@@ -58,7 +58,7 @@ class Entity implements EntitySkeleton {
 	//var effects:Graphics; // can have as many as you want!
 
 	// override me! and remember to call super()
-	public function new(?scene:Scene) { // good programming says to pass in Scene, to support multiple Scenes. such as split screen
+	public function new(?scene:Scene) { // good programming says to pass in Scene, also enables to support multiple Scenes, such as split screen
 		//inf = Data.object.get(kind); // castle db stuff
 		//sprite = new h2d.Anim(getAnim(), 15);
 		
