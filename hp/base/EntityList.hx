@@ -56,7 +56,7 @@ class EntityList<T:Entity> {
 	public function add(entity:T) { // i personally prefer "add"/"remove" to keep it simple, and match the rest of the framework
 		entities.push(entity);
 	}
-	public function push(entity:T) { // alt
+	public function push(entity:T) { // original name
 		entities.push(entity);	
 	}
 	
@@ -64,7 +64,7 @@ class EntityList<T:Entity> {
 	public function removeFirst():Null<T> { // "remove" is too ambiguous
 		return entities.pop();
 	}
-	public function pop():Null<T> { // alt
+	public function pop():Null<T> { // original name
 		return entities.pop();
 	}
 	
@@ -121,21 +121,17 @@ class EntityList<T:Entity> {
 	
 	
 	// specialized entity helper extensions
-	public function dispose() {
-		this.removeAll();
-		//this = null; // TODO: FAIL
-	}
-	
-	public function removeAll() {  // or reset
+	public function dispose() {  // or removeAll, or reset
 		//entities.clear(); // TODO: woudn't this work?... nah, contained Object(s) would become janky references
 		for (e in entities) {
 			e.remove(); // remove Object, etc.
 		}
 		
 		entities.clear();
+		//entities = null;
 	}
 	
-	public function clear() { // alt
+	public function clear() { // original name
 		this.removeAll();
 	}
 		
