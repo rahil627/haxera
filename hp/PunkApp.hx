@@ -95,7 +95,7 @@ class PunkApp extends App {
 		// placeholder
 	}
 	
-	# if debug
+	#if debug
 	// draws the rectangular Bounds of each Object in the 2d Scene tree
 	function drawHitboxes2d(insideColor:Int = 0xFF0000, insideAlpha:Float = .5, outlineColor:Int = 0x00FF00, outlineAlpha:Float = .9) {
 		var children = this.s2d.children;
