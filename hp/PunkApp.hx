@@ -81,12 +81,34 @@ class PunkApp extends App {
 		
 		// update global vars
 		HP.dt = dt;
+		
+		#if debug
+		drawHitboxes2d();
+		#end
 	}
 
 	// optional override
 	override function onResize() {
 		// placeholder
 	}
+	
+	# if debug
+	function drawHitboxes2d() {
+		var children = this.s2d.children;
+		var b:Bounds;
+		var g = new h2d.Graphics(this.s2d);
+		
+		for( i in 0...children.length ) {
+			children[i].getBounds(); // i think this includes the bounds of all of it's children, so... only get top layer?
+			// or find another function that returns only that Object's bounds and recurse through the entire scene tree
+			g.beginFill(0xFF0F0, 0.5);
+			g.lineStyle(1, 0x00FF00); // outline?
+			g.drawRect(b.x, b.y, b.width, b.height);
+			g.endFill();
+		}
+		g.dispose(); // is this needed?
+	}
+	#end
 
 
 }
