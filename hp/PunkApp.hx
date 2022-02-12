@@ -68,6 +68,8 @@ class PunkApp extends App {
 	
 	public function dispose() {
 		// TODO: ?
+		//HP.dipose() // ?
+		//console = null //? 
 	}
 	
 	#if debug
