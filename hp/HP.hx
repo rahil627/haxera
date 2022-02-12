@@ -44,6 +44,13 @@ class HP {
 		HP.is3d = false; // TODO: maybe can't have field names begin with a number?
 
 		HP.window = Window.getInstance();
+		//HP.windowWidth = HP.window.width; // unimpl until i need it
+		//HP.windowHeight = HP.window.height;
+		HP.windowTitle = HP.window.title;
+		HP.windowDisplayMode = HP.window.displayMode;
+		HP.windowIsFocused = HP.window.isFocused;
+		HP.windowMouseX = HP.windowMouseX;
+		HP.windowMouseY = HP.windowMouseY;
 
 		HP.engine = app.engine;
 
@@ -109,17 +116,20 @@ class HP {
 	public static var screenInputHandler:Interactive; // TODO temp
 	#end
 		
+	// note: try to keep class name in var name for now, for learning purposes
+		
 	// abstract Window
 	// TODO: better to just hide these and just set them in the hxml file
 	// they can be confused with sceneScaleMode, sceneWidth, sceneHeight
-	public static var windowTitle(default, set):String; // try to keep class name in var name for now, for learning purposes
-	public static var windowDisplayMode(default, set):DisplayMode;
-	//public static inline var windowWidth(get, default):Float; // unimpl; no need, yet
-	//public static inline var windowHeight(get, default):Float; // unimpl
+	public static var windowTitle:String;
+	public static var windowDisplayMode:DisplayMode; // Window provides get and set
+	public static var windowIsFocused:Bool; // Window provides get and set; useful to pause when not focused
+	public static var windowMouseX(default, null):Int; // can use for mouse in 3d
+	public static var windowMouseY(default, null):Int;
+	//public static inline var windowWidth(get, null):Float; // unimpl; no need, yet
+	//public static inline var windowHeight(get, null):Float; // unimpl
 	
 	//static inline function get_window() return hxd.Window.getInstance(); // currently using a reference
-	static inline function set_windowTitle(s:String):String return HP.window.title;
-	static inline function set_windowDisplayMode(dm:DisplayMode):DisplayMode return HP.window.displayMode = dm;
 	//HP.window.setFullScreen is deprecated, but can make my own..
 	static inline function get_sceneEvents() return app.sevents; 
 
