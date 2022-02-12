@@ -42,7 +42,8 @@ class PunkApp extends App {
 		HP.init(this, console);
 		
 		// set some stuff
-		HP.window.title = "heaps <3 p u n k"; // i've seen this set in the hxml build file
+		HP.windowTitle = "heaps <3 p u n k"; // i've seen this set in the hxml build file
+		HP.engine.backgroundColor = #E0C9A6;
 	
 		
 		
