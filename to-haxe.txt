@@ -3,8 +3,6 @@ todo: add to haxe.txt
 just a temp place to leave some notes i get from the web with my iPad
 or from vim/server
 
-
-
 // note: classes have new instead of class name / standard constructor
 
 // TODO: init in constuctor vs in init()
