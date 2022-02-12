@@ -77,10 +77,6 @@ class PunkApp extends App {
 		
 		// update global vars
 		HP.dt = dt;
-
-		// TODO: testing timer vars
-		if (hxd.Timer.dt != dt)
-			HP.console.log("the time vars are actually different!");		
 	}
 
 	// optional override
