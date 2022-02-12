@@ -18,7 +18,7 @@ class MyApp extends App {
 	// called during application setup after `loadAssets` completed (from docs)
 	override function init() {
 		super.init();
-    AppGlobal.scene = this.s2d;
+        AppGlobal.scene = this.s2d;
 		/*
 		 // config screen stuff
 		 // the hxml file can set some of these too, not sure which has priority tho
