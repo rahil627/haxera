@@ -76,10 +76,13 @@ class Entity implements EntitySkeleton {
 
 	// override me! and remember to call super.remove()
 	public function remove() {
+		// basically, whenever you call new to create something, you need to destroy it
+		
 		//sprite.remove(); // all Objects provide this
+		//sprite = null;
 		AppGlobal.entities.remove(this);
 		//this = null; // TODO: FAIL, lol
-		// i guess to the garbage collector it goes..?
+		// and off to the garbage collector it goes!
 	}
 	
 	
