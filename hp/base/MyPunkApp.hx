@@ -19,7 +19,7 @@ class MyPunkApp extends PunkApp {
 	// called during application setup after `loadAssets` completed (from docs)
 	override function init() {
 		super.init();
-		HP.setup(this, false);
+		HP.setup(false);
 		/*
 		 // config screen stuff
 		 // the hxml file can set some of these too, not sure which has priority tho
@@ -38,6 +38,11 @@ class MyPunkApp extends PunkApp {
 		 hxd.Res.initEmbed(); // use hxd.Res.initEmbed(); for html5/js
 		 #end
 		*/
+		// init app globals
+		AppGlobal.app = this; // this is a little different from HP.app, which uses the base class
+		AppGlobal.world = world;
+		AppGlobal.entities = entities;
+		
 		 // init app stuff
 		 world = new Layers(HP.scene);
 		 entities = new EntityList<Entity>();
