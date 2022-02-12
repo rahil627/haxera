@@ -74,12 +74,12 @@ class Entity implements EntitySkeleton {
 
 	// draw and render are handled automatically
 
-	// override me! and remember to call super.remove()
-	public function remove() {
+	// override me! and remember to call super.dispose()
+	public function dispose() {
 		// basically, whenever you call new to create something, you need to destroy it
 		
 		//sprite.remove(); // all Objects provide this
-		//sprite = null;
+		//sprite = null; // not sure if necessarry, but deepnight does it
 		AppGlobal.entities.remove(this);
 		//this = null; // TODO: FAIL, lol
 		// and off to the garbage collector it goes!
