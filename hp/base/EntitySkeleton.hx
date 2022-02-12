@@ -5,7 +5,7 @@ import hp.base.*; // DELETE ME!!
 
 // the skeletal structure of entities
 // just something to ensure that all entities provide certain functionalites
-// so that when you do iterate through entities, you can call those functions without error
+// so that when you do iterate through a list of entities, you can call those functions without error
 // those functions can be empty, so no worries about cases when you don't need them
 // example use: Entity implements EntitySkeleton
 interface EntitySkeleton {
