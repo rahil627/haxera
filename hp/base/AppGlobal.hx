@@ -4,6 +4,7 @@ package hp.base; // DELETE ME!!
 import hp.base.*; // DELETE ME!!
 	
 import h2d.Layers;
+import h2d.Scene;  //import h3d.scene.Scene;
 
 // a static global helper class, with a scope specific to this app
 // store references to commonly-used data structures here
@@ -11,7 +12,9 @@ import h2d.Layers;
 // TODO: singleton vs static
 class AppGlobal {
 	
-	// only keep references to stuff here // TODO: huh? my brain hurts
+	// only keep references to stuff here
+	public static var scene:Scene;
+	
  	public static var world:Layers;
 	
 	public static var entities:EntityList<Entity>;
