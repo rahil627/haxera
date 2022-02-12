@@ -11,6 +11,7 @@ import h2d.Layers;
 class MyPunkApp extends PunkApp {
 
 	// note: Layers is only useful for 2d
+	// TODO: Scene extends Layers sooooo.. don't really need this???
 	var world:Layers; // just a helper tool to put things in the right place in a 2d scene tree
 	var entities:EntityList<Entity>;
 	//var players:Array<PlayerEntity>; // TODO: static vs global reference
