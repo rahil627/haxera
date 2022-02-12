@@ -3,6 +3,8 @@
 package hp.base; // DELETE ME!!
 import hp.base.*; // DELETE ME!!
 
+import h2d.Scene; // h3d.scene.Scene
+
 /*
 // although you can use this.is / std.isOfType, this is 
 // still useful in case you need to search for something but
@@ -56,11 +58,15 @@ class Entity implements EntitySkeleton {
 	//var effects:Graphics; // can have as many as you want!
 
 	// override me! and remember to call super()
-	public function new() { // note: good programming says to pass in the Scene, but mehhhh
+	public function new(?scene:Scene) { // good programming says to pass in Scene, to support multiple Scenes. such as split screen
 		//inf = Data.object.get(kind); // castle db stuff
-		//this.x = x; // just a wrapper for e.sprite.x?
-		//this.y = y;
 		//sprite = new h2d.Anim(getAnim(), 15);
+		
+		// a common transform wrapper
+		//x = sprite.x;
+		//y = sprite.y;
+		//r = sprite.rotation;
+		
 		//AppGlobal.scene.addChild(sprite); // if no Layers add Object to Scene
 		//AppGlobal.world.add(sprite, Layer.monster);  // add Object to Layers
 		AppGlobal.entities.push(this);
