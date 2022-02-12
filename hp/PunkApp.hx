@@ -93,7 +93,8 @@ class PunkApp extends App {
 	}
 	
 	# if debug
-	function drawHitboxes2d() {
+	// draws the rectangular Bounds of each Object in the 2d Scene tree
+	function drawHitboxes2d(insideColor:Int = 0xFF0000, insideAlpha:Float = .5, outlineColor:Int = 0x00FF00, outlineAlpha:Float = .9) {
 		var children = this.s2d.children;
 		var b:Bounds;
 		var g = new h2d.Graphics(this.s2d);
@@ -101,8 +102,8 @@ class PunkApp extends App {
 		for( i in 0...children.length ) {
 			children[i].getBounds(); // i think this includes the bounds of all of it's children, so... only get top layer?
 			// or find another function that returns only that Object's bounds and recurse through the entire scene tree
-			g.beginFill(0xFF0F0, 0.5);
-			g.lineStyle(1, 0x00FF00); // outline?
+			g.beginFill(insideColor, insideAlpha);
+			g.lineStyle(1, outlineColor, outlineAlpha);
 			g.drawRect(b.x, b.y, b.width, b.height);
 			g.endFill();
 		}
