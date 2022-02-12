@@ -39,7 +39,6 @@ class PunkApp extends App {
 		#end
 		
 		// init global ds
-		// warning: maybe initializes sound manager on this first call?
 		HP.init(this, console);
 		
 		// set some stuff
