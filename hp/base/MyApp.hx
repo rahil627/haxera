@@ -46,7 +46,7 @@ class MyApp extends PunkApp {
 	}
 	
 	public function reset() {
-		entities.dipose();
+		entities.clear();
 		world = new Layers(); // TODO: lol, dunno how to dispose, the array is private, *i think* it's just a tiny array of indicies anyway.., no content
 	}
 	
