@@ -53,6 +53,8 @@ class Entity implements EntitySkeleton {
 	//var name:String; // although strange, i've seen HaxePunk and Armory use this for searching, secret optimization magic??
 	//var kind:EntityKind; // maybe useful narrowing down searches; one big container vs keeping multiple containers
 	//var class = Type.getClassName(Type.getClass(this)); // @author MikeTuttle/HaxePunk, i think it uses reflection, which might not be good for cross-platform use
+
+	//var parent:Object;
 	
 	//var sprite:Anim; // Object and it's extensions: Drawable, Graphics, Anim, etc.
 	//var effects:Graphics; // can have as many as you want!
@@ -69,7 +71,8 @@ class Entity implements EntitySkeleton {
 		
 		//AppGlobal.scene.addChild(sprite); // if no Layers add Object to Scene
 		//AppGlobal.world.add(sprite, Layer.monster);  // add Object to Layers
-		AppGlobal.entities.push(this);
+		
+		//AppGlobal.entities.push(this);
 	}
 
 	// override me! and remember to call super.update(dt)
@@ -86,8 +89,7 @@ class Entity implements EntitySkeleton {
 		
 		//sprite.remove(); // all Objects provide this
 		//sprite = null; // not sure if necessarry, but deepnight does it
-		AppGlobal.entities.remove(this);
-		//this = null; // TODO: FAIL, lol
+		//AppGlobal.entities.remove(this);
 		// and off to the garbage collector it goes?
 	}
 	
