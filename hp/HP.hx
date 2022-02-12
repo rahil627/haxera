@@ -91,7 +91,7 @@ class HP {
 	public static var scene2d(default, null):Scene; 
 	public static var scene3d(default, null):h3d.scene.Scene; 
 	public static var app(default, null):App; // TODO: App vs PunkApp
-	public static var engine(default, null):Engine; // currently using a reference; don't know what this is yet... has backgroundColor tho
+	public static var engine(default, null):Engine; //don't know what this is yet... has backgroundColor tho
 
 	// TODO: how to set the initial value of a property without triggering the setter?
 	//static function set_scene(s:Scene):Scene { HP.app.setScene(s, true); return app.s2d; } // TODO: only works for 2d, but there might be a way to use event scene interactive, or whaterver the base class of both 2d and 3d scene are... see the App.setScene method on how Scene is downcasted
@@ -124,7 +124,7 @@ class HP {
 	public static var windowTitle:String;
 	public static var windowDisplayMode:DisplayMode; // Window provides get and set
 	public static var windowIsFocused:Bool; // Window provides get and set; useful to pause when not focused
-	public static var windowMouseX(default, null):Int; // can use for mouse in 3d
+	public static var windowMouseX(default, null):Int; // can use for mouse in 3d, or from hxd.SceneEvents?
 	public static var windowMouseY(default, null):Int;
 	//public static inline var windowWidth(get, null):Float; // unimpl; no need, yet
 	//public static inline var windowHeight(get, null):Float; // unimpl
