@@ -132,7 +132,7 @@ class EntityList<T:Entity> {
 	}
 	
 	public function clear() { // original name
-		this.removeAll();
+		this.dispose;
 	}
 		
 	//public function remove() { // alt, too ambiguous, i'd rather throw an error
