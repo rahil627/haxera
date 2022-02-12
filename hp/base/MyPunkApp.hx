@@ -39,7 +39,7 @@ class MyPunkApp extends PunkApp {
 		 #end
 		*/
 		// init app globals
-		AppGlobal.app = this; // this is a little different from HP.app, which uses the base class
+		//AppGlobal.app = this; // this is a little different from HP.app, which uses the base class
 		AppGlobal.world = world;
 		AppGlobal.entities = entities;
 		
