@@ -53,6 +53,8 @@ class HP {
 		HP.windowMouseY = HP.windowMouseY;
 
 		HP.engine = app.engine;
+		
+		HP.soundManager = hxd.snd.Manager.get(); // also forces sound manager init on startup instead of first sound play
 
 		#if debug
 		HP.console = console;
@@ -99,12 +101,12 @@ class HP {
 
 	// from other places
 	// warning: maybe "lazy" initializes sound manager on this first call?
-	public static var soundManager(get, null):Manager;
+	public static var soundManager(default, null):Manager;
 	// delta current time, normally you should use dt tho
 	public static var dct(get, null):Float;
 	
-	static inline function get_soundManager() return hxd.snd.Manager.get();
-	static inline function get_dct() return hxd.Timer.dt;
+	//static inline function get_soundManager() return hxd.snd.Manager.get();
+	static inline function get_dct() return hxd.Timer.dt; // must use getter for non-reference values
 
 
 	// PunkApp
