@@ -33,6 +33,8 @@ class Mouse {
 	public static inline function get_x() return HP.scene.mouseX;
 	public static inline function get_y() return HP.scene.mouseY;
 
+	// for 3d, can try using either Window.mouseX/Y or perhaps from hxd.SceneEvents
+
 	public static inline function get_leftIsDown():Bool return Key.isDown(Key.MOUSE_LEFT);
 	public static inline function get_leftJustPressed():Bool return Key.isPressed(Key.MOUSE_LEFT); // isPressed is confusing :(
 	public static inline function get_leftJustReleased():Bool return Key.isReleased(Key.MOUSE_LEFT);
