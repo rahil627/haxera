@@ -63,6 +63,10 @@ class PunkApp extends App {
 		#end
 	}
 	
+	public function dispose() {
+		// TODO: ?
+	}
+	
 	#if debug
 	// TODO: testing input
 	function onEvent(event : hxd.Event) {
