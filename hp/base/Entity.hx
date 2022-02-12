@@ -3,7 +3,7 @@
 package hp.base; // DELETE ME!!
 import hp.base.*; // DELETE ME!!
 
-import h2d.Scene; // h3d.scene.Scene
+import h2d.Object; // h3d.Object
 
 /*
 // although you can use this.is / std.isOfType, this is 
@@ -58,7 +58,7 @@ class Entity implements EntitySkeleton {
 	//var effects:Graphics; // can have as many as you want!
 
 	// override me! and remember to call super()
-	public function new(?scene:Scene) { // good programming says to pass in Scene, also enables to support multiple Scenes, such as split screen
+	public function new(?parent:Object) { // good programming says to pass in Scene, also enables to support multiple Scenes, such as split screen
 		//inf = Data.object.get(kind); // castle db stuff
 		//sprite = new h2d.Anim(getAnim(), 15);
 		
