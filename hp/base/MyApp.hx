@@ -17,16 +17,16 @@ class MyApp extends App {
 
 	// called during application setup after `loadAssets` completed (from docs)
 	override function init() {
-		super.init();
-        AppGlobal.scene = this.s2d;
+		super.init();	
 		/*
 		 // config screen stuff
 		 // the hxml file can set some of these too, not sure which has priority tho
 		 // not sure what defaultsmooth nor usescreenpixels do... just a sample from deepnight
 		 var window = Window.getInstance();
+		 var scene = this.s2d;
 		 window.displayMode = hxd.DisplayMode.Windowed;
-		 AppGlobal.scene.defaultSmooth = true;
-		 AppGlobal.scene.scaleMode = LetterBox(1280, 720, false, Center, Center);
+		 scene.defaultSmooth = true;
+		 scene.scaleMode = LetterBox(1280, 720, false, Center, Center);
 		 #if js
 		 window.useScreenPixels = true;
 		 #end
@@ -38,6 +38,14 @@ class MyApp extends App {
 		 hxd.Res.initEmbed(); // use hxd.Res.initEmbed(); for html5/js
 		 #end
 		*/
+		
+		// init app globals
+		AppGlobal.app = this; // this is a little different from HP.app, which uses the base class
+		AppGlobal.scene = this.s2d;
+		AppGlobal.world = world;
+		AppGlobal.entities = entities;
+			
+	
 		 // init app stuff
 		 world = new Layers(HP.scene);
 		 entities = new EntityList<Entity>();
