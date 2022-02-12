@@ -67,9 +67,11 @@ class PunkApp extends App {
 	}
 	
 	public function dispose() {
+		// App has a dispose() and isDisposed var to trash the s2d, s3d, and engine,
+		// but, it's private, so, i'm guessing it's internally handled already
 		// TODO: ?
-		//HP.dipose() // ?
-		//console = null //? 
+		//HP.dipose() // set all references to null?
+		//console = null //? didn't see a dispose function
 	}
 	
 	#if debug
