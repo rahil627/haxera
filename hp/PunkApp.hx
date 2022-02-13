@@ -82,6 +82,7 @@ class PunkApp extends App {
 	#end
 		
 	// override me and remember to call super.update(dt)
+	// without this, the dt non-reference value will never get updated!!!
 	override function update(dt:Float) {
 		super.update(dt); // empty
 		
