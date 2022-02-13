@@ -102,17 +102,20 @@ class PunkApp extends App {
 	#if debug
 	// draws the rectangular Bounds of each Object in the 2d Scene tree
 	function drawHitboxes2d(insideColor:Int = 0xFF0000, insideAlpha:Float = .5, outlineColor:Int = 0x00FF00, outlineAlpha:Float = .9) {
-		var children = this.s2d.children;
+		//var children = this.s2d.children; // private var?? wtf. i give up on learning this shit, just use Godot!
+		var ai:ArrayIterator<Object> = this.s2d.getLayer(-1);
 		var b:Bounds;
 		var g = new h2d.Graphics(this.s2d);
 		
-		for( i in 0...children.length ) {
-			children[i].getBounds(); // i think this includes the bounds of all of it's children, so... only get top layer?
+		while (ai.hasNext()) {
+		//for( i in 0...children.length ) {
+			//children[i].getBounds(); // i think this includes the bounds of all of it's children, so... only get top layer?
 			// or find another function that returns only that Object's bounds and recurse through the entire scene tree
 			g.beginFill(insideColor, insideAlpha);
 			g.lineStyle(1, outlineColor, outlineAlpha);
 			g.drawRect(b.x, b.y, b.width, b.height);
 			g.endFill();
+			ai.Next();
 		}
 		//g.dispose(); // is this needed?
 		// i'm guesing when it's added to the scene via new Object(parent) constructor,
