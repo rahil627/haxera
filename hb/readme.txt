@@ -1,4 +1,6 @@
-this is the package for **HeapsBase**: "base"/"bare-bones" code for an app/game made with Heaps( not actual library ds'es)
+this is the package for
+**HeapsBase**,
+a collection of "base"/"bare-bones" code for an app/game made with Heaps (not an actual library to be included/imported)
 
 in it lies a very basic entity system (just simple composition, not pure component design). Basically:
 Entity is mainly just a container for unwritten game logic and often h2d.Object(s) (or something that extends Object). Otherwise, it might have a few properties: layer, id, kind, etc.
@@ -14,4 +16,4 @@ maybe you need to use EntityList, or maybe a normal List or Array is enough, or 
 HOW TO USE:
 TODO: as of now, you must remove the top 4 lines on the top of each file... that's annoying! :( But if it wasn't in it's own package, it would clog up the namespace, so... ??? create a separate repo? :/ use "sed (-i) 1,4d filename" to do it. be careful: the -i flag causes the deletion
 
-there are two versions of the main app class: PunkApp, which relies on HeapsPunk, and MyApp, which has no such dependencies
+there are two versions of the main app class: PunkApp, which relies on HeapsPunk, and MyApp, which has no such dependencies (TODO: remove dependency to HP)
