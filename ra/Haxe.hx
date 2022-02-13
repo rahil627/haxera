@@ -1,6 +1,6 @@
 package ra; // is this not implied by the path name?
 
-import haxe.Math;
+import hxd.Math;
 
 // a helper/utility ds for the haxe programming language (including std lib)
 // more for my own personal use / not useful to others
@@ -12,7 +12,7 @@ class Haxe { // todo: HaxeHelper.hx? HH import alias
 	}	
 	
 	public static inline function randomHex():Int {
-		return Math.randomInt(0xFFFFFF);
+		return randomInt(0xFFFFFF);
 	}
 	
 	

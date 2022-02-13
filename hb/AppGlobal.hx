@@ -12,7 +12,7 @@ import h2d.Scene;  //import h3d.scene.Scene;
 class AppGlobal {
 	
 	// only keep references to stuff here
-	//public static var app:PunkApp/MyApp; // this just seems like really bad programming, lol
+	//public static var app:PunkApp/MyApp; // seems like really bad programming, but maybe even more convenient to access the main class's stuff via autocomplete; it's a static singleton // TODO: do it!
 	public static var scene:Scene;
 	
  	public static var world:Layers;

@@ -5,6 +5,11 @@ or from vim/server
 
 
 
+if the module/package doesn't match the file-path
+  - add "-cp path-to-modules" to hxml file
+
+ // this.super() doesn't work, must use just super()
+
 import ra.hp.* // doesn't work recursively...
 
 //this = null; // TODO: FAIL, lol    
