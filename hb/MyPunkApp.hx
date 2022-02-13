@@ -3,6 +3,8 @@
 package hb; // DELETE ME!!
 import hb.*; // DELETE ME!!
 
+import hp.HP;
+
 // just a bare-bones App/Main to copy to begin a new project with
 // the data is all optional, feel free to delete!
 // rename the class, constructor call, 'n filename and you're good to go!
