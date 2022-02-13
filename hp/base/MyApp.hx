@@ -3,8 +3,6 @@
 package hp.base; // DELETE ME!!
 import hp.base.*; // DELETE ME!!
 
-import h2d.Layers;
-
 // just a bare-bones App/Main to copy to begin a new project with
 // the data is all optional, feel free to delete!
 // rename the class, constructor call, 'n filename and you're good to go!
@@ -47,7 +45,7 @@ class MyApp extends App {
 			
 	
 		 // init app stuff
-		 world = new Layers(HP.scene);
+		 world = new h2d.Layers(HP.scene);
 		 entities = new EntityList<Entity>();
 		 //players = new Array<PlayerEntity>();
 		 //var monster = new Entity(); // just be sure to store the reference to entities somewhere safe!
