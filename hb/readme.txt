@@ -1,4 +1,4 @@
-this package is for "base"/"bare-bones" code for an app/game, not actual library ds'es, hence the seperate package
+this is the package for **HeapsBase**: "base"/"bare-bones" code for an app/game made with Heaps( not actual library ds'es)
 
 in it lies a very basic entity system (just simple composition, not pure component design). Basically:
 Entity is mainly just a container for unwritten game logic and often h2d.Object(s) (or something that extends Object). Otherwise, it might have a few properties: layer, id, kind, etc.
