@@ -8,7 +8,7 @@ import haxe.Int64;
 // note to self: there should no dependencies beyond the haxe package
 class Haxe { // todo: HaxeHelper.hx? HH import alias
 
-	public static inline function randomInt(max = Int64.high):Int { // TODO: couldn't find 32-bit max, will crash on 32-bit systems!!!
+	public static inline function randomInt(max:Int = Int64.high):Int { // TODO: couldn't find 32-bit max, will crash on 32-bit systems!!!
 		return std.int(Math.random(max));
 	}	
 	
