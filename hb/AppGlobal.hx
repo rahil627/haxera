@@ -12,11 +12,9 @@ import h2d.Scene;  //import h3d.scene.Scene;
 class AppGlobal {
 	
 	// only keep references to stuff here
-	//public static var app:PunkApp/MyApp; // seems like really bad programming, but maybe even more convenient to access the main class's stuff via autocomplete; it's a static singleton // TODO: do it!
-	public static var scene:Scene;
-	
- 	public static var world:Layers;
-	
+	//public static var app:PunkApp/MyApp; // seems like really bad programming, but maybe even more convenient to access the main class's stuff via autocomplete; it's a static singleton
+	//public static var scene:Scene; // TODO: here vs HP.scene
+ 	//public static var world:Layers;
 	public static var entities:EntityList<Entity>;
 	//public static var players:Array<Player>;	
 	//public static var players:Vector<Player>; // or this, if the max amount of players never change
@@ -27,7 +25,7 @@ class AppGlobal {
 	//public static inline final laserWidth = 50;
 
 }
-
+/*
 // careful: not to be confused with Layers with an 's'
 enum Layer {
 	background;
@@ -36,3 +34,4 @@ enum Layer {
 	effects;
 	ui;
 }
+*/
