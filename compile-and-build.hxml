@@ -2,5 +2,6 @@
 -cp hp/base
 -lib heaps
 -js app.js
+# or hb.MyApp
 -main hb.MyPunkApp
 -debug
