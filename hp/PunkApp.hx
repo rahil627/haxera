@@ -33,8 +33,9 @@ class PunkApp extends App {
 		super.init(); // empty
 		
 		#if debug
-		console = new h2d.Console(hxd.res.DefaultFont.get(), HP.scene); // might eventually need it's own PunkConsole class
-		console.resizeTo(console.size*2);
+		var font = hxd.res.DefaultFont.get();
+		font.resizeTo(font.size*2);
+		console = new h2d.Console(font, HP.scene); // might eventually need it's own PunkConsole class
 		console.shortKeyChar = "`".charCodeAt(0);
 		console.show(); // TODO: temp, because inputs dont work
 		
@@ -66,11 +67,9 @@ class PunkApp extends App {
 		#end
 	}
 	
-	public function dispose() {
-		// App has a dispose() and isDisposed var to trash the s2d, s3d, and engine,
-		// but, it's private, so, i'm guessing it's internally handled already
-		// TODO: ?
-		//HP.dipose() // set all references to null?
+	override function dispose() {
+		super.dispose(); // very important! gets rid of s2d, s3d, engine
+		//HP.dispose() // set all references to null?
 		//console = null //? didn't see a dispose function
 	}
 	
@@ -102,8 +101,8 @@ class PunkApp extends App {
 	#if debug
 	// draws the rectangular Bounds of each Object in the 2d Scene tree
 	function drawHitboxes2d(insideColor:Int = 0xFF0000, insideAlpha:Float = .5, outlineColor:Int = 0x00FF00, outlineAlpha:Float = .9) {
-		var children = this.s2d.children;
-		var b:Bounds;
+		var children:Array<h2d.Object> = this.s2d.children;
+		var b:h2d.col.Bounds;
 		var g = new h2d.Graphics(this.s2d);
 		
 		for( i in 0...children.length ) {

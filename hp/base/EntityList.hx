@@ -129,7 +129,7 @@ class EntityList<T:Entity> {
 	public function clear() { // original name
 		//entities.clear(); // TODO: woudn't this work?... nah, contained Object(s) would become janky references
 		for (e in entities) {
-			e.remove(); // remove Object, etc.
+			e.dispose(); // remove Object, etc.
 		}
 		entities.clear();
 	}

@@ -10,7 +10,7 @@ class MyPunkApp extends PunkApp {
 
 	// note: Layers is only useful for 2d
 	// TODO: Scene extends Layers sooooo.. don't really need this???
-	var world:Layers; // just a helper tool to put things in the right place in a 2d scene tree
+	var world:h2d.Layers; // just a helper tool to put things in the right place in a 2d scene tree
 	var entities:EntityList<Entity>;
 	//var players:Array<Player>;
 
@@ -51,7 +51,7 @@ class MyPunkApp extends PunkApp {
 	
 	public function reset() {
 		entities.clear();
-		world = new Layers(); // TODO: lol, dunno how to dispose, the array is private, *i think* it's just a tiny array of indicies anyway.., no content
+		world = new h2d.Layers(); // TODO: lol, dunno how to dispose, the array is private, *i think* it's just a tiny array of indicies anyway.., no content
 	}
 	
 	// called each frame right before rendering (from docs)
