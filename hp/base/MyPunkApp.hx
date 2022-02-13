@@ -12,7 +12,7 @@ class MyPunkApp extends PunkApp {
 	// TODO: Scene extends Layers sooooo.. don't really need this???
 	var world:Layers; // just a helper tool to put things in the right place in a 2d scene tree
 	var entities:EntityList<Entity>;
-	//var players:Array<PlayerEntity>; // TODO: static vs global reference
+	//var players:Array<Player>;
 
 	// called during application setup after `loadAssets` completed (from docs)
 	override function init() {
@@ -44,7 +44,7 @@ class MyPunkApp extends PunkApp {
 		 // init app stuff
 		 world = new h2d.Layers(HP.scene);
 		 entities = new EntityList<Entity>();
-		 //players = new Array<PlayerEntity>();
+		 //players = new Array<Player>();
 		 //var monster = new Entity(); // just be sure to store the reference to entities somewhere safe!
 
 	}
