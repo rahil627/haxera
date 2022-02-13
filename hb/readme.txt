@@ -14,6 +14,6 @@ maybe you need to use EntityList, or maybe a normal List or Array is enough, or 
 *warning:* there's currently one interconnectedness / dependency: the main update loop requires Entity to provide a dispose(), and an update() (even if it's empty), hence the EntitySkeleton interface
 
 HOW TO USE:
-TODO: as of now, you must remove the top 4 lines on the top of each file... that's annoying! :( But if it wasn't in it's own package, it would clog up the namespace, so... ??? create a separate repo? :/ use "sed (-i) 1,4d filename" to do it. be careful: the -i flag causes the deletion
+Tas of now, you must remove the top 4 lines on the top of each file... that's annoying! :( But if it wasn't in it's own package, it would clog up the namespace, use "sed (-i) 1,4d filename" to do it. be careful: the -i flag causes the deletion (TODO: so... ??? create a separate repo? find some way to tell the compiler from the folder to ignore this source folder)
 
 there are two versions of the main app class: PunkApp, which relies on HeapsPunk, and MyApp, which has no such dependencies (TODO: remove dependency to HP)
