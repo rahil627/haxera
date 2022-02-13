@@ -101,17 +101,22 @@ class PunkApp extends App {
 	#if debug
 	// draws the rectangular Bounds of each Object in the 2d Scene tree
 	function drawHitboxes2d(insideColor:Int = 0xFF0000, insideAlpha:Float = .5, outlineColor:Int = 0x00FF00, outlineAlpha:Float = .9) {
-		var children:Array<h2d.Object> = this.s2d.children;
+		//var children:Array<h2d.Object> = this.s2d.children;  // private var?? wtf. i give up on learning this shit, just use Godot!
+		var ai/*:hxd.impl.ArrayIterator<h2d.Object>*/ = this.s2d.getLayer(-1);
 		var b:h2d.col.Bounds;
 		var g = new h2d.Graphics(this.s2d);
-		
-		for( i in 0...children.length ) {
-			children[i].getBounds(); // i think this includes the bounds of all of it's children, so... only get top layer?
+		var i:Int = 0;
+		while (ai.hasNext()) {
+		//for( i in 0...children.length ) {
+			//children[i].getBounds(); // i think this includes the bounds of all of it's children, so... only get top layer?
 			// or find another function that returns only that Object's bounds and recurse through the entire scene tree
+		// TODO: wtf to do with an ArrayIterator, if you cannot access the children array?	
 			g.beginFill(insideColor, insideAlpha);
 			g.lineStyle(1, outlineColor, outlineAlpha);
-			g.drawRect(b.x, b.y, b.width, b.height);
+			//g.drawRect(b.x, b.y, b.width, b.height); // TODO: temp
 			g.endFill();
+			ai.next;
+			i++;
 		}
 		//g.dispose(); // is this needed?
 		// i'm guesing when it's added to the scene via new Object(parent) constructor,
