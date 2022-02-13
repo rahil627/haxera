@@ -63,8 +63,8 @@ class MyApp extends App {
 	// first call is done after the application is set up (so `loadAssets` and `init` are called (from docs)
 	override function update(dt:Float) {
 		super.update(dt);
+		//players.update(dt);
 		entities.update(dt);
-		
 		
 	}
 	
