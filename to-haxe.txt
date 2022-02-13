@@ -3,10 +3,14 @@ todo: add to haxe.txt
 just a temp place to leave some notes i get from the web with my iPad
 or from vim/server
 
+<<<<<<< HEAD
 
  // TODO: are strings set by value? yes, they are!
 
  is3d = false; // TODO: maybe can't have field names begin with a number?
+=======
+the Std (standard) package is automatically imported
+>>>>>>> 9b3d7890286409b0033675a0130358f84da39726
 
 package ra; // package name it not automatically implied by file-path
 // without it, it will use the top-most name-space
