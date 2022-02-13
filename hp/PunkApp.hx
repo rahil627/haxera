@@ -38,7 +38,7 @@ class PunkApp extends App {
 
 		#if debug
 		var font = hxd.res.DefaultFont.get();
-		//font.resizeTo(font.size*2);
+		font.resizeTo(font.size*3);
 		console = new Console(font, HP.scene); // might eventually need it's own PunkConsole class
 		console.shortKeyChar = "`".charCodeAt(0);
 		console.show(); // TODO: temp, because inputs dont work
@@ -52,7 +52,7 @@ class PunkApp extends App {
 		
 		// set some stuff
 		HP.windowTitle = "heaps <3 p u n k"; // i've seen this set in the hxml build file
-		//HP.engine.backgroundColor = 0xE0C9A6;
+		HP.engine.backgroundColor = 0xE0C9A6;
 	
 		
 		
@@ -105,6 +105,7 @@ class PunkApp extends App {
 	}
 	
 	#if debug
+	
 	// draws the rectangular Bounds of each Object in the 2d Scene tree
 	function drawHitboxes2d(insideColor:Int = 0xFF0000, insideAlpha:Float = .5, outlineColor:Int = 0x00FF00, outlineAlpha:Float = .9) {
 		//var children:Array<h2d.Object> = this.s2d.children;  // private var?? wtf. i give up on learning this shit, just use Godot!
@@ -129,6 +130,7 @@ class PunkApp extends App {
 		// i'm guesing when it's added to the scene via new Object(parent) constructor,
 		// it's stored in the scene tree container and stays until removed (by Object.remove/removeChild/removeParent)
 	}
+
 	#end
 		
 	#if debug
