@@ -1,7 +1,7 @@
 // just an optional bare-bones ds to copy and begin a new project with
 // delete these lines and you're good to go!
-package base; // DELETE ME!!
-import base.*; // DELETE ME!!
+package hb; // DELETE ME!!
+import hb.*; // DELETE ME!!
 
 // just a bare-bones App/Main to copy to begin a new project with
 // the data is all optional, feel free to delete!
