@@ -1,7 +1,7 @@
 // just an optional bare-bones ds to copy and begin a new project with
 // delete these lines and you're good to go!
-package base; // DELETE ME!!
-import base.*; // DELETE ME!!
+package hb; // DELETE ME!!
+import hb.*; // DELETE ME!!
 	
 import h2d.Layers;
 import h2d.Scene;  //import h3d.scene.Scene;
