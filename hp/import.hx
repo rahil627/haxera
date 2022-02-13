@@ -2,5 +2,7 @@
 
 // aliases
 // holy shit(!!) this is awesome!!
-//import AppGlobal as GG // game globals
+//import ra.*; // includes my helper classes: ra.Heaps, ra.Haxe
+//import ra.hp.HP; // HeapsPunk globals
+//import AppGlobal as GG; // game globals
   
