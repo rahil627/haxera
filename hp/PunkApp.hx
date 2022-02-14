@@ -39,7 +39,8 @@ class PunkApp extends App {
 		#if debug
 		var font = hxd.res.DefaultFont.get();
 		font.resizeTo(font.size*3);
-		console = new Console(font, HP.scene); // might eventually need it's own PunkConsole class
+		console = new Console(font); // might eventually need it's own PunkConsole class
+		HP.scene.add(console, -1); // add to top-most layer of the scene
 		console.shortKeyChar = "`".charCodeAt(0);
 		console.show(); // TODO: temp, because inputs dont work
 		console.log("console test");
