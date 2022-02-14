@@ -3,7 +3,12 @@ todo: add to haxe.txt
 just a temp place to leave some notes i get from the web with my iPad
 or from vim/server
 
+http://snowkit.github.io/linc/
+  - this seems like a cool way to just use pop C++ libs, but still retain Haxe...
+  
+  
 
+thoughts 'n quirks from my game dev:
  // TODO: are strings set by value? yes, they are!
 
 is3d = false; // TODO: maybe can't have field names begin with a number?
