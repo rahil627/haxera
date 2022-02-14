@@ -13,7 +13,7 @@ class AppGlobal {
 	
 	// only keep references to stuff here
 	//public static var app:MyPunkApp/MyApp; 
-	//public static var scene:Scene; // TODO: here vs HP.scene
+	public static var scene:Scene; // TODO: here vs HP.scene
  	//public static var world:Layers;
 	public static var entities:EntityList<Entity>;
 	//public static var players:Array<Player>; // TODO: make entity Array?

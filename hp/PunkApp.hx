@@ -40,7 +40,7 @@ class PunkApp extends App {
 		var font = hxd.res.DefaultFont.get();
 		font.resizeTo(font.size*3);
 		console = new Console(font); // might eventually need it's own PunkConsole class
-		this.s2d.add(console, -1); // add to top-most layer of the scene
+		this.s2d.add(console, -1); // add to top-most layer of the scene; use layer -1 for debug only
 		console.shortKeyChar = "`".charCodeAt(0);
 		console.show(); // TODO: temp, because inputs dont work
 		console.log("console test");
@@ -135,8 +135,9 @@ class PunkApp extends App {
 	#end
 		
 	#if debug
+	// not only does it work, but it also the file-path and line-number!!
 	// @author deepnight, dn.Lib
-	/*public static*/ function redirectTracesToConsole(c:h2d.Console) {
+	function redirectTracesToConsole(c:h2d.Console) {
 		haxe.Log.trace = function(m, ?pos) {
 			if ( pos != null && pos.customParams == null )
 				pos.customParams = ["debug"];
