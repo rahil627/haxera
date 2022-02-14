@@ -37,6 +37,13 @@ geometry / 2d math
     - Vector2d
       - HaxePunk
       - or use Heaps.Vector (4d) as a base  
+      
+2d collision system (without physics)
+  - differ by snowkit
+    - https://github.com/snowkit/differ
+    - kinda old... but, probably quality stuff!
+  - this way, there would be no reason to write my own collision functions, just register various collision shapes, and *viola!*
+    - TODO: compare writing my own collision with hxd.h2d.col cs using this
 
 **vector graphics drawing functions**
   - ?
@@ -54,12 +61,12 @@ color
       
 tweens
   - **does heaps even have any?? :o**
+    - i don't think so..
+  - Actuate (a tweening lib)
   - haxepunk/tweens, especially motion tweens vs a complete tweening library such as Actuate
     - openFL also has a tween class
   
-
-
-
+  
 
 
 
