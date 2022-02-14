@@ -4,7 +4,7 @@ package hb; // DELETE ME!!
 import hb.*; // DELETE ME!!
 	
 import h2d.Layers;
-import h2d.Scene;  //import h3d.scene.Scene;
+import h2d.Scene;  // or h3d.scene.Scene;
 
 // a static global helper class, with a scope specific to this app
 // store references to commonly-used data structures here
@@ -12,11 +12,11 @@ import h2d.Scene;  //import h3d.scene.Scene;
 class AppGlobal {
 	
 	// only keep references to stuff here
-	//public static var app:PunkApp/MyApp; // seems like really bad programming, but maybe even more convenient to access the main class's stuff via autocomplete; it's a static singleton
+	//public static var app:MyPunkApp/MyApp; 
 	//public static var scene:Scene; // TODO: here vs HP.scene
  	//public static var world:Layers;
 	public static var entities:EntityList<Entity>;
-	//public static var players:Array<Player>;	
+	//public static var players:Array<Player>; // TODO: make entity Array?
 	//public static var players:Vector<Player>; // or this, if the max amount of players never change
 	//public static var entitiesBackpack:Map<Int, TargetEntities>; // to search commonly-searched stuff by id (key)	
 
@@ -27,6 +27,11 @@ class AppGlobal {
 }
 /*
 // careful: not to be confused with Layers with an 's'
+// note: because files are modules (instead of ds'es), you must use AppGlobal.Layer
+// or, put it in it's own file
+// note: G.Layer, where G is an alias for Global, doesn't work!
+// ordered from back to front, 0 is the back, n is the front, -1 is special to put in front-most
+// use AppGlobal.Layer.getIndex() as the layer index in Layers
 enum Layer {
 	background;
 	players;

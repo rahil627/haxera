@@ -11,9 +11,9 @@ import hp.HP;
 // rename the class, constructor call, 'n filename and you're good to go!
 class MyPunkApp extends hp.PunkApp {
 
-	// note: Layers is only useful for 2d
-	// TODO: Scene extends Layers sooooo.. don't really need this???
-	public static var app:MyPunkApp; // static singleton
+	// an alternative to globals, this singleton prevents you from creating references and provides autocomplete
+	public static var inst:MyPunkApp; // static singleton
+	//public var scene:Scene; // alt name to s2d/s3d
 	//var world:h2d.Layers; // just a helper tool to put things in the right place in a 2d scene tree
 	var entities:EntityList<Entity>;
 	//var players:Array<Player>;
@@ -41,7 +41,6 @@ class MyPunkApp extends hp.PunkApp {
 		 #end
 		*/
 		// init app globals
-		//MyPunkApp.app = this;
 		//AppGlobal.app  = this; // this is a little different from HP.app, which uses the base class
 		//AppGlobal.world = world;
 		AppGlobal.entities = entities;
@@ -50,12 +49,15 @@ class MyPunkApp extends hp.PunkApp {
 		 //world = new h2d.Layers(HP.scene);
 		 entities = new EntityList<Entity>();
 		 //players = new Array<Player>();
-		 //var monster = new Entity(); // just be sure to store the reference to entities somewhere safe!
+		 //var monster = new Entity();
+		 // be sure to store the references commonly-used to entities somewhere safe!
+		 // otherwise, you'd have to find it in a list, the hard way, one-by-one
 
 	}
 	
 	public function reset() {
 		entities.clear();
+		//players = [];
 		//world = new h2d.Layers(); // TODO: lol, dunno how to dispose, the array is private, *i think* it's just a tiny array of indicies anyway.., no content
 	}
 	
@@ -71,17 +73,9 @@ class MyPunkApp extends hp.PunkApp {
 	// note: must be placed at the end? threw an error:
 	// module main didn't define object type Main?
 	static function main() {
-		new MyPunkApp();
+		inst = new MyPunkApp();
 		// can store an instance of it... but, for what? for now HP.app is the parent PunkApp class
 	}
 
-	/*
-	static var app:MyPunkApp = null;
-	public static function get():MyPunkApp {
-		if (app == null)
-			throw ("we've got a problem!");
-		
-		return app;
-	}
-	*/
+
 }
