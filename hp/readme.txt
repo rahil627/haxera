@@ -32,10 +32,10 @@ DsEx (temporary) = HXP's miscelleneous helper functions
 h2d.Object = Entity transform, spartan transform helper functions (just move(), lol)
 h2d.col = masks
   - note: heaps doesn't have a collision system, it just provides you with geometry functions for various shapes
-  - if you really need a complete collision system, one option is to integrate a physics simulation library (echo, etc. successors of Box2d), as it often contains collision-detection with it; Otherwise, you must use these collider shape functions to write your own collision checks
+  - if you really need a complete collision system, one option is to integrate a physics simulation library (echo, etc. successors of Box2d), as it often contains collision-detection with it; **Maybe there's an option to just turn off the physics part and just use collision?** Otherwise, you must use these collider shape functions to write your own collision checks
 
 none (modular libs: Actuate, OpenFL's tween lib, etc.) = Tween, Tweener
-none (DIY using Math?) = Entity's very simple 2d solid/rigid body system / movement handling
+none (modular libs: differ; or, DIY using Math) = Entity's simple 2d solid/rigid body seperation system / movement handling
   - it basically just prevented entities marked "solid" from passing through one another, dictating how those kinds of collisions should be handled. For example, if two entitties are constantly running into each other, and one is running much faster than the other, it handles it nicely.
 none (DIY using hxd.col) = simple 2d collision system (Mask, Entity, main game loop... it was a complete system!)
 none = Entity collision helper functions (thisEntity.collides(thatEntity)), Scene's entity collision with shape functions (collide(entity, shape)), Entity's distance helper functions, HXP's math helper functions, etc.
