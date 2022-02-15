@@ -12,6 +12,9 @@ http://snowkit.github.io/linc/
   
 
 thoughts 'n quirks from my game dev:
+
+if(this-is-null) throw ("this is not bool")
+
  // TODO: are strings set by value? yes, they are!
 
 is3d = false; // TODO: maybe can't have field names begin with a number?
