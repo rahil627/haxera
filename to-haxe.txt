@@ -18,6 +18,70 @@ http://snowkit.github.io/linc/
   
 notes form ruby:
 
+
+Haxe is a high level modern programming toolkit that compiles to a multitude of languages (c#, c++, java, js, python, php, etc). 
+
+The Haxe Toolkit:
+Now that we see that Haxe includes a programming language, what else does the Haxe Toolkit include? (more details on haxe.org)
+The programming language
+The (cross) compiler
+The standard library
+
+What does that compiler generate? Code in a target language and depending on the target, a binary of sorts. Let's look at a simple example.
+
+Given App.hx as a Haxe class, let's see an example of how to get a target language file from a Haxe file:
+
+haxe -main App -python app.py
+haxe -main App -js app.js
+
+
+noteable compiler utilities:
+There are so many to list, because of the wide number of targets, but I'll short list some of my favourite ones :
+insanely fast
+documentation (hopefully not xml anymore...)
+code completion (hopefully not xml anymore...)
+
+
+the standard library:
+When you're writing code in general, and especially cross platform code, it's really helpful (and often important) to have code that works the same across all targets.
+
+This is what the standard library is for. There are a myriad of classes in there, way too many to list here, but let's pick a few for examples of the type of thing that are "built in" to the language and are often available on every target.
+
+target specific utilities:
+On top of common tools and types and utilities, the standard library includes a lot of options for each target individually, allowing maximum use of the underlying language features.
+
+Some easy examples: File/FileSystem access.
+
+
+
+Using the generated code:
+As this is a large and open ended topic, I will only give a few simple examples for you to understand how to use the low level code output in another project or as part of a project. This is ALWAYS going to be dependent on the actual language output you are targeting. For example, C# can use dll's really easily, or C++ target can generate as a static library, etc. Each target usage differs based on where you will use it.
+...
+
+js example 
+JS is straight forward, you simply load it in an HTML file in the browser or in node.js or other interpreters.
+...
+
+C# example
+With Haxe code written say as a library for use in C# tools (like Unity, Mono, etc) you can directly generate a .dll file for immediate use as a reference. The code can also be included in the project manually, and the -D no-root flag will keep all the Haxe code in it's own namespace to avoid conflicts.
+
+Java example
+A good example of a Java use case would be an Android plugin. If you add the android.jar library to your class path in the hxml file or command line, you can compile immediately usable jar files from Haxe code that call the native android api's directly. 
+Here's an example class, written in Haxe, that opens a URL in the device default browser as a new Activity. This Haxe class is compiled into a .jar file, and is then usable in any android project thanks to the Haxe cross compiler, and the Haxe java backend.
+
+
+Haxe is a low-level toolkit:
+...
+frameworks, bindings, native externs and cross target implementations are written by third party developers, to give you access to these things in your Haxe code.
+
+Continuing with the js target example, how about JQuery? What about node.js? Pixi.js? Phaser? What about some audio for the js web target, like Howler.js.
+
+All of these offer strongly typed, ready to use bindings for just one of the many targets.
+
+Certain targets like C++ and C# are a bit more complicated due to the nature of different compilers and runtimes, but there are still many frameworks and bindings available to you for any number of things.
+
+...
+
 on backends:
 Often a target has it's own implementation of all of the backend details, and standard lib implementation specifics. These are an automatic dependency when targeting that platform, as they make all the generated code work, but the process is transparent to you provided you have them installed through haxelib. For example, haxelib install hxjava would install the java backend, hxcs and hxcpp are the C# and C++ backends respectively.
 
@@ -34,6 +98,7 @@ Neko is useful for these types of tools and includes features like nekotools -bo
 Finally, because Haxe includes neko in the installer and is dependent on it, it's a reliable tool that many frameworks and developers lean on to do their bidding. If you're going to be using Haxe and writing tools, it's a great option for scripting user facing utilities that will have no dependencies and be cross platform.
 
 notes about platform vs target
+[cross platform and cross target development]
 A platform is a host environment that runs code.
 web/mac/windows/linux/ios/android
 A target is a language target that haxe compiles to
