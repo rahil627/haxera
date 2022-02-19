@@ -125,6 +125,9 @@ compiles to php/neko
 
   
   
+  
+  
+  
 https://notes.underscorediscovery.com/haxe-entry-point/
 my notes:
 this post is more of a tutorial of one's first program, but crucially going over haxelib and hxml in detail
@@ -145,8 +148,7 @@ the -next flag begins a new haxe build command, but in the same file:
 -next
 -main game
 
-
-
+...
 
 Importing code from the library
 Now we need to reference some code from arguable. We do this using the import statement. Import statements must be before everything else in the file, so it goes right at the top of our class.
@@ -173,9 +175,17 @@ Capital letter: A haxe class (module).
 
 In this obtuse example, Game.game is a static variable on the class called Game, and game.Game implies that the Game class is in a folder called game/. Ideally you wouldn't name things in such convoluted ways, but with this simple rule you can always tell the difference.
 
+...
 
+Some notes: I have intentionally specified the 'full name' for sys.io.Process. This is an alternative to using import, and is important when you might have to modules/classes with overlapping names. I like to keep haxe API names explicit, so myself and others can easily look them up.
+ 
+...
+(my notes)
+can use Sys.args to get args from a command-line execution
+...
+One thing you'll notice is the HaxelibCounter.hx:48: stuff, that comes from trace, which is really important for debugging effectively. But since our tool will be user facing, we want to remove that from the output. For this, Sys.println is available, which will print to the command line without any prefixes.
 
-
+We can use a built in define for this: #if debug. Haxe has a -debug command line option which enables more debug related features, depending on the target. It also defines the debug conditional which we can use to swap between clean logging and debug logging. When we want to debug, we uncomment the #-debug line from inside our hxml (shown later) and in the code :
  
  
  
