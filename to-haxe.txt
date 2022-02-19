@@ -7,6 +7,7 @@ the haxe cookbook is a really nice way to learn some stuff
   - https://code.haxe.org/category/principles/everything-is-an-expression.html
   
 ruby0x1 (of luxe) has a few well written posts about haxe!
+https://notes.underscorediscovery.com/tag/haxe/
   - https://notes.underscorediscovery.com/haxe-from-1000ft/
     - https://notes.underscorediscovery.com/haxe-entry-point/
   - https://notes.underscorediscovery.com/haxe-compile-time-macros/
@@ -16,9 +17,8 @@ http://snowkit.github.io/linc/
   
   
   
-notes form ruby:
-
-
+notes form ruby0x1:
+https://notes.underscorediscovery.com/haxe-from-1000ft/
 Haxe is a high level modern programming toolkit that compiles to a multitude of languages (c#, c++, java, js, python, php, etc). 
 
 The Haxe Toolkit:
@@ -125,8 +125,61 @@ compiles to php/neko
 
   
   
-  
-  
+https://notes.underscorediscovery.com/haxe-entry-point/
+my notes:
+this post is more of a tutorial of one's first program, but crucially going over haxelib and hxml in detail
+
+hxml is basically just a list of the `haxe` command's arguments, for example
+
+the command:
+haxe -main game -lib heaps -cmd ./game.exe
+
+would look like this in a .hxml file:
+-main game
+-lib heaps
+# this runs a command after the previous commands are done
+-cmd ./game.exe
+
+the -next flag begins a new haxe build command, but in the same file:
+-main dependency
+-next
+-main game
+
+
+
+
+Importing code from the library
+Now we need to reference some code from arguable. We do this using the import statement. Import statements must be before everything else in the file, so it goes right at the top of our class.
+
+Class paths 
+The import statement basically checks a list of locations called the class path to see if the module you are looking for is in there. Our example: import arguable.ArgParser;
+
+If you look at the haxelib install log above, you will notice that arguable/ArgParser.hx is actually just a file within a folder. This is no coincidence! A . within the import statement is stepping one depth lower into the class path. This is true for a folder (a package), or a Module (multiple types within one hx file) - more on that below.
+
+By using -lib arguable, we add the location of that folder that haxelib is keeping track of - to the class path. Now, when some Haxe code says import arguable.ArgParser;, the modules within the class path are checked. Since a single file on disk can contain multiple types, the file that contains them is called a Module. hint: You can also look up the -cp command, it adds a package folder manually.
+
+Since that's all we need to know about that for now,
+
+What about packages? 
+A package is a folder within the class path. arguable. is the package, ArgParser is the module. import arguable.ArgParser; tells Haxe to look inside the arguable package folder(s) and find a module called ArgParser. Simple enough!
+
+This brings up an important rule of understanding in Haxe:
+
+Modules/Classes MUST start with a Capital Letter
+packages/folders MUST start with lower case
+This is how you tell the difference between game.Game and Game.game. 
+Small letter: package (reaching into a folder). 
+Capital letter: A haxe class (module).
+
+In this obtuse example, Game.game is a static variable on the class called Game, and game.Game implies that the Game class is in a folder called game/. Ideally you wouldn't name things in such convoluted ways, but with this simple rule you can always tell the difference.
+
+
+
+
+ 
+ 
+ 
+ 
   
 
 thoughts 'n quirks from my game dev:
