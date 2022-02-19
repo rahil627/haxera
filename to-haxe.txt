@@ -5,9 +5,18 @@ or from vim/server
 
 the haxe cookbook is a really nice way to learn some stuff
   - https://code.haxe.org/category/principles/everything-is-an-expression.html
+  
+ruby0x1 (of luxe) has a few well written posts about haxe!
+  - https://notes.underscorediscovery.com/haxe-from-1000ft/
+    - https://notes.underscorediscovery.com/haxe-entry-point/
+  - https://notes.underscorediscovery.com/haxe-compile-time-macros/
 
 http://snowkit.github.io/linc/
   - this seems like a cool way to just use pop C++ libs, but still retain Haxe...
+  
+  
+  
+  
   
   
 
