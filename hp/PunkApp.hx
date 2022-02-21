@@ -37,15 +37,16 @@ class PunkApp extends App {
 		console = null;
 
 		#if debug
+		// init console
 		var font = hxd.res.DefaultFont.get();
-		font.resizeTo(font.size*3);
-		console = new Console(font); // might eventually need it's own PunkConsole class
+		font.resizeTo(font.size * 3); // the default font is tiny!!
+		console = new Console(font); // might eventually need it's own custom PunkConsole class
 		this.s2d.add(console, -1); // add to top-most layer of the scene; use layer -1 for debug only
 		console.shortKeyChar = "`".charCodeAt(0);
 		console.show(); // TODO: temp, because inputs dont work
-		console.log("console test");
+		console.log("console log test");
 		redirectTracesToConsole(console);
-		trace("trace test");
+		trace("trace to console test");
 		#end
 		
 		// init global ds
@@ -55,8 +56,6 @@ class PunkApp extends App {
 		HP.windowTitle = "heaps <3 p u n k"; // i've seen this set in the hxml build file
 		HP.engine.backgroundColor = 0xE0C9A6;
 	
-		
-		
 		#if debug
 		// TODO: temporary global input handler solution until i actually fix keys
 		HP.screenInputHandler = new h2d.Interactive(HP.scene.width, HP.scene.height, HP.scene); // ?collider = HP.scene.getBounds()
@@ -135,7 +134,7 @@ class PunkApp extends App {
 	#end
 		
 	#if debug
-	// not only does it work, but it also the file-path and line-number!!
+	// not only does it work, but it also adds the file-path and line-number!!
 	// @author deepnight, dn.Lib
 	function redirectTracesToConsole(c:h2d.Console) {
 		haxe.Log.trace = function(m, ?pos) {
