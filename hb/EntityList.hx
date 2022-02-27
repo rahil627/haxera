@@ -18,7 +18,14 @@ class EntityList<T:Entity> {
 	// it's interesting... entity has type, layer, camera, and can be added to the scene, much like Object
 	// in my case, however, all of that stuff is in handled by Object, except the type (i use "kind") and layer
 	// so this ds will be much simpler
-	// also, HaxePunk's EntityList extends Entity(!!), making it more of a parent Object
+	// also, HaxePunk's EntityList extends Entity(!!), making it more of a parent Object...
+	
+	// i think HaxePunk has "object pooling", which seems pretty damn important, but,
+	// at the moment, i'm uncertain of how Haxe's garbage collection works
+	// apparently, C/C++ is slow at "dynamic memory de/allocation", see:
+	// https://stackoverflow.com/questions/15894122/why-not-allocate-and-deallocate-memory-frequently-in-c-games
+	// so, this bring about ideas of pre-allocation, pooling (re-using memory), etc.
+	// TODO: is creating "new" objects and disposing objects within a frame (1/60 second) a problem in Haxe?
 	
 	// see h2d.Object, so as not to overlap functionality with that
 	// avoid re-creating a whole nother scene tree! lol
