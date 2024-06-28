@@ -31,7 +31,7 @@ class Entity implements EntitySkeleton {
 	// https://gameprogrammingpatterns.com/component.html
 	// setting up entity to use a component design might be fine for an engine with a game editor
 	// but doing it through code seems pretty excessive:
-	// for every entity you'd have multiple individualized component classes
+	// for every entity you'd have multiple individualized component classes, along with complementary systems for each component
 	// i personally like this simple composition style better
 	
 	// "components" that come in Heaps 2d module
@@ -51,6 +51,7 @@ class Entity implements EntitySkeleton {
 	
 	//var id:Int; // maybe useful for finding it later..?, can be used as a map key, TODO: storing temp int vs reference?
 	//var name:String; // although strange, i've seen HaxePunk and Armory use this for searching, secret optimization magic??
+	//  - Object has this, using a tree
 	//var kind:EntityKind; // maybe useful narrowing down searches; one big container vs keeping multiple containers
 	//var class = Type.getClassName(Type.getClass(this)); // @author MikeTuttle/HaxePunk, i think it uses reflection, which might not be good for cross-platform use
 
