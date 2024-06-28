@@ -19,7 +19,11 @@ class EntityList<T:Entity> {
 	// in my case, however, all of that stuff is in handled by Object, except the type (i use "kind") and layer
 	// so this ds will be much simpler
 	// also, HaxePunk's EntityList extends Entity(!!), making it more of a parent Object...
-	
+
+	// todo: add struct implementation
+	// https://community.haxe.org/t/value-types-vs-allocated-types-and-soa-in-haxe/3361/6
+	//  - there are no structs in haxe (because many langs don't support it..?)
+	//  - haxionomic made an object pool class
 	// i think HaxePunk has "object pooling", which seems pretty damn important, but,
 	// at the moment, i'm uncertain of how Haxe's garbage collection works
 	// apparently, C/C++ is slow at "dynamic memory de/allocation", see:
